@@ -19,6 +19,73 @@
 }
 .agent__actions { margin-top: var(--space-6); display: flex; flex-wrap: wrap; gap: var(--space-3); }
 
+/* ---------- 接入原理 ---------- */
+.agent__how { margin-top: var(--space-9); }
+.agent__how .section__title { margin-top: var(--space-2); }
+.agent__how-lead {
+  margin-top: var(--space-3);
+  max-width: 760px;
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--color-ink-muted);
+}
+.how-stack {
+  margin-top: var(--space-6);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+.how-row {
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--color-paper);
+}
+.how-row__n {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: var(--tracking-display);
+  font-variant-numeric: tabular-nums;
+}
+.how-row--mcp .how-row__n { color: var(--hue-teal-ink); }
+.how-row--skill .how-row__n { color: var(--hue-blue-ink); }
+.how-row--plugin .how-row__n { color: var(--hue-violet-ink); }
+.how-row__body { margin-top: var(--space-3); }
+.how-row__k { font-size: var(--text-caption); font-weight: 600; letter-spacing: var(--tracking-text); }
+.how-row__v {
+  margin-top: var(--space-2);
+  font-size: var(--text-caption);
+  line-height: var(--leading-body);
+  color: var(--color-ink-muted);
+}
+.how-row__eg {
+  margin-top: var(--space-2);
+  font-size: var(--text-micro);
+  line-height: var(--leading-body);
+  color: var(--color-ink-subtle);
+}
+.how-row__eg b { font-weight: 600; color: var(--color-ink); }
+.how-row code {
+  font-family: var(--font-mono);
+  font-size: inherit;
+  color: var(--color-ink);
+  background: var(--color-canvas);
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+.agent__how-note {
+  margin-top: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--hue-violet-wash);
+  font-size: var(--text-caption);
+  line-height: var(--leading-body);
+  color: var(--color-ink);
+}
+.agent__how-note b { font-weight: 600; color: var(--hue-violet-ink); }
+
 /* 场景切换 */
 .stage__switch {
   margin-top: var(--space-6);
@@ -599,6 +666,7 @@
   .stage__frame { min-width: 900px; }
   .why-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-3); }
   .media-grid { grid-template-columns: minmax(0, 1fr); }
+  .how-stack { grid-template-columns: minmax(0, 1fr); gap: var(--space-3); }
 }
 @media (max-width: 640px) {
   .agent { padding: var(--space-7) 0 var(--space-9); }

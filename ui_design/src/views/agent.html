@@ -12,6 +12,41 @@
       </div>
     </header>
 
+    <section class="agent__how" id="agentHow" aria-labelledby="howTitle">
+      <p class="eyebrow">接入原理</p>
+      <h2 class="section__title" id="howTitle">三层，让智能体「能调、会调、装得上」</h2>
+      <p class="agent__how-lead">光圈AI 不做自己的聊天窗口，而是把系统能力按 MCP 标准开放出去，用 Agent Skill 把高频任务编排好，再以 Agent Plugin 的形式装进智能体。客户不需要理解协议细节，只需要知道这三层各管什么。</p>
+
+      <ol class="how-stack">
+        <li class="how-row how-row--mcp">
+          <span class="how-row__n">01</span>
+          <div class="how-row__body">
+            <p class="how-row__k">能力层 · MCP 服务器</p>
+            <p class="how-row__v">把系统能力工具化：<code>search_assets</code> 检索、<code>get_asset_metadata</code> 元数据、<code>aggregate_uploads</code> 统计、<code>export_to_excel</code> 导出、<code>list_collections</code> 专辑。权限受控，任意兼容 MCP 的智能体都以同一方式调用。</p>
+            <p class="how-row__eg"><b>不再为每个平台写一套集成</b>：同一接口支持 stdio 与 SSE 两种传输。</p>
+          </div>
+        </li>
+        <li class="how-row how-row--skill">
+          <span class="how-row__n">02</span>
+          <div class="how-row__body">
+            <p class="how-row__k">编排层 · Agent Skill</p>
+            <p class="how-row__v">封装高频任务流程，解决「什么时候调、按什么顺序调」。时间范围解析、多次工具调用、结果格式化与文件命名由 Skill 串成固定流程，用户只说一句话。</p>
+            <p class="how-row__eg"><b>例「生成季度上传报告」</b>：解析 2026-Q3 → 调 <code>aggregate_uploads</code>（按上传者）→ 出表 → 命名导出。</p>
+          </div>
+        </li>
+        <li class="how-row how-row--plugin">
+          <span class="how-row__n">03</span>
+          <div class="how-row__body">
+            <p class="how-row__k">接入层 · Agent Plugin</p>
+            <p class="how-row__v">把上面两层打包成智能体客户端里可安装的插件：装上、登录一次就能用。首期适配腾讯 WorkBuddy（内置 MCP 与 Skills 扩展机制），后续 Codex、Claude Code、OpenClaw 复用同一服务器。</p>
+            <p class="how-row__eg"><b>换智能体只换这一层</b>：工具与 Skill 不用重写。</p>
+          </div>
+        </li>
+      </ol>
+
+      <p class="agent__how-note">一句话记住：<b>能力</b>决定「能调什么」，<b>编排</b>决定「怎么组合」，<b>接入</b>决定「装到哪里」——换智能体只换最上面一层，下面两层不动。</p>
+    </section>
+
     <div class="stage__switch" role="group" aria-label="选择演示场景">
       <button class="stage__sw is-active" type="button" data-demo-scenario="ops" aria-pressed="true">
         <span class="stage__sw-k">场景 A</span>
