@@ -1,0 +1,177 @@
+﻿<section class="view" id="view-upload" data-route="upload" hidden>
+<div class="lib">
+  <div class="lib__head">
+    <div>
+      <h1 class="lib__title">上传与元数据治理</h1>
+      <p class="lib__sub">AI 预填分类与标签，人工确认后入库；每件素材都带着可追溯的来源与授权。</p>
+    </div>
+    <div class="u-row">
+      <button class="btn btn--quiet" type="button" data-toast="已切换为批量上传模式">批量上传</button>
+      <button class="btn btn--primary" type="button" data-toast="上传任务已开始，完成后自动进入治理队列">开始上传</button>
+    </div>
+  </div>
+
+  <section class="upload u-mt-2" aria-label="上传队列">
+    <div class="dropzone">
+      <div>
+        <p class="eyebrow">拖拽上传</p>
+        <h2>把今天拍的素材放进来</h2>
+        <p>支持 MP4 / MOV / JPG / PNG / WAV，单文件最大 20GB。上传完成后自动转码 4K 代理并生成水印预览。</p>
+      </div>
+      <div class="u-row">
+        <button class="btn btn--primary" type="button" data-toast="已打开文件选择器（原型演示）">选择文件</button>
+        <button class="btn btn--text" type="button" data-toast="已选择文件夹：白蕉海鲈_0418">从文件夹导入</button>
+      </div>
+    </div>
+
+    <div class="file-list">
+      <div class="file-row">
+        <div class="file-row__head">
+          <span class="file-row__name">白蕉海鲈产业园航拍_4K.mp4</span>
+          <span class="status">已入库</span>
+        </div>
+        <p class="file-row__meta">3.8 GB · 00:48 · 陈晓 · 元数据完整度 92%</p>
+        <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+      </div>
+
+      <div class="file-row">
+        <div class="file-row__head">
+          <span class="file-row__name">黄杨河落日_未修图.jpg</span>
+          <span class="status status--ai">AI 预填完成</span>
+        </div>
+        <p class="file-row__meta">24.6 MB · 5472×3648 · 待人工确认 3 项</p>
+        <div class="bar-track"><div class="bar-fill" style="width:78%"></div></div>
+      </div>
+
+      <div class="file-row">
+        <div class="file-row__head">
+          <span class="file-row__name">飘色巡游_现场收音.wav</span>
+          <span class="status status--warn">转码中 64%</span>
+        </div>
+        <p class="file-row__meta">186 MB · 12:04 · 林海 · 预计还需 1 分 20 秒</p>
+        <div class="bar-track"><div class="bar-fill" style="width:64%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="grid-2 u-mt-4">
+    <section class="panel" aria-labelledby="aiSuggest">
+      <div class="panel__head">
+        <div>
+          <h2 class="panel__title" id="aiSuggest">AI 建议 · 待人工确认</h2>
+          <p class="panel__meta u-mt-1">素材 DM-2026-0419 · 黄杨河落日_未修图.jpg</p>
+        </div>
+        <span class="confidence">模型置信度 0.94</span>
+      </div>
+      <div class="panel__body">
+        <div class="field">
+          <span>标题</span>
+          <input type="text" value="黄杨河落日" aria-label="素材标题">
+        </div>
+
+        <div class="u-mt-3">
+          <p class="eyebrow">分类建议</p>
+          <div class="chip-row u-mt-2">
+            <button class="chip is-active" type="button" data-toast="已接受分类：图片">图片</button>
+            <button class="chip is-active" type="button" data-toast="已接受分类：风光">风光</button>
+            <button class="chip" type="button" data-toast="已添加分类：城市">城市</button>
+            <button class="chip" type="button" data-toast="已添加分类：黄杨河">黄杨河</button>
+          </div>
+        </div>
+
+        <div class="u-mt-3">
+          <p class="eyebrow">标签建议</p>
+          <div class="chip-row u-mt-2">
+            <button class="chip is-active" type="button" data-toast="已接受标签：黄杨河">黄杨河</button>
+            <button class="chip is-active" type="button" data-toast="已接受标签：日落">日落</button>
+            <button class="chip is-active" type="button" data-toast="已接受标签：井岸镇">井岸镇</button>
+            <button class="chip" type="button" data-toast="已接受标签：城市风光">城市风光</button>
+            <button class="chip" type="button" data-toast="已接受标签：晚霞">晚霞</button>
+          </div>
+        </div>
+
+        <div class="field u-mt-3">
+          <span>授权范围</span>
+          <select aria-label="授权范围">
+            <option>可商用 · 需登记使用方</option>
+            <option>仅内部使用</option>
+            <option>需购买授权后商用</option>
+          </select>
+        </div>
+
+        <div class="field u-mt-3">
+          <span>可见范围</span>
+          <select aria-label="可见范围">
+            <option>内部 + 销售池</option>
+            <option>仅内部可见</option>
+            <option>公开（带水印）</option>
+          </select>
+        </div>
+
+        <div class="u-row u-mt-4">
+          <button class="btn btn--primary" type="button" data-toast="已确认入库，元数据完整度提升至 96%">确认入库</button>
+          <button class="btn btn--text" type="button" data-toast="已保存草稿，稍后继续">稍后处理</button>
+          <button class="btn btn--quiet" type="button" data-toast="已重新运行 AI 建议">重新识别</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="stack-4">
+      <section class="panel" aria-labelledby="qualityTitle">
+        <div class="panel__head">
+          <h2 class="panel__title" id="qualityTitle">元数据完整度</h2>
+          <span class="panel__meta">本月平均</span>
+        </div>
+        <div class="panel__body">
+          <p class="kpi__value">86%</p>
+          <p class="kpi__meta">较上月提升 9 个百分点，销售池准入线为 70%。</p>
+          <div class="bar-list u-mt-4">
+            <div class="bar-row">
+              <div class="bar-row__head"><span>基础信息</span><span>100%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-row__head"><span>版权与授权</span><span>80%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-row__head"><span>人物与地点</span><span>65%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:65%"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-row__head"><span>标签与分类</span><span>92%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:92%"></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="queueTitle">
+        <div class="panel__head">
+          <h2 class="panel__title" id="queueTitle">待完善队列</h2>
+          <button class="btn btn--text" type="button" data-toast="已打开完整治理队列">查看全部</button>
+        </div>
+        <div class="panel__body">
+          <div class="queue">
+            <div class="queue__item">
+              <div class="queue__head"><span>斗门旧街骑楼修缮</span><span>缺人物授权 · 68%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:68%"></div></div>
+            </div>
+            <div class="queue__item">
+              <div class="queue__head"><span>龙舟竞渡 · 现场收音</span><span>缺拍摄地点 · 72%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:72%"></div></div>
+            </div>
+            <div class="queue__item">
+              <div class="queue__head"><span>莲洲春耕</span><span>缺版权登记 · 79%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:79%"></div></div>
+            </div>
+          </div>
+          <p class="mini-note">完整度低于 70% 的素材不会进入销售池，但仍可在内部检索与使用。</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <p class="foot-note">治理规则：AI 只做建议，入库与授权状态由人确认；每次修改都会写入不可篡改的操作日志。</p>
+</div>
+</section>

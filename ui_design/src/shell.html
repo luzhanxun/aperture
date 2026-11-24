@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>光圈AI · 数字化素材管理系统</title>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/screens.css">
+<link rel="stylesheet" href="assets/css/store.css">
+<link rel="stylesheet" href="assets/css/overview.css">
+<link rel="stylesheet" href="assets/css/agent.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/color.css">
+</head>
+<body data-route="overview">
+
+<a class="skip" href="#viewRoot">跳到主内容</a>
+
+<header class="shell" id="shell">
+  <a class="shell__brand" href="#/overview" aria-label="光圈AI 总览">
+    <svg class="shell__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m14.31 8 5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16 3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"/></svg>
+    <span class="shell__name">光圈AI</span>
+  </a>
+
+  <nav class="shell__nav" aria-label="系统导航">
+    <a href="#/overview" data-nav="overview">总览</a>
+    <a href="#/library" data-nav="library">素材库</a>
+    <a href="#/sales" data-nav="sales">销售链接</a>
+    <a href="#/buy" data-nav="buy">客户端</a>
+    <a href="#/stats" data-nav="stats">数据统计</a>
+    <a href="#/admin" data-nav="admin">管理后台</a>
+    <a href="#/agent" data-nav="agent">AI智能体整合</a>
+    <a href="#/design" data-nav="design">设计规范</a>
+    <a href="#/mcp" data-nav="mcp">智能体接口规范</a>
+  </nav>
+
+  <div class="shell__right">
+    <span class="shell__hint">原型 · 数据为示意</span>
+    <a class="shell__user" href="#/login" data-nav="login" aria-label="登录与账号">
+      <span class="avatar">陈</span>
+      <span class="shell__user-name">陈晓</span>
+    </a>
+  </div>
+</header>
+
+<main id="viewRoot">
+<!-- @views -->
+</main>
+
+<!-- @parts -->
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<section class="view" id="view-sales" data-route="sales" hidden>
+<div class="lib">
+  <div class="lib__head">
+    <div>
+      <h1 class="lib__title">销售链接</h1>
+      <p class="lib__sub">把素材打包成一条链接发给客户：在线看预览、选授权、付款后自动开通原片下载。</p>
+    </div>
+    <div class="u-row">
+      <a class="btn btn--quiet" href="#/buy">查看客户端页面</a>
+      <button class="btn btn--primary" type="button" data-toast="已新建一条空白销售链接">新建销售链接</button>
+    </div>
+  </div>
+
+  <div class="grid-2 grid-2--even u-mt-2">
+    <section class="panel" aria-labelledby="configTitle">
+      <div class="panel__head">
+        <div>
+          <h2 class="panel__title" id="configTitle">链接配置</h2>
+          <p class="panel__meta u-mt-1">一条链接可包含多件素材，客户按授权范围分别下单。</p>
+        </div>
+        <span class="panel__meta">SL-260418-07</span>
+      </div>
+      <div class="panel__body">
+        <div class="field">
+          <span>关联素材</span>
+          <div class="asset-picked">
+            <img src="assets/img/fish-farm.svg" alt="白蕉海鲈产业园航拍缩略图">
+            <img src="assets/img/river-dusk.svg" alt="黄杨河落日缩略图">
+            <img src="assets/img/dragon-boat.svg" alt="黄杨河龙舟竞渡缩略图">
+            <span>共 3 件 · 视频 2 / 图片 1</span>
+            <button class="btn btn--text" type="button" data-toast="已打开素材选择器">更换</button>
+          </div>
+        </div>
+
+        <div class="field-row u-mt-3">
+          <label class="field">
+            <span>授权范围</span>
+            <select aria-label="授权范围">
+              <option>单次商用 · 单一平台</option>
+              <option>多平台商用 · 一年期</option>
+              <option>仅内部审片使用</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>链接有效期</span>
+            <select aria-label="链接有效期">
+              <option>7 天（默认）</option>
+              <option>30 天</option>
+              <option>长期有效</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="field u-mt-3">
+          <span>访问次数上限</span>
+          <input type="text" value="50" aria-label="访问次数上限">
+          <p class="field-hint">超过上限后链接自动失效，避免预览页被转发扩散。</p>
+        </div>
+
+        <label class="check-row u-mt-3">
+          <input type="checkbox" checked>
+          <span>允许客户下载带水印预览
+            <small>原片仅在支付成功并签署授权后开放，下载记录写入审计日志。</small>
+          </span>
+        </label>
+
+        <div class="u-row u-mt-4">
+          <button class="btn btn--primary" type="button" data-toast="链接已生成，有效期 7 天，已复制到剪贴板">生成链接</button>
+          <button class="btn btn--text" type="button" data-toast="已保存为链接模板">保存为模板</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="stack-4">
+      <section class="panel" aria-labelledby="latestTitle">
+        <div class="panel__head">
+          <h2 class="panel__title" id="latestTitle">最近生成的链接</h2>
+          <span class="status">有效</span>
+        </div>
+        <div class="panel__body">
+          <div class="link-card">
+            <div class="link-card__top">
+              <div>
+                <p class="link-card__url">aperture.doumen.gov.cn/s/8Kq2fR</p>
+                <p class="link-card__meta">3 件素材 · 有效期至 2026-04-25 · 访问 12 / 50 · 最近 2 小时前</p>
+              </div>
+              <div class="qr-mini">
+                <svg viewBox="0 0 80 80" role="img" aria-label="销售链接二维码">
+                  <defs>
+                    <pattern id="qrp" width="8" height="8" patternUnits="userSpaceOnUse">
+                      <rect width="8" height="8" fill="#ffffff"/>
+                      <rect width="4" height="4" fill="#1d1d1f"/>
+                      <rect x="4" y="4" width="4" height="4" fill="#1d1d1f"/>
+                    </pattern>
+                    <g id="finder">
+                      <rect width="22" height="22" fill="#1d1d1f"/>
+                      <rect x="5" y="5" width="12" height="12" fill="#ffffff"/>
+                      <rect x="9" y="9" width="4" height="4" fill="#1d1d1f"/>
+                    </g>
+                  </defs>
+                  <rect width="80" height="80" fill="url(#qrp)"/>
+                  <rect x="6" y="6" width="22" height="22" fill="#ffffff"/>
+                  <rect x="52" y="6" width="22" height="22" fill="#ffffff"/>
+                  <rect x="6" y="52" width="22" height="22" fill="#ffffff"/>
+                  <use href="#finder" x="6" y="6"/>
+                  <use href="#finder" x="52" y="6"/>
+                  <use href="#finder" x="6" y="52"/>
+                </svg>
+              </div>
+            </div>
+            <div class="link-card__actions">
+              <button class="btn btn--text" type="button" data-copy="https://aperture.doumen.gov.cn/s/8Kq2fR">复制链接</button>
+              <a class="btn btn--text" href="#/link">打开预览页</a>
+              <button class="btn btn--text" type="button" data-toast="链接已停用，客户再次打开将显示失效提示">停用</button>
+            </div>
+          </div>
+
+          <div class="link-steps">
+            <div class="link-step">
+              <span class="link-step__num">01</span>
+              <p class="link-step__text"><strong>客户打开链接</strong>无需注册即可查看带水印预览与授权说明。</p>
+            </div>
+            <div class="link-step">
+              <span class="link-step__num">02</span>
+              <p class="link-step__text"><strong>选择授权并下单</strong>按用途与分辨率选择价格，在线完成支付。</p>
+            </div>
+            <div class="link-step">
+              <span class="link-step__num">03</span>
+              <p class="link-step__text"><strong>自动开通下载</strong>支付成功即生成授权凭证，原片下载同步开放。</p>
+            </div>
+            <div class="link-step">
+              <span class="link-step__num">04</span>
+              <p class="link-step__text"><strong>回到后台对账</strong>访问、转化、成交与下载记录全部留痕。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <section class="panel panel--flush u-mt-4" aria-labelledby="linkTableTitle">
+    <div class="panel__head">
+      <h2 class="panel__title" id="linkTableTitle">链接记录</h2>
+      <span class="panel__meta">近 30 天 · 共 46 条</span>
+    </div>
+    <div class="panel__body">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">链接</th>
+              <th scope="col">关联素材</th>
+              <th scope="col">有效期至</th>
+              <th scope="col">访问</th>
+              <th scope="col">状态</th>
+              <th scope="col">成交</th>
+              <th scope="col"><span class="sr-only">操作</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SL-260418-07<div class="cell-sub">8Kq2fR</div></td>
+              <td>白蕉海鲈 · 黄杨河落日 等 3 件</td>
+              <td>2026-04-25</td>
+              <td>12 / 50</td>
+              <td><span class="status">有效</span></td>
+              <td>¥1,440</td>
+              <td class="cell-actions"><button class="btn btn--text" type="button" data-toast="链接已复制">复制</button></td>
+            </tr>
+            <tr>
+              <td>SL-260416-03<div class="cell-sub">2M7P1D</div></td>
+              <td>斗门旧街骑楼修缮 等 2 件</td>
+              <td>2026-04-23</td>
+              <td>28 / 30</td>
+              <td><span class="status">有效</span></td>
+              <td>¥860</td>
+              <td class="cell-actions"><button class="btn btn--text" type="button" data-toast="链接已复制">复制</button></td>
+            </tr>
+            <tr>
+              <td>SL-260411-11<div class="cell-sub">6Q9W4T</div></td>
+              <td>黄杨河龙舟竞渡</td>
+              <td>2026-04-18</td>
+              <td>50 / 50</td>
+              <td><span class="status">已用尽</span></td>
+              <td>¥2,400</td>
+              <td class="cell-actions"><button class="btn btn--text" type="button" data-toast="已延长链接有效期 7 天">延期</button></td>
+            </tr>
+            <tr>
+              <td>SL-260402-05<div class="cell-sub">9L2B8N</div></td>
+              <td>莲洲春耕 · 飘色巡游 等 4 件</td>
+              <td>2026-04-09</td>
+              <td>17 / 50</td>
+              <td><span class="status status--off">已过期</span></td>
+              <td>¥0</td>
+              <td class="cell-actions"><button class="btn btn--text" type="button" data-toast="已按原配置重建链接">重建</button></td>
+            </tr>
+            <tr>
+              <td>SL-260328-02<div class="cell-sub">3C5H7K</div></td>
+              <td>斗门港集装箱码头</td>
+              <td>长期</td>
+              <td>36 / 100</td>
+              <td><span class="status status--off">已停用</span></td>
+              <td>¥1,200</td>
+              <td class="cell-actions"><button class="btn btn--text" type="button" data-toast="已恢复链接">恢复</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="paged">
+        <span>显示 1–5 / 46 条</span>
+        <span class="paged__buttons"><button class="btn btn--text" type="button" data-toast="已是第一页">上一页</button><button class="btn btn--text" type="button" data-toast="已加载下一页">下一页</button></span>
+      </div>
+    </div>
+  </section>
+
+  <p class="foot-note">链接失效不等于授权失效：已成交订单的原片下载与授权凭证仍可在后台查阅。</p>
+</div>
+</section>

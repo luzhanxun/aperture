@@ -1,0 +1,339 @@
+﻿<section class="view" id="view-stats" data-route="stats" hidden>
+<div class="lib">
+  <div class="lib__head">
+    <div>
+      <h1 class="lib__title">定价与销售统计</h1>
+      <p class="lib__sub">看清楚哪些素材在卖、哪条链接在转化、哪一类授权最常被选择。</p>
+    </div>
+    <div class="u-row">
+      <div class="segmented segmented--text" role="group" aria-label="统计时间范围">
+        <button class="is-active" type="button" data-toast="已切换到近 30 天">近 30 天</button>
+        <button type="button" data-toast="已切换到近 90 天">近 90 天</button>
+        <button type="button" data-toast="已切换到本年度">本年度</button>
+      </div>
+      <button class="btn btn--quiet" type="button" data-toast="已导出 CSV，可在下载中心查看">导出报表</button>
+    </div>
+  </div>
+
+  <div class="kpi-grid u-mt-2">
+    <div class="kpi">
+      <p class="kpi__label">本月成交额</p>
+      <p class="kpi__value">¥28,640</p>
+      <p class="kpi__meta">较上月 +18.4% · 目标完成 71%</p>
+    </div>
+    <div class="kpi">
+      <p class="kpi__label">授权订单</p>
+      <p class="kpi__value">42</p>
+      <p class="kpi__meta">企业客户 26 · 个人 16</p>
+    </div>
+    <div class="kpi">
+      <p class="kpi__label">链接转化率</p>
+      <p class="kpi__value">34%</p>
+      <p class="kpi__meta">1,284 次访问 · 176 笔支付</p>
+    </div>
+    <div class="kpi">
+      <p class="kpi__label">素材均价</p>
+      <p class="kpi__value">¥462</p>
+      <p class="kpi__meta">视频 ¥680 · 图片 ¥180</p>
+    </div>
+  </div>
+
+  <div class="grid-2 u-mt-4">
+    <section class="panel" aria-labelledby="funnelTitle">
+      <div class="panel__head">
+        <div>
+          <h2 class="panel__title" id="funnelTitle">预览链接转化</h2>
+          <p class="panel__meta u-mt-1">客户从打开链接到完成支付的四步。</p>
+        </div>
+      </div>
+      <div class="panel__body">
+        <div class="funnel">
+          <div class="funnel__row">
+            <span>打开链接</span>
+            <span class="funnel__track"><span class="funnel__fill" style="width:100%"></span></span>
+            <span class="funnel__value">1,284</span>
+          </div>
+          <div class="funnel__row">
+            <span>查看预览</span>
+            <span class="funnel__track"><span class="funnel__fill" style="width:77%"></span></span>
+            <span class="funnel__value">986</span>
+          </div>
+          <div class="funnel__row">
+            <span>选择授权</span>
+            <span class="funnel__track"><span class="funnel__fill" style="width:40%"></span></span>
+            <span class="funnel__value">512</span>
+          </div>
+          <div class="funnel__row">
+            <span>完成支付</span>
+            <span class="funnel__track"><span class="funnel__fill funnel__fill--soft" style="width:14%"></span></span>
+            <span class="funnel__value">176</span>
+          </div>
+        </div>
+        <p class="foot-note">流失集中在意向授权到支付一步：客户常要求先看无水印小样或走对公转账。</p>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="categoryTitle">
+      <div class="panel__head">
+        <div>
+          <h2 class="panel__title" id="categoryTitle">分类销售额</h2>
+          <p class="panel__meta u-mt-1">近 30 天 · 按素材一级分类汇总。</p>
+        </div>
+      </div>
+      <div class="panel__body">
+        <div class="bar-list">
+          <div class="bar-row">
+            <div class="bar-row__head"><span>城市影像</span><span>¥12,400</span></div>
+            <div class="bar-track"><span class="bar-fill" style="width:100%"></span></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-row__head"><span>农业产业</span><span>¥8,600</span></div>
+            <div class="bar-track"><span class="bar-fill" style="width:69%"></span></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-row__head"><span>非遗民俗</span><span>¥4,200</span></div>
+            <div class="bar-track"><span class="bar-fill" style="width:34%"></span></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-row__head"><span>活动记录</span><span>¥3,440</span></div>
+            <div class="bar-track"><span class="bar-fill" style="width:28%"></span></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-row__head"><span>其他</span><span>¥1,000</span></div>
+            <div class="bar-track"><span class="bar-fill" style="width:8%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="panel u-mt-4" aria-labelledby="trendTitle">
+    <div class="panel__head">
+      <div>
+        <h2 class="panel__title" id="trendTitle">成交趋势</h2>
+        <p class="panel__meta u-mt-1">按日汇总的成交额，周末与节庆素材上线后有明显抬升。</p>
+      </div>
+      <div class="chart__legend">
+        <span class="chart__key">成交额</span>
+        <span class="chart__key chart__key--muted">30 日均线</span>
+      </div>
+    </div>
+    <div class="panel__body">
+      <div class="trend-chart">
+        <svg viewBox="0 0 720 200" role="img" aria-label="近 30 天成交额折线图，从 4 月 1 日的 4.2 万元上升至 4 月 30 日的 6.8 万元，中途在 4 月 12 日龙舟素材上线后达到峰值。">
+          <line class="grid-line" x1="0" y1="20" x2="720" y2="20"/>
+          <line class="grid-line" x1="0" y1="65" x2="720" y2="65"/>
+          <line class="grid-line" x1="0" y1="110" x2="720" y2="110"/>
+          <line class="grid-line" x1="0" y1="155" x2="720" y2="155"/>
+          <path class="area" d="M20 132 L82 120 L144 118 L206 96 L268 104 L330 88 L392 74 L454 82 L516 62 L578 58 L640 66 L700 44 L700 168 L20 168 Z"/>
+          <polyline class="line" points="20,132 82,120 144,118 206,96 268,104 330,88 392,74 454,82 516,62 578,58 640,66 700,44"/>
+          <line class="line--mean" x1="20" y1="92" x2="700" y2="92"/>
+          <circle class="dot" cx="206" cy="96" r="4"/>
+          <circle class="dot" cx="516" cy="62" r="4"/>
+          <circle class="dot" cx="700" cy="44" r="4"/>
+          <text x="20" y="188">04-01</text>
+          <text x="206" y="188">04-09</text>
+          <text x="392" y="188">04-18</text>
+          <text x="578" y="188">04-26</text>
+          <text x="700" y="188" text-anchor="end">04-30</text>
+          <text x="0" y="16">¥8k</text>
+          <text x="0" y="61">¥6k</text>
+          <text x="0" y="106">¥4k</text>
+          <text x="0" y="151">¥2k</text>
+        </svg>
+      </div>
+      <p class="foot-note">峰值出现在 04-12（龙舟竞渡素材上线）与 04-24（文旅局批量采购 6 条城市影像）。</p>
+    </div>
+  </section>
+
+  <section class="panel panel--flush u-mt-4" aria-labelledby="orderTitle">
+    <div class="panel__head">
+      <h2 class="panel__title" id="statsOrderTitle">成交订单</h2>
+      <span class="panel__meta">近 30 天 · 42 笔 · 其中 1 笔退款</span>
+    </div>
+    <div class="panel__body">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">订单号</th>
+              <th scope="col">素材</th>
+              <th scope="col">授权范围</th>
+              <th scope="col">客户</th>
+              <th scope="col">金额</th>
+              <th scope="col">时间</th>
+              <th scope="col">状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DM2604180037<div class="cell-sub">链接 8Kq2fR</div></td>
+              <td>黄杨河落日</td>
+              <td>单次商用 · 4K</td>
+              <td>斗门区文旅发展有限公司</td>
+              <td>¥480</td>
+              <td>04-18 15:22</td>
+              <td><span class="status">已支付</span></td>
+            </tr>
+            <tr>
+              <td>DM2604180036<div class="cell-sub">链接 8Kq2fR</div></td>
+              <td>白蕉海鲈产业园航拍</td>
+              <td>多平台商用 · 一年</td>
+              <td>白蕉镇农业服务中心</td>
+              <td>¥1,280</td>
+              <td>04-18 11:04</td>
+              <td><span class="status">已支付</span></td>
+            </tr>
+            <tr>
+              <td>DM2604170029<div class="cell-sub">链接 2M7P1D</div></td>
+              <td>斗门旧街骑楼修缮</td>
+              <td>单次商用 · 1080P</td>
+              <td>珠海某文化传播公司</td>
+              <td>¥320</td>
+              <td>04-17 17:41</td>
+              <td><span class="status">已支付</span></td>
+            </tr>
+            <tr>
+              <td>DM2604160018<div class="cell-sub">链接 2M7P1D</div></td>
+              <td>黄杨山云海</td>
+              <td>单次商用 · 4K</td>
+              <td>斗门区某中学</td>
+              <td>¥480</td>
+              <td>04-16 09:12</td>
+              <td><span class="status">已支付</span></td>
+            </tr>
+            <tr>
+              <td>DM2604140009<div class="cell-sub">链接 6Q9W4T</div></td>
+              <td>黄杨河龙舟竞渡</td>
+              <td>多平台商用 · 一年</td>
+              <td>珠海某体育运营公司</td>
+              <td>¥1,280</td>
+              <td>04-14 20:07</td>
+              <td><span class="status status--risk">已退款</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="paged">
+        <span>显示 1–5 / 42 笔</span>
+        <span class="paged__buttons"><button class="btn btn--text" type="button" data-toast="已加载下一页">下一页</button></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel u-mt-4" aria-labelledby="pricingTitle" data-tabset>
+    <div class="panel__head">
+      <div>
+        <h2 class="panel__title" id="pricingTitle">定价策略</h2>
+        <p class="panel__meta u-mt-1">调整后仅影响新订单，已成交订单金额不变。</p>
+      </div>
+    </div>
+    <div class="panel__body">
+      <div class="tabs" role="tablist" aria-label="定价方式">
+        <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="category">分类默认价</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-tab="batch">批量调价</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-tab="single">单素材定价</button>
+      </div>
+
+      <div class="u-mt-4" data-tab-panel="category">
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">分类</th>
+                <th scope="col">默认图片价</th>
+                <th scope="col">默认视频价</th>
+                <th scope="col">商用加价</th>
+                <th scope="col">近 30 天成交</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>城市影像</td>
+                <td><input class="price-input" type="text" value="180" aria-label="城市影像默认图片价"></td>
+                <td><input class="price-input" type="text" value="680" aria-label="城市影像默认视频价"></td>
+                <td>×1.5</td>
+                <td>¥12,400</td>
+              </tr>
+              <tr>
+                <td>农业产业</td>
+                <td><input class="price-input" type="text" value="160" aria-label="农业产业默认图片价"></td>
+                <td><input class="price-input" type="text" value="560" aria-label="农业产业默认视频价"></td>
+                <td>×1.5</td>
+                <td>¥8,600</td>
+              </tr>
+              <tr>
+                <td>非遗民俗</td>
+                <td><input class="price-input" type="text" value="200" aria-label="非遗民俗默认图片价"></td>
+                <td><input class="price-input" type="text" value="720" aria-label="非遗民俗默认视频价"></td>
+                <td>×2.0</td>
+                <td>¥4,200</td>
+              </tr>
+              <tr>
+                <td>活动记录</td>
+                <td><input class="price-input" type="text" value="120" aria-label="活动记录默认图片价"></td>
+                <td><input class="price-input" type="text" value="480" aria-label="活动记录默认视频价"></td>
+                <td>×1.2</td>
+                <td>¥3,440</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="u-row u-mt-3">
+          <button class="btn btn--primary" type="button" data-toast="定价已保存，仅对新订单生效">保存定价</button>
+          <button class="btn btn--text" type="button" data-toast="已恢复到上一次保存的定价">还原</button>
+        </div>
+      </div>
+
+      <div class="u-mt-4" data-tab-panel="batch" hidden>
+        <div class="field-row">
+          <label class="field">
+            <span>作用范围</span>
+            <select aria-label="批量调价作用范围">
+              <option>全部分类</option>
+              <option>城市影像</option>
+              <option>农业产业</option>
+              <option>非遗民俗</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>调整方式</span>
+            <select aria-label="批量调价方式">
+              <option>按百分比上调</option>
+              <option>按百分比下调</option>
+              <option>统一设为固定价</option>
+            </select>
+          </label>
+        </div>
+        <label class="field u-mt-3">
+          <span>调整幅度</span>
+          <input type="text" value="10%" aria-label="批量调价幅度">
+          <p class="field-hint">批量调价会生成变更记录，可在审计日志中回溯。</p>
+        </label>
+        <button class="btn btn--primary u-mt-3" type="button" data-toast="已预览影响范围：326 件素材，确认后生效">预览影响范围</button>
+      </div>
+
+      <div class="u-mt-4" data-tab-panel="single" hidden>
+        <div class="asset-picked">
+          <img src="assets/img/dragon-boat.svg" alt="黄杨河龙舟竞渡缩略图">
+          <span>黄杨河龙舟竞渡 · DM-20260411-0008</span>
+          <button class="btn btn--text" type="button" data-toast="已打开素材选择器">更换素材</button>
+        </div>
+        <div class="field-row u-mt-3">
+          <label class="field">
+            <span>图片授权价</span>
+            <input type="text" value="240" aria-label="单素材图片授权价">
+          </label>
+          <label class="field">
+            <span>视频授权价</span>
+            <input type="text" value="880" aria-label="单素材视频授权价">
+          </label>
+        </div>
+        <p class="foot-note">单素材定价优先于分类默认价；设为空则回落到分类价格。</p>
+      </div>
+    </div>
+  </section>
+
+  <p class="foot-note">统计口径与财务对账口径的差异，需要在验收前与中心财务确认。</p>
+</div>
+</section>

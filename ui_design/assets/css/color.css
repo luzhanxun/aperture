@@ -1,0 +1,71 @@
+/* ==========================================================================
+   色彩层 · v1.1
+   在 tokens.css 的色相令牌之上，为数据可视化、类目标识与状态提示着色。
+   规则不变：色相只承担“含义”，蓝色（--color-accent）仍是唯一的可交互色；
+   不加描边、不加阴影、字号不低于 12px。
+   ========================================================================== */
+
+/* ---------- 转化漏斗：从访问到支付，色相逐级推进 ---------- */
+.funnel__row:nth-child(1) .funnel__fill { background: var(--hue-teal); }
+.funnel__row:nth-child(2) .funnel__fill { background: var(--hue-blue); }
+.funnel__row:nth-child(3) .funnel__fill { background: var(--hue-violet); }
+.funnel__row:nth-child(4) .funnel__fill { background: var(--hue-amber); }
+
+/* ---------- 类目条形：色相即类目身份 ---------- */
+.bar-row:nth-child(1) .bar-fill { background: var(--hue-blue); }
+.bar-row:nth-child(2) .bar-fill { background: var(--hue-green); }
+.bar-row:nth-child(3) .bar-fill { background: var(--hue-pink); }
+.bar-row:nth-child(4) .bar-fill { background: var(--hue-orange); }
+.bar-row:nth-child(5) .bar-fill { background: var(--color-ink-subtle); }
+
+/* ---------- 指标卡：极淡的类目底色，让四张卡不再连成一片白 ---------- */
+.kpi-grid > .kpi:nth-child(1) { background: var(--hue-blue-wash); }
+.kpi-grid > .kpi:nth-child(2) { background: var(--hue-teal-wash); }
+.kpi-grid > .kpi:nth-child(3) { background: var(--hue-violet-wash); }
+.kpi-grid > .kpi:nth-child(4) { background: var(--hue-amber-wash); }
+.kpi-grid > .kpi:nth-child(1) .kpi__value { color: var(--hue-blue-ink); }
+.kpi-grid > .kpi:nth-child(2) .kpi__value { color: var(--hue-teal-ink); }
+.kpi-grid > .kpi:nth-child(3) .kpi__value { color: var(--hue-violet-ink); }
+.kpi-grid > .kpi:nth-child(4) .kpi__value { color: var(--hue-amber-ink); }
+
+/* ---------- 趋势图：成交额用蓝色，30 日均线用中性色 ---------- */
+.trend-chart .area { fill: var(--color-accent); opacity: 0.12; }
+.trend-chart .line--mean {
+  fill: none;
+  stroke: var(--color-ink-subtle);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 6;
+}
+
+/* ---------- 状态点：绿=通过 / 琥珀=待处理 / 橙=风险 / 紫=AI ---------- */
+.status::before { background: var(--hue-green); }
+.status--ok::before { background: var(--hue-green); }
+.status--warn::before { background: var(--hue-amber); }
+.status--risk::before { background: var(--hue-orange); }
+.status--ai::before { background: var(--hue-violet); }
+.status--info::before { background: var(--hue-blue); }
+
+/* ---------- 标签：只有需要区分类目时才着色 ---------- */
+.chip--cat-1 { background: var(--hue-blue-soft); color: var(--hue-blue-ink); }
+.chip--cat-2 { background: var(--hue-green-soft); color: var(--hue-green-ink); }
+.chip--cat-3 { background: var(--hue-pink-soft); color: var(--hue-pink-ink); }
+.chip--cat-4 { background: var(--hue-amber-soft); color: var(--hue-amber-ink); }
+.chip--cat-5 { background: var(--hue-violet-soft); color: var(--hue-violet-ink); }
+.chip--cat-6 { background: var(--hue-teal-soft); color: var(--hue-teal-ink); }
+.chip--cat-1.is-active,
+.chip--cat-2.is-active,
+.chip--cat-3.is-active,
+.chip--cat-4.is-active,
+.chip--cat-5.is-active,
+.chip--cat-6.is-active { background: var(--color-accent); color: var(--color-paper); }
+
+/* ---------- 素材缩略图：给未上图的占位块一层色相底 ---------- */
+.asset-card__thumb--tint-1 { background: var(--hue-blue-soft); }
+.asset-card__thumb--tint-2 { background: var(--hue-green-soft); }
+.asset-card__thumb--tint-3 { background: var(--hue-pink-soft); }
+
+/* ---------- 智能体标识 ---------- */
+.badge--ai {
+  background: var(--grad-ai);
+  color: var(--color-paper);
+}

@@ -1,0 +1,449 @@
+﻿<section class="view" id="view-design" data-route="design" hidden>
+<div class="doc">
+  <div class="doc__head">
+    <div class="wrap">
+      <p class="doc__label">UI Guide · v1.1</p>
+      <h1 class="doc__title">一套克制的界面语言</h1>
+      <p class="doc__lead">所有界面共用一套 token：一个强调色、七组语义色相、四级文字、一套间距。v1.1 在不改变「蓝色只表可交互」的前提下补入了色彩与影像，让界面在客户面前有温度；v1.1 同时把十二屏收进同一个原型：十一屏共用外壳，客户链接页独立成页。</p>
+    </div>
+  </div>
+
+  <section class="doc__band doc__band--paper" aria-labelledby="d-colorTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">01 · Color</p>
+        <h2 id="d-colorTitle">颜色</h2>
+        <p>强调色是画面里唯一的彩色，只用于主操作、当前项与可点击文本。其余层级靠中性色与留白建立。</p>
+        <div class="token-grid">
+          <div class="token">
+            <div class="token__swatch sw--canvas"></div>
+            <p class="token__name">画布</p>
+            <p class="token__value">--color-canvas · #f5f5f7</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--paper"></div>
+            <p class="token__name">卡片 / 内容面</p>
+            <p class="token__value">--color-paper · #ffffff</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--ink"></div>
+            <p class="token__name">主文字</p>
+            <p class="token__value">--color-ink · #1d1d1f</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--ink-muted"></div>
+            <p class="token__name">次级文字</p>
+            <p class="token__value">--color-ink-muted · #58585e</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--ink-subtle"></div>
+            <p class="token__name">辅助文字</p>
+            <p class="token__value">--color-ink-subtle · #6f6f76</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--hairline"></div>
+            <p class="token__name">细线</p>
+            <p class="token__value">--color-hairline · #d2d2d7</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--accent"></div>
+            <p class="token__name">强调色</p>
+            <p class="token__value">--color-accent · #0071e3</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--accent-strong"></div>
+            <p class="token__name">浅底上的链接</p>
+            <p class="token__value">--color-accent-strong · #0066cc</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--accent-text"></div>
+            <p class="token__name">深底上的链接</p>
+            <p class="token__value">--color-accent-text · #2997ff</p>
+          </div>
+        </div>
+        <ul class="rule-list">
+          <li>主文字与画布的对比度 ≥ 7:1，次级文字 ≥ 4.5:1。</li>
+          <li>不在强调色上再叠加浅色文字，强调色按钮统一用白字。</li>
+          <li>文字形式的链接按底色分两档：浅底用 <code>--color-accent-strong</code>，深色英雄区用 <code>--color-accent-text</code>，两者在各自底色上都 ≥ 4.5:1。</li>
+          <li>状态用文字 + 6px 圆点表达：正常为绿，进行中为琥珀，临期为橙，失败为玫红，AI 处理为紫，关闭为灰。</li>
+        </ul>
+      </div>
+
+      <div class="doc__section u-mt-8">
+        <p class="doc__label">01b · Color extension</p>
+        <h2 id="d-hueTitle">色相：只表意，不表交互</h2>
+        <p>v1.0 的克制是对的，但全灰的画面无法让人在十秒内分辨「这是哪类素材、这条数据在说什么」。v1.1 补入七组色相，只允许出现在三处：影像与插画、数据可视化、内容分类与状态。蓝色仍是唯一的交互信号，任何一个色相都不得用来画按钮描边或可点击文字，否则客户会误判哪里能点。</p>
+        <div class="table-wrap">
+          <table class="table table--compact hue-table">
+            <thead>
+              <tr>
+                <th scope="col">色相</th>
+                <th scope="col">Token</th>
+                <th scope="col">唯一含义</th>
+                <th scope="col">出现位置</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="hue-dot" style="background: var(--hue-blue)"></span>蓝</td>
+                <td><code>--hue-blue</code> · #0071e3</td>
+                <td>可交互 / 主品牌</td>
+                <td>主按钮、链接、当前导航、进度</td>
+              </tr>
+              <tr>
+                <td><span class="hue-dot" style="background: var(--hue-teal)"></span>青</td>
+                <td><code>--hue-teal</code> · #0d9aa8</td>
+                <td>影像与水域场景</td>
+                <td>上传转码、水产与乡村题材、影像带</td>
+              </tr>
+              <tr>
+                <td><span class="hue-dot" style="background: var(--hue-green)"></span>绿</td>
+                <td><code>--hue-green</code> · #2fa84f</td>
+                <td>通过 / 可售</td>
+                <td>审核通过、已授权、可商用</td>
+              </tr>
+              <tr>
+                <td><span class="hue-dot" style="background: var(--hue-amber)"></span>琥珀</td>
+                <td><code>--hue-amber</code> · #d98600</td>
+                <td>待处理</td>
+                <td>转码中、待审核、待付款</td>
+              </tr>
+              <tr>
+                <td><span class="hue-dot" style="background: var(--hue-orange)"></span>橙</td>
+                <td><code>--hue-orange</code> · #e2591f</td>
+                <td>临期 / 需跟进</td>
+                <td>授权临期、待续费、退款</td>
+              </tr>
+              <tr>
+                <td><span class="hue-dot" style="background: var(--hue-pink)"></span>玫红</td>
+                <td><code>--hue-pink</code> · #d6336c</td>
+                <td>新闻与节庆</td>
+                <td>新闻类目、龙舟与民俗素材</td>
+              </tr>
+              <tr>
+                <td><span class="hue-dot" style="background: var(--hue-violet)"></span>紫</td>
+                <td><code>--hue-violet</code> · #6b4ee6</td>
+                <td>AI 能力</td>
+                <td>AI 预填、智能标签、智能体入口</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="doc__note">每组色相配四档：<code>-soft</code> 用于标签底、<code>-wash</code> 用于整块留白、<code>-ink</code> 用于小字、原色用于圆点与图形。渐变只在影像占位与 AI 标识上使用，不用于按钮。</p>
+        <div class="grad-grid">
+          <div class="grad grad--brand"><span>--grad-brand</span></div>
+          <div class="grad grad--dusk"><span>--grad-dusk</span></div>
+          <div class="grad grad--sea"><span>--grad-sea</span></div>
+          <div class="grad grad--ember"><span>--grad-ember</span></div>
+          <div class="grad grad--ai"><span>--grad-ai</span></div>
+        </div>
+        <ul class="rule-list">
+          <li>一个色相只背一个含义，跨页面复用，不按页面重新分配。</li>
+          <li>色相不进入文字层级：正文永远是四级中性色，颜色只出现在圆点、标签底、图形与图表。</li>
+          <li>同一屏内不出现三种以上色相，避免变成彩色货架。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--canvas" aria-labelledby="d-typeTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">02 · Typography</p>
+        <h2 id="d-typeTitle">字号与字重</h2>
+        <p>标题用苹方 / 系统黑体，正文用同一字体族以保证中文断行稳定。字重最多三级：400、600、700。</p>
+        <div class="u-mt-4">
+          <div class="type-row">
+            <p class="type-row__meta">Hero · 56px · 700<br>仅总览页使用一次</p>
+            <p class="type-row__sample u-display" style="font-size:var(--text-hero);line-height:var(--leading-hero);letter-spacing:var(--tracking-hero);font-weight:700">找得到，读得懂。</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta">H1 · 40px · 700<br>页面唯一主标题</p>
+            <p class="type-row__sample u-display" style="font-size:var(--text-h1);line-height:var(--leading-display);font-weight:700">素材库</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta">H2 · 28px · 600<br>区块标题</p>
+            <p class="type-row__sample u-display" style="font-size:var(--text-h2);line-height:var(--leading-display);font-weight:600">区块标题</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta">H3 · 21px · 600<br>卡片与面板标题</p>
+            <p class="type-row__sample u-display" style="font-size:var(--text-h3);line-height:var(--leading-display);font-weight:600">卡片标题</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta">正文 · 17px · 400<br>说明与段落</p>
+            <p class="type-row__sample" style="font-size:var(--text-body);line-height:var(--leading-body)">素材库支持关键词、类型、分类与可见范围组合检索。</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta">说明 · 14px · 400 / 600<br>表格、按钮、元数据</p>
+            <p class="type-row__sample" style="font-size:var(--text-caption);line-height:var(--leading-body)">陈晓 · 系统管理员 · 2026-04-18 上传</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta">辅助 · 12px · 400<br>最小字号，用于标注</p>
+            <p class="type-row__sample u-subtle" style="font-size:var(--text-micro);line-height:var(--leading-body)">4K 原片 · 5472×3648 · 486MB</p>
+          </div>
+        </div>
+        <ul class="rule-list">
+          <li>正文不小于 12px；一屏内不超过三级字号跳跃。</li>
+          <li>中文不使用斜体与字间距过大的大写样式。</li>
+          <li>数字用等宽数字（<span class="u-mono">font-variant-numeric: tabular-nums</span>），保证表格对齐。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--paper" aria-labelledby="d-spaceTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">03 · Space &amp; Shape</p>
+        <h2 id="d-spaceTitle">间距与形状</h2>
+        <p>间距只有八级，全部来自 4px 基准。区块之间 64px，面板内 24px，控件之间 12–16px。</p>
+        <div class="space-row">
+          <div class="space-item"><i style="width:var(--space-1)"></i><span>4</span></div>
+          <div class="space-item"><i style="width:var(--space-2)"></i><span>8</span></div>
+          <div class="space-item"><i style="width:var(--space-3)"></i><span>12</span></div>
+          <div class="space-item"><i style="width:var(--space-4)"></i><span>16</span></div>
+          <div class="space-item"><i style="width:var(--space-5)"></i><span>24</span></div>
+          <div class="space-item"><i style="width:var(--space-6)"></i><span>32</span></div>
+          <div class="space-item"><i style="width:var(--space-7)"></i><span>48</span></div>
+          <div class="space-item"><i style="width:var(--space-8)"></i><span>64</span></div>
+          <div class="space-item"><i style="width:var(--space-9)"></i><span>80</span></div>
+        </div>
+        <div class="demo-row">
+          <span class="chip">圆角 8 · 卡片与输入</span>
+          <span class="chip">圆角 11 · 面板与抽屉</span>
+          <span class="chip">胶囊 980 · 筛选与标签</span>
+        </div>
+        <ul class="rule-list">
+          <li>内容列最大 980px；多列网格最大 1200px；页面左右留白 24px。</li>
+          <li>顶部导航 44px，后台侧栏 200px，详情抽屉 320px。</li>
+          <li>卡片、面板、表格一律不加边框，靠背景与留白区分。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--canvas" aria-labelledby="d-compTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">04 · Components</p>
+        <h2 id="d-compTitle">组件与状态</h2>
+        <p>每个组件至少定义默认、悬停、聚焦、禁用与选中五种状态。以下为关键状态示意。</p>
+
+        <div class="demo-block">
+          <p class="u-micro u-subtle">按钮 · 主操作只有一个</p>
+          <div class="demo-row">
+            <button class="btn btn--primary" type="button">生成链接</button>
+            <button class="btn btn--text" type="button">次要操作</button>
+            <button class="btn btn--quiet" type="button">安静操作</button>
+            <button class="btn btn--danger" type="button">删除素材</button>
+            <button class="btn btn--primary" type="button" disabled>禁用</button>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <p class="u-micro u-subtle">筛选与状态</p>
+          <div class="demo-row">
+            <span class="chip is-active">全部</span>
+            <span class="chip">视频</span>
+            <span class="chip">图片</span>
+            <span class="status">已发布</span>
+            <span class="status status--off">已下架</span>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <p class="u-micro u-subtle">表单与选项</p>
+          <div class="demo-row" style="align-items:flex-start">
+            <label class="field" style="min-width:240px">
+              <span>授权范围</span>
+              <select><option>单次商用 · 4K 原片</option><option>多平台商用 · 一年期</option></select>
+            </label>
+            <label class="field" style="min-width:240px">
+              <span>访问上限</span>
+              <input type="text" value="50">
+              <span class="field-hint">超过上限后链接自动失效。</span>
+            </label>
+          </div>
+          <div class="option-list u-mt-3">
+            <button class="option is-selected" type="button" aria-pressed="true">
+              <span class="option__body"><span class="option__title">单次商用 · 4K 原片</span><span class="option__desc">单一平台使用一次</span></span>
+              <span class="option__price">¥480</span>
+            </button>
+            <button class="option" type="button" aria-pressed="false">
+              <span class="option__body"><span class="option__title">多平台商用 · 一年期</span><span class="option__desc">不限平台与次数</span></span>
+              <span class="option__price">¥1,280</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <p class="u-micro u-subtle">空状态 · 不使用图标或插画</p>
+          <div class="empty">
+            <p class="empty__title">没有符合条件的素材</p>
+            <p class="empty__text">试着减少筛选条件，或换一个关键词。</p>
+            <button class="btn btn--text" type="button">清除筛选</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--paper" aria-labelledby="d-motionTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">05 · Motion</p>
+        <h2 id="d-motionTitle">动效与反馈</h2>
+        <p>动效只用于解释状态变化，不用于装饰。所有过渡 120–200ms，统一缓动曲线。</p>
+        <ul class="rule-list">
+          <li>抽屉从右侧滑入 200ms，遮罩同步淡入；关闭后焦点回到触发按钮。</li>
+          <li>批量操作条从底部升起 200ms，选中数量变化即时刷新。</li>
+          <li>悬停只改变文字颜色或背景，不做缩放与旋转。</li>
+          <li>系统开启「减少动态效果」时，所有过渡降为 0.01ms。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--canvas" aria-labelledby="a11yTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">06 · Accessibility</p>
+        <h2 id="a11yTitle">可访问性与响应式</h2>
+        <ul class="rule-list">
+          <li>所有可交互元素可用键盘到达，焦点环 2px 强调色，不做 outline: none。</li>
+          <li>对比度：主文字 15.4:1、次级文字 6.7:1、辅助文字 4.6:1（画布上均 ≥ 4.5:1，AA 达标）。</li>
+          <li>强调蓝在画布上为 4.3:1，按规范只用于可交互文本与选中态，不用于正文段落。</li>
+          <li>点击区域不小于 44×44px；图标按钮必须有中文 aria-label。</li>
+          <li>图片有 alt：装饰性为空，内容性描述画面与地点。</li>
+          <li>表格使用 th scope，展开行同步 aria-expanded。</li>
+          <li>900px 以下后台侧栏折为顶部横条，640px 以下全部单列。</li>
+          <li>320px 宽度下不出现横向滚动；表格可横向滚动但页面不滚动。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--paper" aria-labelledby="d-banTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">07 · Avoid</p>
+        <h2 id="d-banTitle">禁用清单</h2>
+        <div class="grid-2 u-mt-4">
+          <ul class="rule-list">
+            <li>不用阴影制造层级，只有抽屉、浮层与提示条例外。</li>
+            <li>不用彩色渐变、玻璃拟态卡片或装饰性插画。</li>
+            <li>不用 emoji、图标或插画填充空状态。</li>
+            <li>不给卡片、按钮、输入框、筛选标签加边框。</li>
+          </ul>
+          <ul class="rule-list">
+            <li>不用彩色胶囊表示状态，改用文字加圆点。</li>
+            <li>不把强调色用于装饰、标题或大面积背景。</li>
+            <li>不使用纯黑 #000 作为文字颜色。</li>
+            <li>不在同一屏堆叠超过三级字号与两种强调色。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--canvas" aria-labelledby="d-shellTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">08 · Shell &amp; Routing</p>
+        <h2 id="d-shellTitle">一个外壳，十二个视图</h2>
+        <p>前版把每屏做成独立 HTML，客户需要在十一个标签页之间来回点，看到的是十一个碎片。v1.1 收成一个单页应用：顶部外壳固定不动，只有下面的内容区在换。任何一个视图都能直接分享，浏览器前进后退照常可用，刷新不会丢失位置。客户打开销售链接的 <code>#/link</code> 是唯一例外：它模拟客户在微信里点开的那一页，不使用内部导航。</p>
+        <div class="table-wrap">
+          <table class="table table--compact">
+            <thead>
+              <tr>
+                <th scope="col">地址</th>
+                <th scope="col">视图</th>
+                <th scope="col">客户用它确认什么</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>#/overview</code></td><td>总览</td><td>系统边界与八个子系统的关系</td></tr>
+              <tr><td><code>#/library</code></td><td>素材库</td><td>检索、筛选、详情抽屉、批量操作</td></tr>
+              <tr><td><code>#/upload</code></td><td>上传与元数据治理</td><td>批量入库、AI 预填、审核队列</td></tr>
+              <tr><td><code>#/sales</code></td><td>销售链接</td><td>链接配置、有效期、访问上限与成交</td></tr>
+              <tr><td><code>#/buy</code></td><td>客户端</td><td>客户看到的素材商店、价格与授权范围</td></tr>
+              <tr><td><code>#/link</code></td><td>客户销售链接页</td><td>客户点开链接后的预览、授权与支付（无内部导航）</td></tr>
+              <tr><td><code>#/stats</code></td><td>数据看板</td><td>指标口径与漏斗</td></tr>
+              <tr><td><code>#/admin</code></td><td>后台</td><td>账号、角色、权限矩阵、审计日志</td></tr>
+              <tr><td><code>#/login</code></td><td>登录</td><td>身份与安全策略</td></tr>
+              <tr><td><code>#/agent</code></td><td>AI智能体整合</td><td>工具在真实对话里怎么被调用</td></tr>
+              <tr><td><code>#/mcp</code></td><td>智能体接口规范</td><td>对外暴露的五个工具与字段</td></tr>
+              <tr><td><code>#/design</code></td><td>设计规范</td><td>本页：数值与规则</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="rule-list">
+          <li>切屏时内容区做 10px 上移淡入，250ms；开启「减少动态效果」时不播放。</li>
+          <li>当前所在的导航项使用深色底 + <code>aria-current="page"</code>，颜色不参与标识。</li>
+          <li>锚点链接写成 <code>#/admin</code> 加 <code>data-goto</code>，例如把「权限矩阵」这一条直接发给客户，打开就停在矩阵那一屏。</li>
+          <li>总览使用深色英雄区，进入总览以外的任意视图时外壳自动回到浅色，不出现两套导航。</li>
+          <li><code>#/link</code> 不显示外壳导航与登录态，只保留右上角「返回原型 · 销售链接」作为唯一出口；客户不会用内部导航找到它。</li>
+          <li>上传与元数据治理不占顶部导航，入口放在后台管理的侧栏；<code>#/upload</code> 仍可直接访问与分享。</li>
+          <li>客户页与销售链接必须共用同一组事实：链接编号 SL-260418-07、有效期 2026-04-25、访问 12 / 50、素材 DM-20260412-0031，漏斗仍是 1,284 / 986 / 512 / 176。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--paper" aria-labelledby="d-demoTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">09 · Agent demo</p>
+        <h2 id="d-demoTitle">AI智能体整合：在真实界面上演两遍</h2>
+        <p>接口规范只能回答「有哪些工具」，回答不了「它能帮我干什么」。所以 <code>#/agent</code> 用一张真实的对话产品截图作底，把光圈AI 的工具调用叠在对话里，用播放器把完整任务从提问走到交付。客户看到的不是示意图，而是工具在一次真实对话中的位置。两个场景对应需求书 5.2 的两条验收基准：运营岗的素材任务、管理岗的上传统计。</p>
+        <div class="table-wrap">
+          <table class="table table--compact">
+            <thead>
+              <tr>
+                <th scope="col">场景</th>
+                <th scope="col">角色与提问</th>
+                <th scope="col">调用的工具链</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>A · 招商运营</td><td>运营岗：把一条素材做成短视频，并给授权链接与投放清单</td><td><code>search_assets</code> → <code>get_asset_metadata</code> → <code>generate_sales_link</code> → <code>export_to_excel</code></td></tr>
+              <tr><td>B · 管理决策</td><td>管理岗：统计 2026 Q3 上传情况，并按素材所有者分类</td><td><code>aggregate_uploads</code> → <code>list_collections</code> → <code>export_to_excel</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap u-mt-4">
+          <table class="table table--compact">
+            <thead>
+              <tr>
+                <th scope="col">层</th>
+                <th scope="col">内容</th>
+                <th scope="col">规则</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>底图层</td><td>WorkBuddy 空界面截图 1916 × 966</td><td>等比缩放，不裁切，不重绘；只保留左侧导航与会话区</td></tr>
+              <tr><td>对话层</td><td>场景 A 八步、场景 B 七步，切换即重置</td><td>浮在截图内容区之上，宽度不超出底图气泡区</td></tr>
+              <tr><td>工具层</td><td>每次调用显示工具名、入参摘要、耗时</td><td>工具名用紫，参数用等宽字，耗时用辅助色</td></tr>
+              <tr><td>数据层</td><td>指标卡、走势、条形、洞察卡只在场景 B 出现</td><td>色相只做分类标识；数字用等宽数位，右对齐</td></tr>
+              <tr><td>播放层</td><td>上一步 / 下一步 / 自动播放 / 重播 + 步骤说明</td><td>未在当前步的元素隐藏，不靠滚动交代进度</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="rule-list">
+          <li>两个场景共用同一底板与播放器：切换场景即切工具链，不新开页面，不换视觉语言。</li>
+          <li>每一步停留时，说明必须回答「这一步客户得到了什么」，而不是复述工具名。</li>
+          <li>底图属于客户提供的真实产品，只作演示背景，不修改、不冒充光圈AI 的界面。</li>
+          <li>两段演示同时录成 <code>.webm</code>（1280 × 800，无声循环）与 <code>.gif</code>（640 × 400），放在 <code>assets/media/</code>，可直接进汇报与微信。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="doc__foot">
+    <div class="wrap">
+      <p>光圈AI 设计规范 v1.1 · 与项目需求计划书同步维护 · <a href="#/overview">返回设计总览</a></p>
+    </div>
+  </div>
+</div>
+</section>

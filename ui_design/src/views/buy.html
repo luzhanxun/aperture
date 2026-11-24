@@ -1,0 +1,341 @@
+<section class="view" id="view-buy" data-route="buy" hidden>
+<div class="shop">
+  <header class="shop__top">
+    <a class="shop__brand" href="#/buy">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m14.31 8 5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16 3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"/></svg>
+      <span><strong>光圈AI</strong> 素材商店</span>
+    </a>
+    <label class="shop__search">
+      <svg class="shop__search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" data-shop-search placeholder="搜索题材、地点或编号" aria-label="搜索商店素材">
+    </label>
+    <div class="shop__actions">
+      <a class="shop__cart-link" href="#shopCart" data-goto="shopCart">选购清单 <span data-cart-count>1</span></a>
+      <button class="shop__text" type="button" data-toast="授权记录可在「我的授权」中查看">我的授权</button>
+    </div>
+  </header>
+
+  <section class="shop__hero" aria-labelledby="shopTitle">
+    <div class="shop__hero-copy">
+      <p class="eyebrow">斗门区融媒体中心 · 素材商店</p>
+      <h1 class="shop__title" id="shopTitle">把斗门的画面，<br>授权给你的下一次发布。</h1>
+      <p class="shop__lead">城市影像、农业产业、非遗与活动记录，按用途和分辨率明码标价。选中的素材进入选购清单，支付后立即获得无水印原片与可查的授权凭证。</p>
+      <div class="shop__hero-actions">
+        <a class="btn btn--primary" href="#shelf" data-goto="shelf">开始选素材</a>
+        <a class="btn btn--text" href="#/link">看一条客户销售链接</a>
+      </div>
+      <dl class="shop__facts">
+        <div>
+          <dt>本月授权</dt>
+          <dd>42 笔</dd>
+        </div>
+        <div>
+          <dt>素材均价</dt>
+          <dd>¥462</dd>
+        </div>
+        <div>
+          <dt>授权方式</dt>
+          <dd>3 档</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="shop__hero-media" aria-label="近期上架的斗门影像">
+      <figure class="shop__shot shop__shot--main">
+        <img src="assets/img/river-dusk.svg" alt="黄杨河落日与跨河桥">
+        <figcaption>黄杨河落日 · 城市影像</figcaption>
+      </figure>
+      <figure class="shop__shot">
+        <img src="assets/img/fish-farm.svg" alt="白蕉海鲈养殖鱼塘与网箱航拍">
+        <figcaption>白蕉海鲈 · 农业产业</figcaption>
+      </figure>
+      <figure class="shop__shot">
+        <img src="assets/img/dragon-boat.svg" alt="黄杨河上的龙舟竞渡">
+        <figcaption>龙舟竞渡 · 活动记录</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="shop__notice">
+    <p class="shop__notice-text"><strong>你从销售链接 SL-260418-07 进入</strong><span>斗门区融媒体中心发出 · 有效期至 2026-04-25 · 访问 12 / 50</span></p>
+    <a class="btn btn--text" href="#/link">打开这条链接的客户页</a>
+  </div>
+
+  <section class="shop__catalog" id="shelf" aria-labelledby="shelfTitle">
+    <div class="shop__catalog-head">
+      <div>
+        <p class="eyebrow">Shelf</p>
+        <h2 id="shelfTitle">正在出售</h2>
+        <p class="shop__catalog-sub">价格含授权凭证；原片在支付后开放下载。缩略图均为水印预览。</p>
+      </div>
+      <p class="shop__count"><strong data-shop-count>8</strong> 件可见</p>
+    </div>
+
+    <div class="shop__filters" role="group" aria-label="按素材分类筛选">
+      <button class="chip is-active" type="button" data-shop-filter="all" aria-pressed="true">全部</button>
+      <button class="chip" type="button" data-shop-filter="city" aria-pressed="false">城市影像</button>
+      <button class="chip" type="button" data-shop-filter="agri" aria-pressed="false">农业产业</button>
+      <button class="chip" type="button" data-shop-filter="heritage" aria-pressed="false">非遗民俗</button>
+      <button class="chip" type="button" data-shop-filter="event" aria-pressed="false">活动记录</button>
+    </div>
+
+    <div class="shop__layout">
+      <div>
+        <div class="shelf__grid">
+          <article class="sku" data-sku-card data-cat="city" data-keywords="黄杨河 落日 井岸 城市 风光 李锐 DM-20260412-0031">
+            <div class="sku__media">
+              <img src="assets/img/river-dusk.svg" alt="黄杨河落日与跨河桥">
+              <span class="sku__tag">城市影像</span>
+              <span class="sku__flag">销售链接精选</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">黄杨河落日</h3>
+              <p class="sku__meta">DM-20260412-0031 · 图片 · 4K</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥480</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="DM-20260412-0031" data-title="黄杨河落日" data-price="480" data-license="单次商用 · 4K 原片" aria-label="加入选购清单：黄杨河落日">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sku" data-sku-card data-cat="agri" data-keywords="白蕉 海鲈 产业园 航拍 农业 养殖 陈晓">
+            <div class="sku__media">
+              <img src="assets/img/fish-farm.svg" alt="白蕉海鲈养殖鱼塘与网箱航拍">
+              <span class="sku__tag">农业产业</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">白蕉海鲈产业园航拍</h3>
+              <p class="sku__meta">视频 · 4K · 00:48 · 陈晓</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥560</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="fish-farm" data-title="白蕉海鲈产业园航拍" data-price="560" data-license="单次商用 · 4K 原片" aria-label="加入选购清单：白蕉海鲈产业园航拍">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sku" data-sku-card data-cat="city" data-keywords="黄杨山 云海 晨雾 斗门镇 风光 周敏">
+            <div class="sku__media">
+              <img src="assets/img/mountain-mist.svg" alt="黄杨山云海与山脊">
+              <span class="sku__tag">城市影像</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">黄杨山云海</h3>
+              <p class="sku__meta">图片 · 6000×4000 · 周敏</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥180</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="mountain-mist" data-title="黄杨山云海" data-price="180" data-license="单次商用 · 原图" aria-label="加入选购清单：黄杨山云海">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sku" data-sku-card data-cat="city" data-keywords="斗门旧街 骑楼 修缮 城市更新 林海 视频">
+            <div class="sku__media">
+              <img src="assets/img/old-street.svg" alt="斗门旧街骑楼与行人">
+              <span class="sku__tag">城市影像</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">斗门旧街骑楼修缮</h3>
+              <p class="sku__meta">视频 · 4K · 02:16 · 林海</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥680</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="old-street" data-title="斗门旧街骑楼修缮" data-price="680" data-license="单次商用 · 4K 原片" aria-label="加入选购清单：斗门旧街骑楼修缮">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sku" data-sku-card data-cat="event" data-keywords="龙舟 竞渡 黄杨河 端午 体育 陈晓 视频">
+            <div class="sku__media">
+              <img src="assets/img/dragon-boat.svg" alt="黄杨河上的龙舟竞渡">
+              <span class="sku__tag">活动记录</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">黄杨河龙舟竞渡</h3>
+              <p class="sku__meta">视频 · 4K · 01:32 · 陈晓</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥480</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="dragon-boat" data-title="黄杨河龙舟竞渡" data-price="480" data-license="单次商用 · 4K 原片" aria-label="加入选购清单：黄杨河龙舟竞渡">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sku" data-sku-card data-cat="agri" data-keywords="莲洲 春耕 稻田 农人 乡村 周敏 图片">
+            <div class="sku__media">
+              <img src="assets/img/rice-field.svg" alt="莲洲镇稻田与劳作的农人">
+              <span class="sku__tag">农业产业</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">莲洲春耕</h3>
+              <p class="sku__meta">图片 · 5472×3648 · 周敏</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥160</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="rice-field" data-title="莲洲春耕" data-price="160" data-license="单次商用 · 原图" aria-label="加入选购清单：莲洲春耕">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sku" data-sku-card data-cat="heritage" data-keywords="飘色 巡游 非遗 民俗 斗门镇 林海 图片">
+            <div class="sku__media">
+              <img src="assets/img/puppet-parade.svg" alt="斗门飘色巡游的色台与人群">
+              <span class="sku__tag">非遗民俗</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">斗门飘色巡游</h3>
+              <p class="sku__meta">图片 · 4200×2800 · 林海</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥200</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="puppet-parade" data-title="斗门飘色巡游" data-price="200" data-license="单次商用 · 原图" aria-label="加入选购清单：斗门飘色巡游">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sku" data-sku-card data-cat="city" data-keywords="斗门港 集装箱 码头 港口 产业 李锐 视频">
+            <div class="sku__media">
+              <img src="assets/img/harbor.svg" alt="斗门港集装箱堆场与门式起重机">
+              <span class="sku__tag">城市影像</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">斗门港集装箱码头</h3>
+              <p class="sku__meta">视频 · 4K · 01:04 · 李锐</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥680</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="harbor" data-title="斗门港集装箱码头" data-price="680" data-license="单次商用 · 4K 原片" aria-label="加入选购清单：斗门港集装箱码头">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="shop__empty" id="shopEmpty" hidden>
+          <p class="shop__empty-title">这个筛选下暂时没有素材</p>
+          <p>换一个分类，或清空搜索词重新看看。</p>
+          <button class="btn btn--text" type="button" data-shop-reset>查看全部素材</button>
+        </div>
+      </div>
+
+      <aside class="cart" id="shopCart" aria-labelledby="cartTitle">
+        <div class="cart__head">
+          <h2 id="cartTitle">选购清单</h2>
+          <span class="status" data-cart-status>1 件</span>
+        </div>
+        <div class="cart__list" id="cartItems"></div>
+        <p class="cart__empty" id="cartEmpty" hidden>清单还是空的。挑一件素材，价格与授权范围会显示在这里。</p>
+        <div class="cart__total">
+          <span>应付合计</span>
+          <strong id="cartTotal">¥480</strong>
+        </div>
+        <a class="btn btn--primary btn--block" href="#shopCheckout" data-goto="shopCheckout">去结算</a>
+        <p class="cart__note">清单内为单次商用授权。需要多平台或一年期，请联系中心素材管理员调整订单。</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="checkout" id="shopCheckout" aria-labelledby="checkoutTitle">
+    <div class="checkout__main">
+      <p class="eyebrow">Checkout</p>
+      <h2 id="checkoutTitle">确认授权与支付</h2>
+      <ol class="checkout__steps">
+        <li class="is-done">01 清单</li>
+        <li class="is-current">02 主体</li>
+        <li>03 支付</li>
+        <li>04 授权</li>
+      </ol>
+
+      <div class="checkout__summary">
+        <h3>订单内容</h3>
+        <div id="checkoutItems"></div>
+        <dl class="checkout__facts">
+          <div>
+            <dt>授权范围</dt>
+            <dd>单次商用 · 单一平台 · 无水印原片</dd>
+          </div>
+          <div>
+            <dt>授权期限</dt>
+            <dd>与所购素材绑定，凭证长期可查</dd>
+          </div>
+          <div>
+            <dt>交付方式</dt>
+            <dd>支付后开放下载，同一订单最多 5 次</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="field">
+        <span>使用主体</span>
+        <input type="text" value="斗门区文化和旅游发展有限公司" aria-label="使用主体">
+        <p class="field-hint">授权凭证将以此主体开具，请与实际使用方一致。</p>
+      </div>
+
+      <div class="checkout__total">
+        <span>应付合计</span>
+        <strong id="checkoutTotal">¥480</strong>
+      </div>
+
+      <button class="btn btn--primary btn--block" type="button" data-shop-buy>支付并获取授权</button>
+      <p class="checkout__note">支付方式：微信支付 · 对公转账（企业客户）。点击支付即表示同意《素材授权使用协议》。</p>
+    </div>
+
+    <aside class="checkout__aside">
+      <h3>支付后你会得到</h3>
+      <ul class="rule-list">
+        <li>无水印原片下载入口，按订单授权范围开放。</li>
+        <li>一条可在「我的授权」查阅的电子授权凭证。</li>
+        <li>电子发票，预计 1 个工作日内开具。</li>
+        <li>下载与凭证查看记录写入审计日志。</li>
+      </ul>
+      <h3 class="checkout__aside-title">对公转账</h3>
+      <p class="checkout__aside-text">企业客户可先提交订单，由中心财务确认到账后开通下载。合同与发票由财务统一寄送。</p>
+    </aside>
+  </section>
+
+  <section class="checkout checkout--done" id="shopSuccess" tabindex="-1" aria-labelledby="shopDoneTitle" hidden>
+    <div class="checkout__done">
+      <div>
+        <p class="eyebrow">Payment complete</p>
+        <h2 id="shopDoneTitle">授权已开通</h2>
+        <p class="checkout__done-lead">订单 DM2604180037 已完成。无水印原片下载权限已开放，授权范围与期限以凭证为准。</p>
+        <div class="done__items" id="shopSuccessItems"></div>
+        <dl class="done__facts">
+          <div>
+            <dt>主素材授权编号</dt>
+            <dd>AU-2026-0418-037</dd>
+          </div>
+          <div>
+            <dt>使用主体</dt>
+            <dd>斗门区文化和旅游发展有限公司</dd>
+          </div>
+          <div>
+            <dt>订单合计</dt>
+            <dd id="shopSuccessTotal">¥480</dd>
+          </div>
+          <div>
+            <dt>票据状态</dt>
+            <dd>电子发票开具中，预计 1 个工作日</dd>
+          </div>
+        </dl>
+        <div class="u-row u-mt-4">
+          <button class="btn btn--primary" type="button" data-toast="开始下载无水印原片">下载无水印原片</button>
+          <button class="btn btn--text" type="button" data-toast="授权凭证已生成 PDF">查看授权凭证</button>
+          <a class="btn btn--text" href="#shelf" data-goto="shelf">继续选购</a>
+        </div>
+      </div>
+      <aside class="checkout__aside">
+        <h3>凭证说明</h3>
+        <ul class="rule-list">
+          <li>授权编号与订单号一一对应，可在「我的授权」下载 PDF。</li>
+          <li>同一订单最多下载 5 次，超过后需联系素材管理员。</li>
+          <li>链接失效不影响已成交订单的授权与下载。</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <p class="foot-note">客户端页面原型：浏览、筛选、加入选购清单到支付下载的完整链路。价格取自现有定价表与销售订单，条款为示意。</p>
+</div>
+</section>

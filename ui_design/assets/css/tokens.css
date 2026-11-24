@@ -1,0 +1,125 @@
+/* 光圈AI · 设计令牌（唯一来源，规则中不得硬编码原始值）
+   v1.1 色彩扩展：在 v1.0 的中性色 + 单一强调蓝之上，增加 7 组可命名色相。
+   色相只用于「有含义」的位置——影像、数据可视化、类型分类、AI 标识；
+   交互色仍然只有强调蓝。中性色与排版规则不变。 */
+:root {
+  --color-canvas: #f5f5f7;
+  --color-paper: #ffffff;
+  --color-ink: #1d1d1f;
+  /* Greys tuned so every tier clears 4.5:1 on canvas (#f5f5f7) as well as paper. */
+  --color-ink-muted: #58585e;
+  --color-ink-subtle: #6f6f76;
+  --color-ink-inverse: #f5f5f7;
+  --color-accent: #0071e3;
+  --color-accent-hover: #0066cc;
+  /* accent-strong is the text-safe tint: 5.0:1 on canvas, 5.5:1 on paper. */
+  --color-accent-strong: #0066cc;
+  --color-accent-text: #2997ff;
+  --color-surface-elevated: #fafafc;
+  --color-hairline: #d2d2d7;
+  --color-hairline-soft: rgba(0, 0, 0, 0.08);
+  --color-nav-glass: rgba(0, 0, 0, 0.8);
+  --color-focus-ring: #0071e3;
+
+  /* 色相 · 蓝（品牌 / 主链路） */
+  --hue-blue: #0071e3;
+  --hue-blue-soft: #e8f1ff;
+  --hue-blue-ink: #0059b3;
+  --hue-blue-wash: #f2f7ff;
+  /* 色相 · 青（水系 / 素材） */
+  --hue-teal: #0d9aa8;
+  --hue-teal-soft: #e2f6f8;
+  --hue-teal-ink: #0a7883;
+  --hue-teal-wash: #effbfc;
+  /* 色相 · 绿（可用 / 通过） */
+  --hue-green: #2fa84f;
+  --hue-green-soft: #e6f6ea;
+  --hue-green-ink: #1e7d3a;
+  --hue-green-wash: #f1fbf3;
+  /* 色相 · 琥珀（待办 / 提醒） */
+  --hue-amber: #d98600;
+  --hue-amber-soft: #fdf2dd;
+  --hue-amber-ink: #a56500;
+  --hue-amber-wash: #fffaf0;
+  /* 色相 · 橙（销售 / 热度） */
+  --hue-orange: #e2591f;
+  --hue-orange-soft: #fdeee6;
+  --hue-orange-ink: #b8420f;
+  --hue-orange-wash: #fff6f1;
+  /* 色相 · 洋红（营销 / 节庆） */
+  --hue-pink: #d6336c;
+  --hue-pink-soft: #fdeaf1;
+  --hue-pink-ink: #ad2457;
+  --hue-pink-wash: #fff5f8;
+  /* 色相 · 紫（AI / 智能体） */
+  --hue-violet: #6b4ee6;
+  --hue-violet-soft: #efebfe;
+  --hue-violet-ink: #5138c4;
+  --hue-violet-wash: #f6f4ff;
+
+  /* 渐变 */
+  --grad-brand: linear-gradient(135deg, #0071e3 0%, #6b4ee6 100%);
+  --grad-dusk: linear-gradient(150deg, #2b1b3d 0%, #6c5ce7 40%, #e8556d 74%, #f2762e 100%);
+  --grad-sea: linear-gradient(155deg, #0b3d5c 0%, #0d9aa8 58%, #74dfd2 100%);
+  --grad-ember: linear-gradient(150deg, #b8420f 0%, #e2591f 48%, #f2b233 100%);
+  --grad-ai: linear-gradient(135deg, #5138c4 0%, #6b4ee6 50%, #0d9aa8 100%);
+
+  --font-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --font-text: "SF Pro Text", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --text-hero: 56px;
+  --text-h1: 40px;
+  --text-h2: 28px;
+  --text-h3: 21px;
+  --text-body: 17px;
+  --text-caption: 14px;
+  --text-micro: 12px;
+
+  --tracking-hero: -1.44px;
+  --tracking-display: -0.8px;
+  --tracking-text: -0.2px;
+  --leading-hero: 1.07;
+  --leading-display: 1.14;
+  --leading-body: 1.47;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 40px;
+  --space-8: 48px;
+  --space-9: 64px;
+  --space-10: 80px;
+
+  --radius-sm: 8px;
+  --radius-md: 11px;
+  --radius-lg: 18px;
+  --radius-pill: 980px;
+
+  --shadow-float: rgba(0, 0, 0, 0.22) 3px 5px 30px 0px;
+  --shadow-lift: 0 18px 44px -22px rgba(0, 0, 0, 0.35);
+  --nav-backdrop: saturate(180%) blur(20px);
+  --shell-h: 52px;
+
+  --ease-apple: cubic-bezier(0.4, 0, 0.6, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 160ms;
+  --duration-base: 320ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Kill travel and looping, keep colour/opacity feedback readable. */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-property: color, background-color, border-color, box-shadow, opacity !important;
+    transition-duration: 120ms !important;
+    scroll-behavior: auto !important;
+  }
+}

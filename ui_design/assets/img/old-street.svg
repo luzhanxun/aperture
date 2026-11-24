@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="黄昏时分的斗门旧街骑楼">
+<defs>
+<linearGradient id="oldStreet-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22304F"/><stop offset=".42" stop-color="#6B4B6B"/><stop offset=".72" stop-color="#D9764E"/><stop offset="1" stop-color="#F2A65A"/></linearGradient>
+<radialGradient id="oldStreet-glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFD9A0" stop-opacity=".9"/><stop offset="1" stop-color="#FFD9A0" stop-opacity="0"/></radialGradient>
+<radialGradient id="oldStreet-vignette" cx=".5" cy=".5" r=".7"><stop offset=".52" stop-color="#1A1424" stop-opacity="0"/><stop offset="1" stop-color="#1A1424" stop-opacity=".72"/></radialGradient>
+</defs>
+<rect width="800" height="600" fill="url(#oldStreet-sky)"/>
+<circle cx="400" cy="172" r="240" fill="url(#oldStreet-glow)" opacity=".6"/>
+<path fill="#222B45" d="M0 206V152h38v22h34v-32h52v30h30v-18h56v26h28v-14h48v34h34v-26h44v22h40v-12h56v30h38v-20h46v26h44v-16h42v34h40v-22h46v26h36v-32h44v40h52v92H0z"/>
+<path fill="#2A2033" d="M0 600L310 206H490L800 600Z"/>
+<path fill="#8A4532" d="M0 0h310v206H0z"/>
+<path fill="#74392A" d="M800 0H490v206h310z"/>
+<path stroke="#E0A458" stroke-width="9" fill="none" d="M0 -2L310 172M0 112L310 198M0 206L310 216M800 -2L490 172M800 112L490 198M800 206L490 216"/>
+<path fill="#2F6F62" d="M0 22L310 176v26L0 128zM0 150L310 208v8L0 206z"/>
+<path fill="#275C50" d="M800 22L490 176v26L800 128zM800 150L490 208v8L800 206z"/>
+<path stroke="#E0A458" stroke-width="3" opacity=".8" fill="none" d="M30 40v70M80 64v66M130 89v60M180 113v54M230 138v48M280 162v42M770 40v70M720 64v66M670 89v60M620 113v54M570 138v48M520 162v42M110 178v22M180 186v16M250 194v10M690 178v22M620 186v16M550 194v10"/>
+<path fill="#5B2C22" opacity=".9" d="M0 274L310 248v-22L0 224z"/>
+<path fill="#4A241D" opacity=".9" d="M800 274L490 248v-22L800 224z"/>
+<path fill="#E0A458" d="M0 224L310 226v22L0 274z"/>
+<path fill="#C98A4A" d="M800 224L490 226v22L800 274z"/>
+<path stroke="#7A3B2A" stroke-width="3" fill="none" d="M0 246L310 248M800 246L490 248"/>
+<path fill="#6B3527" d="M12 470V302h78l6 174zM108 470V318h66l8 160zM192 470V334h58l8 146z"/>
+<path fill="#5A2D21" d="M788 470V302h-78l-6 174zM692 470V318h-66l-8 160zM608 470V334h-58l-8 146z"/>
+<g fill="url(#oldStreet-glow)" opacity=".55"><ellipse cx="52" cy="400" rx="34" ry="42"/><ellipse cx="146" cy="408" rx="28" ry="36"/><ellipse cx="224" cy="416" rx="24" ry="30"/><ellipse cx="748" cy="400" rx="34" ry="42"/><ellipse cx="654" cy="408" rx="28" ry="36"/></g>
+<path fill="#B4573B" d="M0 478V278l14 4v200zM92 478V300l16 4v178zM178 478V318l14 4v158zM256 478V334l12 4v142z"/>
+<path fill="#9C4A33" d="M800 478V278l-14 4v200zM708 478V300l-16 4v178zM622 478V318l-14 4v158zM544 478V334l-12 4v142z"/>
+<ellipse cx="400" cy="540" rx="156" ry="48" fill="#C9784A" opacity=".22"/>
+<path stroke="#3E2C44" stroke-width="2" fill="none" opacity=".8" d="M400 206L330 600M400 206L200 600M400 206L470 600M400 206L610 600M330 330H470M300 420H500M270 510H530"/>
+<path stroke="#E8B27A" stroke-width="3" fill="none" opacity=".38" d="M338 556h42M418 542h56M356 582h64M470 566h38"/>
+<circle cx="110" cy="450" r="58" fill="url(#oldStreet-glow)" opacity=".55"/>
+<path stroke="#3A1B1E" stroke-width="2" d="M110 414v14"/>
+<ellipse cx="110" cy="450" rx="15" ry="19" fill="#D7263D"/>
+<ellipse cx="110" cy="450" rx="8" ry="18" fill="#E8434F" opacity=".6"/>
+<path stroke="#F2B233" stroke-width="3" d="M104 431h12M104 469h12"/>
+<circle cx="196" cy="460" r="44" fill="url(#oldStreet-glow)" opacity=".45"/>
+<path stroke="#3A1B1E" stroke-width="2" d="M196 432v12"/>
+<ellipse cx="196" cy="460" rx="11" ry="14" fill="#D7263D"/>
+<path stroke="#F2B233" stroke-width="2" d="M191 446h10M191 474h10"/>
+<circle cx="690" cy="450" r="52" fill="url(#oldStreet-glow)" opacity=".5"/>
+<path stroke="#3A1B1E" stroke-width="2" d="M690 414v14"/>
+<ellipse cx="690" cy="450" rx="14" ry="18" fill="#D7263D"/>
+<ellipse cx="690" cy="450" rx="7" ry="17" fill="#E8434F" opacity=".6"/>
+<path stroke="#F2B233" stroke-width="3" d="M684 432h12M684 468h12"/>
+<path stroke="#3A2233" stroke-width="1.6" fill="none" d="M0 92L110 138L220 118L310 160M800 92L690 138L580 118L490 160"/>
+<g fill="#FFD9A0"><circle cx="52" cy="114" r="3"/><circle cx="110" cy="138" r="3"/><circle cx="166" cy="127" r="3"/><circle cx="220" cy="118" r="3"/><circle cx="266" cy="136" r="3"/><circle cx="748" cy="114" r="3"/><circle cx="690" cy="138" r="3"/><circle cx="634" cy="127" r="3"/><circle cx="580" cy="118" r="3"/><circle cx="534" cy="136" r="3"/></g>
+<path fill="#2B1D2A" d="M370 524c-2-28 2-46 6-58 4-10 10-16 16-16s12 6 16 16c4 12 8 30 6 58z"/>
+<circle cx="392" cy="438" r="9" fill="#2B1D2A"/>
+<path fill="#2B1D2A" d="M428 520c-2-24 2-40 6-50 3-9 8-14 13-14s10 5 13 14c4 10 8 26 6 50z"/>
+<circle cx="447" cy="446" r="8" fill="#2B1D2A"/>
+<rect width="800" height="600" fill="url(#oldStreet-vignette)"/>
+</svg>

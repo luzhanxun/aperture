@@ -1,0 +1,102 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="榫欒垷绔炴浮">
+<defs>
+<linearGradient id="dragonBoat-sky" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#7CC6E8"/>
+<stop offset=".55" stop-color="#A9DDF2"/>
+<stop offset="1" stop-color="#EAF7E6"/>
+</linearGradient>
+<radialGradient id="dragonBoat-sunGlow" cx=".5" cy=".5" r=".5">
+<stop offset="0" stop-color="#FFFDF0"/>
+<stop offset=".3" stop-color="#FFE9A8"/>
+<stop offset="1" stop-color="#FFD97A" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="dragonBoat-water" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#33B7A4"/>
+<stop offset=".45" stop-color="#0F766E"/>
+<stop offset="1" stop-color="#0A4F4A"/>
+</linearGradient>
+<linearGradient id="dragonBoat-hull" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#E8455C"/>
+<stop offset="1" stop-color="#A81B33"/>
+</linearGradient>
+<radialGradient id="dragonBoat-vignette" cx=".5" cy=".45" r=".75">
+<stop offset=".55" stop-color="#0A4F4A" stop-opacity="0"/>
+<stop offset="1" stop-color="#06302C" stop-opacity=".5"/>
+</radialGradient>
+</defs>
+<rect width="800" height="600" fill="url(#dragonBoat-sky)"/>
+<circle cx="620" cy="172" r="150" fill="url(#dragonBoat-sunGlow)"/>
+<circle cx="620" cy="172" r="30" fill="#FFF8DC"/>
+<g fill="#FFFFFF" opacity=".6">
+<ellipse cx="180" cy="76" rx="150" ry="12"/>
+<ellipse cx="430" cy="120" rx="200" ry="10"/>
+</g>
+<path d="M0 296c60-12 120-16 200-14 80 2 150 0 230-8 90-10 180-4 250 8 50 8 90 10 120 10v22H0z" fill="#22313F"/>
+<g fill="#22313F">
+<circle cx="52" cy="286" r="6"/><circle cx="84" cy="282" r="6"/><circle cx="118" cy="286" r="6"/><circle cx="152" cy="282" r="6"/>
+<circle cx="286" cy="284" r="6"/><circle cx="340" cy="281" r="6"/>
+<circle cx="506" cy="282" r="6"/>
+<circle cx="688" cy="280" r="6"/><circle cx="724" cy="284" r="6"/><circle cx="760" cy="280" r="6"/>
+</g>
+<g fill="#D7263D">
+<rect x="130" y="252" width="4" height="34"/><path d="M134 254h34l-8 12 8 12h-34z"/>
+<rect x="500" y="246" width="4" height="36"/><path d="M504 248h30l-7 12 7 12h-30z"/>
+</g>
+<g>
+<path d="M118 296c32 8 72 8 102 0l-6 14c-30 6-60 6-90 0z" fill="#123A38"/>
+<path d="M216 294c-6-10 0-18 10-20 8-2 14 4 14 12l10-6-2 12 10 2-12 6c0 6-6 10-14 10-8 0-14-6-16-16z" fill="#D7263D"/>
+</g>
+<rect x="0" y="310" width="800" height="290" fill="url(#dragonBoat-water)"/>
+<g stroke="#7FE3D8" stroke-width="3" opacity=".3" fill="none">
+<path d="M0 350h180M210 350h140M380 350h190M600 350h200M0 400h130M160 400h170M360 400h220M610 400h190M0 470h200M240 470h160M440 470h180M650 470h150"/>
+</g>
+<g stroke="#DFF7F4" stroke-width="2" opacity=".22" fill="none" stroke-linecap="round">
+<path d="M60 520h120M220 545h150M430 530h140M620 560h120M0 585h90M700 500h100"/>
+</g>
+<path d="M96 446c170 40 430 30 606-26l22 34c-190 66-460 76-634 36z" fill="url(#dragonBoat-hull)"/>
+<path d="M100 448c180 38 428 26 600-24" stroke="#F2B233" stroke-width="5" fill="none"/>
+<path d="M118 486c190 24 420 14 590-30l6 12c-180 50-420 60-600 32z" fill="#7A1026" opacity=".85"/>
+<path d="M694 424c-2-20 6-36 24-42 16-5 30 3 34 18l14-8-2 18 18 6-20 10c0 12-10 20-24 20-14 0-30-8-44-22z" fill="#D7263D"/>
+<path d="M730 376l-2-24 20 16z" fill="#F2B233"/>
+<path d="M704 402c12-6 24-6 34 0l-4 8c-8-4-18-4-26 0z" fill="#F2B233"/>
+<circle cx="742" cy="392" r="5" fill="#FFF8EC"/>
+<circle cx="743" cy="392" r="2.5" fill="#22313F"/>
+<path d="M758 408c14 8 22 18 24 32" stroke="#F2B233" stroke-width="3" fill="none"/>
+<path d="M736 416l4 8 6-4M724 420l2 8 6-6" fill="#FFF8EC"/>
+<path d="M96 446c-18-2-32-14-36-30 14 8 28 10 42 8z" fill="#D7263D"/>
+<path d="M62 418c10 8 22 12 36 10l-2 8c-14 2-26-2-36-10z" fill="#F2B233"/>
+<g>
+<g fill="#22313F">
+<circle cx="200" cy="418" r="7"/><circle cx="262" cy="416" r="7"/><circle cx="322" cy="414" r="7"/><circle cx="382" cy="412" r="7"/><circle cx="442" cy="410" r="7"/><circle cx="502" cy="408" r="7"/><circle cx="562" cy="406" r="7"/><circle cx="620" cy="404" r="7"/>
+</g>
+<g fill="#D7263D">
+<path d="M191 448l4-26h10l4 26z"/><path d="M253 446l4-26h10l4 26z"/><path d="M313 444l4-26h10l4 26z"/><path d="M373 442l4-26h10l4 26z"/><path d="M433 440l4-26h10l4 26z"/><path d="M493 438l4-26h10l4 26z"/><path d="M553 436l4-26h10l4 26z"/><path d="M611 434l4-26h10l4 26z"/>
+</g>
+<g stroke="#5B3A2B" stroke-width="3" fill="none" stroke-linecap="round">
+<path d="M206 424L168 462M268 422L230 460M328 420L290 458M388 418L350 456M448 416L410 454M508 414L470 452M568 412L530 450M626 410L588 448"/>
+</g>
+<path d="M164 466h2M226 464h2M286 462h2M346 460h2M406 458h2M466 456h2M526 454h2M584 452h2" stroke="#DFF7F4" stroke-width="6" opacity=".6" stroke-linecap="round"/>
+<path d="M156 472q12-10 26-6M268 468q12-10 26-6M380 464q12-10 26-6M492 460q12-10 26-6M604 456q12-10 26-6" stroke="#EAFBF8" stroke-width="3" fill="none" opacity=".85" stroke-linecap="round"/>
+</g>
+<g>
+<circle cx="664" cy="380" r="7" fill="#22313F"/>
+<path d="M655 424l4-38h10l4 38z" fill="#F2B233"/>
+<path d="M664 390l-14-14M664 390l14-14" stroke="#22313F" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="676" cy="424" rx="20" ry="10" fill="#F2B233"/>
+<ellipse cx="676" cy="420" rx="20" ry="6" fill="#D7263D"/>
+</g>
+<g>
+<circle cx="146" cy="402" r="7" fill="#22313F"/>
+<path d="M137 452l6-42h8l6 42z" fill="#D7263D"/>
+<path d="M150 420l-30 48M120 468l-14 18" stroke="#5B3A2B" stroke-width="4" fill="none" stroke-linecap="round"/>
+</g>
+<path d="M116 330h4v120h-4z" fill="#5B3A2B"/>
+<path d="M120 334h48l-11 17 11 17h-48z" fill="#D7263D"/>
+<path d="M120 334h48l-4 6h-44z" fill="#F2B233"/>
+<path d="M120 486c10 4 20 6 32 8l-4 12c-12-2-24-6-34-10z" fill="#7A1026" opacity=".6"/>
+<path d="M0 566c60-16 120-20 190-16 70 4 140 10 210 8 90-2 180-12 260-10 60 2 110 8 140 14v38H0z" fill="#0A4F4A"/>
+<g stroke="#7FE3D8" stroke-width="3" opacity=".4" fill="none" stroke-linecap="round">
+<path d="M40 572c30-6 60-8 90-6M200 578c40-6 80-6 120-2M380 588c40-6 90-6 130-2M580 580c30-4 60-4 90-2"/>
+</g>
+<rect width="800" height="600" fill="url(#dragonBoat-vignette)"/>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="黄杨山云海日出">
+<defs>
+<linearGradient id="mountainMist-sky" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#1A2360"/>
+<stop offset=".35" stop-color="#35478F"/>
+<stop offset=".55" stop-color="#7B6BA8"/>
+<stop offset=".68" stop-color="#FF8A65"/>
+<stop offset=".88" stop-color="#FFC857"/>
+<stop offset="1" stop-color="#FFD9A0"/>
+</linearGradient>
+<radialGradient id="mountainMist-sunGlow" cx=".5" cy=".5" r=".5">
+<stop offset="0" stop-color="#FFF6DC"/>
+<stop offset=".28" stop-color="#FFD9A0" stop-opacity=".9"/>
+<stop offset="1" stop-color="#FF8A65" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="mountainMist-mist" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#F4F8FD" stop-opacity="0"/>
+<stop offset=".5" stop-color="#DCE6F2" stop-opacity=".95"/>
+<stop offset="1" stop-color="#DCE6F2" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="mountainMist-vignette" cx=".5" cy=".45" r=".75">
+<stop offset=".5" stop-color="#0E1636" stop-opacity="0"/>
+<stop offset="1" stop-color="#0E1636" stop-opacity=".6"/>
+</radialGradient>
+</defs>
+<rect width="800" height="600" fill="url(#mountainMist-sky)"/>
+<circle cx="440" cy="312" r="210" fill="url(#mountainMist-sunGlow)"/>
+<circle cx="440" cy="306" r="42" fill="#FFE9B0"/>
+<g fill="#FFD9A0" opacity=".35">
+<ellipse cx="200" cy="230" rx="170" ry="10"/>
+<ellipse cx="600" cy="196" rx="190" ry="8"/>
+<ellipse cx="420" cy="150" rx="240" ry="7"/>
+</g>
+<path d="M-20 344L60 292 100 318 150 272 196 310 246 268 292 306 340 276 386 312 430 280 478 314 528 284 574 312 620 288 668 316 714 292 760 318 820 300V430H-20Z" fill="#6F86BC"/>
+<path d="M60 292 100 318 150 272 196 310 246 268 292 306 340 276 386 312 430 280 478 314 528 284 574 312 620 288 668 316 714 292 760 318" stroke="#FFC857" stroke-width="3" fill="none" opacity=".55"/>
+<path d="M-20 370c80-26 160-32 240-14 80 18 160 20 250 6 90-14 180-10 270 8 40 8 80 8 120 4v40H-20z" fill="#DCE6F2" opacity=".9"/>
+<path d="M-20 356c80-22 160-28 240-12 80 16 160 18 250 4 90-14 180-10 270 6" stroke="#F4F8FD" stroke-width="5" fill="none" opacity=".8"/>
+<path d="M-20 420L70 372 120 402 180 350 240 398 300 360 360 404 420 366 486 406 548 372 610 412 676 378 740 410 800 386 820 392V520H-20Z" fill="#43568C"/>
+<path d="M70 372 120 402 180 350 240 398 300 360 360 404 420 366 486 406 548 372 610 412 676 378 740 410 800 386" stroke="#FFB27A" stroke-width="2.5" fill="none" opacity=".45"/>
+<path d="M-20 450c80-20 170-24 260-10 90 14 180 16 270 4 90-12 170-8 250 8v46H-20z" fill="#DCE6F2" opacity=".95"/>
+<path d="M-20 436c80-18 170-22 260-8 90 14 180 16 270 4 90-12 170-8 250 6" stroke="#FFFFFF" stroke-width="4" fill="none" opacity=".65"/>
+<path d="M-20 500L80 460 150 492 220 448 300 498 370 462 440 504 510 470 580 508 650 474 720 508 790 480 820 492V560H-20Z" fill="#2B3A6B"/>
+<path d="M-20 514c70-18 150-22 230-10 80 12 160 14 240 2 80-12 160-8 240 10v34H-20z" fill="#DCE6F2" opacity=".8"/>
+<path d="M-20 600V534c70-18 110-30 160-20 50 10 90 4 140-16 60-24 110-18 160 4 50 22 100 18 160-4 60-22 110-16 160 10v92z" fill="#151F45"/>
+<g fill="#0E1633">
+<path d="M96 544l14-34 14 34zM116 528l10-22 10 22zM88 550h40v8H88z"/>
+<path d="M700 540l16-40 16 40zM722 520l12-26 12 26zM690 548h48v10h-48z"/>
+<path d="M214 548l10-26 10 26zM206 552h30v6h-30z"/>
+<path d="M330 512h60v8h-60zM336 496h48v6h-48zM340 482h40v6h-40zM354 466h12v16h-12z"/>
+<path d="M322 500l38-18 38 18z"/>
+<path d="M330 484l30-14 30 14z"/>
+</g>
+<g stroke="#0E1633" stroke-width="3" fill="none" opacity=".8" stroke-linecap="round">
+<path d="M470 470q8-7 16 0M494 482q7-6 14 0M446 492q6-5 12 0"/>
+</g>
+<g fill="#F4F8FD" opacity=".5">
+<ellipse cx="150" cy="410" rx="170" ry="18"/>
+<ellipse cx="420" cy="446" rx="220" ry="20"/>
+<ellipse cx="690" cy="414" rx="160" ry="16"/>
+<ellipse cx="280" cy="486" rx="180" ry="16"/>
+<ellipse cx="600" cy="498" rx="150" ry="14"/>
+</g>
+<rect width="800" height="600" fill="url(#mountainMist-vignette)"/>
+</svg>

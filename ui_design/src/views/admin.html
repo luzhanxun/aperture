@@ -1,0 +1,418 @@
+﻿<section class="view" id="view-admin" data-route="admin" hidden>
+<div class="admin">
+  <aside class="admin__side" aria-label="后台导航">
+    <a class="admin__brand" href="#/overview">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m14.31 8 5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16 3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"/></svg>
+      光圈AI 后台
+    </a>
+    <nav class="admin__nav">
+      <p class="admin__label">内容</p>
+      <div class="admin__links">
+        <a class="is-current" href="#/admin">素材管理</a>
+        <a href="#/library">素材库前台</a>
+        <a href="#/upload">上传与元数据治理</a>
+      </div>
+      <p class="admin__label">销售</p>
+      <div class="admin__links">
+        <a href="#/sales">销售链接</a>
+        <a href="#/stats">订单与统计</a>
+      </div>
+      <p class="admin__label">用户</p>
+      <div class="admin__links">
+        <a href="#/admin" data-goto="users">用户与角色</a>
+        <a href="#/admin" data-goto="permissions">权限矩阵</a>
+      </div>
+      <p class="admin__label">系统</p>
+      <div class="admin__links">
+        <a href="#/admin" data-goto="logs">审计日志</a>
+        <a href="#/mcp">智能体接口规范</a>
+      </div>
+    </nav>
+    <div class="admin__foot">
+      <span class="avatar">陈</span>
+      <span>陈晓<br><span class="u-micro u-subtle">系统管理员</span></span>
+    </div>
+  </aside>
+
+  <div class="admin__main">
+    <div class="admin__head">
+      <div>
+        <h1 class="admin__title">素材管理与审计</h1>
+        <p class="admin__sub">统一管理素材、用户、权限与全部操作留痕。</p>
+      </div>
+      <div class="admin__tools">
+        <button class="btn btn--quiet" type="button" data-toast="已导出当前筛选结果">导出列表</button>
+        <a class="btn btn--primary" href="#/upload">上传素材</a>
+      </div>
+    </div>
+
+    <div class="admin__body">
+      <div class="kpi-grid">
+        <div class="kpi">
+          <p class="kpi__label">素材总量</p>
+          <p class="kpi__value">82,416</p>
+          <p class="kpi__meta">已发布 78,204 · 已下架 312</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi__label">待完善元数据</p>
+          <p class="kpi__value">1,284</p>
+          <p class="kpi__meta">完整度低于 80% · 影响检索</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi__label">本月下载</p>
+          <p class="kpi__value">3,642</p>
+          <p class="kpi__meta">含内部调阅与授权下载</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi__label">异常访问</p>
+          <p class="kpi__value">7</p>
+          <p class="kpi__meta">链接超限 5 · 异地登录 2</p>
+        </div>
+      </div>
+
+      <section class="admin__section" aria-labelledby="assetsTitle">
+        <div class="u-row u-row--between">
+          <h2 class="panel__title" id="assetsTitle">素材管理</h2>
+          <div class="list-tools">
+            <label class="search">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input type="search" placeholder="搜索标题、编号或上传者" aria-label="搜索素材">
+            </label>
+            <div class="segmented segmented--text" role="group" aria-label="素材状态筛选">
+              <button class="is-active" type="button" data-toast="已筛选全部素材">全部</button>
+              <button type="button" data-toast="已筛选待完善素材">待完善</button>
+              <button type="button" data-toast="已筛选已下架素材">已下架</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-wrap u-mt-3">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">素材</th>
+                <th scope="col">分类</th>
+                <th scope="col">可见范围</th>
+                <th scope="col">元数据</th>
+                <th scope="col">上传者</th>
+                <th scope="col">状态</th>
+                <th scope="col"><span class="sr-only">操作</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="cell-asset">
+                    <span class="thumb-mini"><img src="assets/img/fish-farm.svg" alt=""></span>
+                    <span><strong>白蕉海鲈产业园航拍</strong><span class="cell-sub">DM-20260412-0014 · 4K</span></span>
+                  </div>
+                </td>
+                <td>农业产业</td>
+                <td>公开可见</td>
+                <td>96%</td>
+                <td>陈晓</td>
+                <td><span class="status">已发布</span></td>
+                <td class="cell-actions"><a class="btn btn--text" href="#/library">查看</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-asset">
+                    <span class="thumb-mini"><img src="assets/img/river-dusk.svg" alt=""></span>
+                    <span><strong>黄杨河落日</strong><span class="cell-sub">DM-20260412-0031 · 4K</span></span>
+                  </div>
+                </td>
+                <td>城市影像</td>
+                <td>内部可见</td>
+                <td>92%</td>
+                <td>李锐</td>
+                <td><span class="status">已发布</span></td>
+                <td class="cell-actions"><a class="btn btn--text" href="#/library">查看</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-asset">
+                    <span class="thumb-mini"><img src="assets/img/old-street.svg" alt=""></span>
+                    <span><strong>斗门旧街骑楼修缮</strong><span class="cell-sub">DM-20260411-0022 · 图片组</span></span>
+                  </div>
+                </td>
+                <td>城市影像</td>
+                <td>付费可见</td>
+                <td>68%</td>
+                <td>林海</td>
+                <td><span class="status status--off">待完善</span></td>
+                <td class="cell-actions"><button class="btn btn--text" type="button" data-toast="已打开元数据补全面板">补全</button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-asset">
+                    <span class="thumb-mini"><img src="assets/img/dragon-boat.svg" alt=""></span>
+                    <span><strong>黄杨河龙舟竞渡</strong><span class="cell-sub">DM-20260411-0008 · 4K</span></span>
+                  </div>
+                </td>
+                <td>活动记录</td>
+                <td>公开可见</td>
+                <td>100%</td>
+                <td>陈晓</td>
+                <td><span class="status">已发布</span></td>
+                <td class="cell-actions"><a class="btn btn--text" href="#/library">查看</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-asset">
+                    <span class="thumb-mini"><img src="assets/img/rice-field.svg" alt=""></span>
+                    <span><strong>莲洲春耕</strong><span class="cell-sub">DM-20260409-0017 · 图片组</span></span>
+                  </div>
+                </td>
+                <td>农业产业</td>
+                <td>内部可见</td>
+                <td>79%</td>
+                <td>周敏</td>
+                <td><span class="status status--off">待完善</span></td>
+                <td class="cell-actions"><button class="btn btn--text" type="button" data-toast="已打开元数据补全面板">补全</button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-asset">
+                    <span class="thumb-mini"><img src="assets/img/puppet-parade.svg" alt=""></span>
+                    <span><strong>斗门飘色巡游</strong><span class="cell-sub">DM-20260408-0041 · 图片组</span></span>
+                  </div>
+                </td>
+                <td>非遗民俗</td>
+                <td>公开可见</td>
+                <td>74%</td>
+                <td>林海</td>
+                <td><span class="status">已发布</span></td>
+                <td class="cell-actions"><a class="btn btn--text" href="#/library">查看</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="paged">
+          <span>显示 1–6 / 82,416 件</span>
+          <span class="paged__buttons"><button class="btn btn--text" type="button" data-toast="已加载下一页">下一页</button></span>
+        </div>
+      </section>
+
+      <section class="panel panel--flush u-mt-4" id="users" aria-labelledby="usersTitle">
+          <div class="panel__head">
+            <h2 class="panel__title" id="usersTitle">用户与角色</h2>
+            <span class="panel__meta">共 38 个账号</span>
+          </div>
+          <div class="panel__body">
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">用户</th>
+                    <th scope="col">角色</th>
+                    <th scope="col">最近登录</th>
+                    <th scope="col">状态</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>陈晓<div class="cell-sub">chenxiao</div></td>
+                    <td>系统管理员</td>
+                    <td>今天 08:41</td>
+                    <td><span class="status">正常</span></td>
+                  </tr>
+                  <tr>
+                    <td>李锐<div class="cell-sub">lirui</div></td>
+                    <td>融媒工作人员</td>
+                    <td>今天 09:12</td>
+                    <td><span class="status">正常</span></td>
+                  </tr>
+                  <tr>
+                    <td>周敏<div class="cell-sub">zhoumin</div></td>
+                    <td>融媒工作人员</td>
+                    <td>昨天 17:36</td>
+                    <td><span class="status">正常</span></td>
+                  </tr>
+                  <tr>
+                    <td>林海<div class="cell-sub">linhai</div></td>
+                    <td>融媒管理人员</td>
+                    <td>昨天 15:02</td>
+                    <td><span class="status">正常</span></td>
+                  </tr>
+                  <tr>
+                    <td>黄工<div class="cell-sub">huanggong</div></td>
+                    <td>一般用户</td>
+                    <td>04-12 10:20</td>
+                    <td><span class="status status--off">已停用</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="u-row u-mt-3">
+              <button class="btn btn--quiet" type="button" data-toast="已打开邀请成员面板">邀请成员</button>
+              <button class="btn btn--text" type="button" data-toast="角色变更需二次确认">调整角色</button>
+            </div>
+          </div>
+      </section>
+
+      <section class="panel u-mt-4" id="permissions" aria-labelledby="permTitle">
+          <div class="panel__head">
+            <div>
+              <h2 class="panel__title" id="permTitle">权限矩阵</h2>
+              <p class="panel__meta u-mt-1">圆点为允许，灰色点为不可见。</p>
+            </div>
+          </div>
+          <div class="panel__body">
+            <div class="table-wrap">
+              <table class="table matrix">
+                <thead>
+                  <tr>
+                    <th scope="col">操作</th>
+                    <th scope="col">一般用户</th>
+                    <th scope="col">工作人员</th>
+                    <th scope="col">管理人员</th>
+                    <th scope="col">系统管理员</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>浏览与检索素材</td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                  <tr>
+                    <td>上传素材</td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                  <tr>
+                    <td>编辑元数据与可见范围</td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                  <tr>
+                    <td>删除素材</td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                  <tr>
+                    <td>生成销售链接</td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                  <tr>
+                    <td>查看销售统计</td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                  <tr>
+                    <td>管理用户与角色</td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                  <tr>
+                    <td>查看审计日志</td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      <section class="panel panel--flush u-mt-4" id="logs" aria-labelledby="logsTitle">
+        <div class="panel__head">
+          <div>
+            <h2 class="panel__title" id="logsTitle">审计日志</h2>
+            <p class="panel__meta u-mt-1">只追加、不可编辑。点击任意一行展开请求详情。</p>
+          </div>
+          <a class="btn btn--text" href="#/admin" data-goto="logs" data-toast="已导出近 30 天日志（CSV）">导出日志</a>
+        </div>
+        <div class="panel__body">
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">时间</th>
+                  <th scope="col">操作人</th>
+                  <th scope="col">动作</th>
+                  <th scope="col">对象</th>
+                  <th scope="col">来源 IP</th>
+                  <th scope="col">结果</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><button class="row-button" type="button" data-log-toggle="log1" aria-expanded="false">今天 09:12</button></td>
+                  <td>李锐</td>
+                  <td>上传素材</td>
+                  <td>黄杨河落日</td>
+                  <td>10.12.4.31</td>
+                  <td><span class="status">成功</span></td>
+                </tr>
+                <tr id="log1" class="log-detail" hidden>
+                  <td colspan="6">
+                    <dl class="log-detail__grid">
+                      <div><dt>请求 ID</dt><dd>req_7F3K2Q9A</dd></div>
+                      <div><dt>耗时</dt><dd>8.4 秒（含转码）</dd></div>
+                      <div><dt>文件</dt><dd>river_dusk_4k.mp4 · 486MB</dd></div>
+                      <div><dt>元数据完整度</dt><dd>92%（缺拍摄许可）</dd></div>
+                      <div><dt>结果</dt><dd>入库成功，等待可见范围复核</dd></div>
+                      <div><dt>客户端</dt><dd>Chrome 124 / Windows 11</dd></div>
+                    </dl>
+                  </td>
+                </tr>
+                <tr>
+                  <td>今天 08:41</td>
+                  <td>陈晓</td>
+                  <td>调整可见范围</td>
+                  <td>白蕉海鲈产业园航拍</td>
+                  <td>10.12.4.8</td>
+                  <td><span class="status">成功</span></td>
+                </tr>
+                <tr>
+                  <td>昨天 20:03</td>
+                  <td>访客链接 8Kq2fR</td>
+                  <td>访问预览页</td>
+                  <td>黄杨河落日</td>
+                  <td>113.76.22.9</td>
+                  <td><span class="status">成功</span></td>
+                </tr>
+                <tr>
+                  <td>昨天 18:47</td>
+                  <td>未知账号</td>
+                  <td>登录</td>
+                  <td>honggong</td>
+                  <td>113.76.22.41</td>
+                  <td><span class="status status--risk">失败</span></td>
+                </tr>
+                <tr>
+                  <td>昨天 15:02</td>
+                  <td>林海</td>
+                  <td>下载原片</td>
+                  <td>斗门旧街骑楼修缮</td>
+                  <td>10.12.4.19</td>
+                  <td><span class="status">成功</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="foot-note">日志保留期限、导出权限与异地登录告警规则，需要在验收前与中心安全负责人确认。</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+</section>

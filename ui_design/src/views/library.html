@@ -1,0 +1,187 @@
+<section class="view" id="view-library" data-route="library" hidden>
+<div class="lib">
+  <div class="lib__head">
+    <div>
+      <h1 class="lib__title">素材库</h1>
+      <p class="lib__sub">斗门区融媒体中心 · 全库 82,416 件素材 · 今日新增 126 件</p>
+    </div>
+    <div class="u-row">
+      <button class="btn btn--quiet" type="button" data-select-toggle aria-pressed="false">多选</button>
+      <a class="btn btn--primary" href="#/upload">上传素材</a>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <label class="search toolbar__search">
+      <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="text" data-search placeholder="搜索标题、标签、拍摄地点或上传者" aria-label="搜索素材">
+    </label>
+    <div class="chip-row" role="group" aria-label="按素材类型筛选">
+      <button class="chip is-active" type="button" data-toast="已切换：全部素材">全部</button>
+      <button class="chip" type="button" data-toast="已切换：视频">视频</button>
+      <button class="chip" type="button" data-toast="已切换：图片">图片</button>
+      <button class="chip" type="button" data-toast="已切换：音频">音频</button>
+      <button class="chip" type="button" data-toast="已切换：文档">文档</button>
+      <button class="chip" type="button" data-toast="已切换：航拍素材">航拍</button>
+    </div>
+    <div class="toolbar__spacer"></div>
+    <div class="segmented" role="group" aria-label="切换视图">
+      <button type="button" class="is-active" data-view="grid" aria-label="网格视图" aria-pressed="true">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      </button>
+      <button type="button" data-view="list" aria-label="列表视图" aria-pressed="false">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <button class="btn btn--quiet" type="button" data-toast="排序：按上传时间，最新优先">最新上传</button>
+  </div>
+
+  <div class="resultbar">
+    <span>匹配 <strong data-result-count>8</strong> 件 / 共 82,416 件 · 全部可见范围</span>
+    <span>缩略图为水印预览，授权后可下载原片</span>
+  </div>
+
+  <div class="asset-grid lib__grid">
+    <article class="asset-card" data-asset data-keywords="白蕉海鲈 产业园 航拍 视频 4k 陈晓 白蕉镇 养殖">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：白蕉海鲈产业园航拍">
+        <div class="thumb">
+          <img src="assets/img/fish-farm.svg" alt="白蕉海鲈养殖鱼塘与网箱的航拍画面" width="800" height="600">
+          <span class="thumb__type">视频</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">白蕉海鲈产业园航拍</h2>
+          <p class="asset-sub">00:48 · 3840×2160 · 陈晓</p>
+          <div class="asset-tags"><span>白蕉镇 · 航拍 · 4K</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+
+    <article class="asset-card" data-asset data-keywords="黄杨河 落日 晚霞 图片 李锐 井岸镇 风光">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：黄杨河落日">
+        <div class="thumb">
+          <img src="assets/img/river-dusk.svg" alt="黄杨河日落与跨河桥" width="800" height="600">
+          <span class="thumb__type">图片</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">黄杨河落日</h2>
+          <p class="asset-sub">5472×3648 · 李锐 · 2026-04-12</p>
+          <div class="asset-tags"><span>井岸镇 · 风光 · 城市</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+
+    <article class="asset-card" data-asset data-keywords="黄杨山 云海 晨雾 图片 周敏 斗门镇 风光">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：黄杨山云海">
+        <div class="thumb">
+          <img src="assets/img/mountain-mist.svg" alt="黄杨山云海与山脊" width="800" height="600">
+          <span class="thumb__type">图片</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">黄杨山云海</h2>
+          <p class="asset-sub">6000×4000 · 周敏 · 2026-04-09</p>
+          <div class="asset-tags"><span>斗门镇 · 晨雾 · 山景</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+
+    <article class="asset-card" data-asset data-keywords="斗门旧街 骑楼 修缮 视频 非遗 林海 斗门镇 城市更新">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：斗门旧街骑楼修缮">
+        <div class="thumb">
+          <img src="assets/img/old-street.svg" alt="斗门旧街骑楼与行人" width="800" height="600">
+          <span class="thumb__type">视频</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">斗门旧街骑楼修缮</h2>
+          <p class="asset-sub">02:16 · 3840×2160 · 林海</p>
+          <div class="asset-tags"><span>斗门镇 · 城市更新</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+
+    <article class="asset-card" data-asset data-keywords="龙舟 竞渡 黄杨河 视频 体育 陈晓 井岸镇 端午">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：黄杨河龙舟竞渡">
+        <div class="thumb">
+          <img src="assets/img/dragon-boat.svg" alt="黄杨河上的龙舟竞渡" width="800" height="600">
+          <span class="thumb__type">视频</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">黄杨河龙舟竞渡</h2>
+          <p class="asset-sub">01:32 · 3840×2160 · 陈晓</p>
+          <div class="asset-tags"><span>井岸镇 · 体育 · 端午</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+
+    <article class="asset-card" data-asset data-keywords="春耕 稻田 农人 图片 周敏 莲洲镇 乡村 航拍">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：莲洲春耕">
+        <div class="thumb">
+          <img src="assets/img/rice-field.svg" alt="莲洲镇稻田与劳作的农人" width="800" height="600">
+          <span class="thumb__type">图片</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">莲洲春耕</h2>
+          <p class="asset-sub">5472×3648 · 周敏 · 2026-03-28</p>
+          <div class="asset-tags"><span>莲洲镇 · 乡村 · 春耕</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+
+    <article class="asset-card" data-asset data-keywords="飘色 巡游 非遗 民俗 图片 林海 斗门镇 节庆">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：斗门飘色巡游">
+        <div class="thumb">
+          <img src="assets/img/puppet-parade.svg" alt="斗门飘色巡游的色台与人群" width="800" height="600">
+          <span class="thumb__type">图片</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">斗门飘色巡游</h2>
+          <p class="asset-sub">4200×2800 · 林海 · 2026-03-15</p>
+          <div class="asset-tags"><span>斗门镇 · 非遗 · 民俗</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+
+    <article class="asset-card" data-asset data-keywords="斗门港 集装箱 码头 视频 工业 李锐 白藤街道 产业">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：斗门港集装箱码头">
+        <div class="thumb">
+          <img src="assets/img/harbor.svg" alt="斗门港集装箱堆场与门式起重机" width="800" height="600">
+          <span class="thumb__type">视频</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">斗门港集装箱码头</h2>
+          <p class="asset-sub">01:04 · 3840×2160 · 李锐</p>
+          <div class="asset-tags"><span>白藤街道 · 产业 · 港口</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+  </div>
+
+  <div class="empty" id="emptyResult" hidden>
+    <h2>没有找到素材</h2>
+    <p>换个关键词，或清除筛选后重新查找。</p>
+    <div class="empty__actions">
+      <button class="btn btn--text" type="button" data-reset>清除筛选</button>
+    </div>
+  </div>
+
+  <p class="foot-note">光圈AI · 素材检索结果受可见范围与授权状态影响，销售素材仅展示水印预览。</p>
+</div>
+
+
+
+</section>

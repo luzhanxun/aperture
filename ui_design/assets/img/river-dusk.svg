@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="黄杨河日落与跨河桥">
+<defs>
+<linearGradient id="riverDusk-sky" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#2B1B3D"/>
+<stop offset=".4" stop-color="#6C5CE7"/>
+<stop offset=".7" stop-color="#E8556D"/>
+<stop offset="1" stop-color="#F2762E"/>
+</linearGradient>
+<radialGradient id="riverDusk-sunGlow" cx=".5" cy=".5" r=".5">
+<stop offset="0" stop-color="#FFF4DC"/>
+<stop offset=".3" stop-color="#FFD9A0"/>
+<stop offset="1" stop-color="#FF9C4A" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="riverDusk-water" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#F7A868"/>
+<stop offset=".14" stop-color="#E8556D"/>
+<stop offset=".48" stop-color="#8A4A78"/>
+<stop offset="1" stop-color="#2B1B3D"/>
+</linearGradient>
+<linearGradient id="riverDusk-shore" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#4A2B55"/>
+<stop offset="1" stop-color="#241631"/>
+</linearGradient>
+<radialGradient id="riverDusk-vignette" cx=".5" cy=".42" r=".75">
+<stop offset=".55" stop-color="#2B1B3D" stop-opacity="0"/>
+<stop offset="1" stop-color="#1B1026" stop-opacity=".62"/>
+</radialGradient>
+</defs>
+<rect width="800" height="600" fill="url(#riverDusk-sky)"/>
+<circle cx="540" cy="296" r="190" fill="url(#riverDusk-sunGlow)"/>
+<circle cx="540" cy="296" r="42" fill="#FFE3B8"/>
+<g fill="#FFD9A0" opacity=".2">
+<ellipse cx="200" cy="120" rx="190" ry="13"/>
+<ellipse cx="520" cy="74" rx="250" ry="10"/>
+<ellipse cx="690" cy="180" rx="170" ry="9"/>
+<ellipse cx="300" cy="216" rx="250" ry="8"/>
+</g>
+<g fill="#E8556D" opacity=".3">
+<ellipse cx="110" cy="184" rx="150" ry="9"/>
+<ellipse cx="650" cy="112" rx="160" ry="8"/>
+</g>
+<path d="M0 340V310h70l16-24 34 24h96l22-16 30 16h72v20z" fill="url(#riverDusk-shore)"/>
+<path d="M520 340v-22h70l24-20 34 20h78l18-14 28 14h28v22z" fill="url(#riverDusk-shore)"/>
+<g fill="#FFC46B">
+<rect x="34" y="298" width="5" height="5"/><rect x="98" y="312" width="4" height="4"/><rect x="160" y="302" width="4" height="4"/>
+<rect x="556" y="306" width="4" height="4"/><rect x="648" y="298" width="5" height="5"/><rect x="712" y="310" width="4" height="4"/>
+</g>
+<rect x="0" y="340" width="800" height="260" fill="url(#riverDusk-water)"/>
+<g fill="#2B1B3D">
+<rect x="0" y="308" width="800" height="11"/>
+<rect x="222" y="196" width="16" height="133"/>
+<rect x="562" y="196" width="16" height="133"/>
+<rect x="214" y="236" width="32" height="9"/>
+<rect x="554" y="236" width="32" height="9"/>
+<rect x="226" y="319" width="8" height="46"/>
+<rect x="566" y="319" width="8" height="46"/>
+</g>
+<path d="M0 308h800" stroke="#F2762E" stroke-width="3" opacity=".55"/>
+<g stroke="#3B2450" stroke-width="2" fill="none" opacity=".9">
+<path d="M226 202L120 308M226 202L160 308M226 202L196 308M226 202L262 308M226 202L310 308M226 202L370 308M226 202L436 308M226 202L500 308M570 202L470 308M570 202L520 308M570 202L556 308M570 202L600 308M570 202L650 308M570 202L700 308"/>
+</g>
+<g fill="#FFD9A0">
+<ellipse cx="540" cy="352" rx="54" ry="5" opacity=".75"/>
+<ellipse cx="534" cy="368" rx="80" ry="6" opacity=".6"/>
+<ellipse cx="548" cy="392" rx="58" ry="5" opacity=".5"/>
+<ellipse cx="536" cy="420" rx="98" ry="6" opacity=".38"/>
+<ellipse cx="546" cy="452" rx="52" ry="4" opacity=".3"/>
+<ellipse cx="538" cy="490" rx="112" ry="6" opacity=".22"/>
+<ellipse cx="548" cy="536" rx="64" ry="4" opacity=".16"/>
+</g>
+<g stroke="#2B1B3D" stroke-width="2" opacity=".28" fill="none">
+<path d="M0 372h240M330 372h170M620 388h180M0 424h160M250 436h230M560 458h240M20 502h300M430 514h370M0 562h330M420 578h380"/>
+</g>
+<path d="M0 600V520c64-16 120-28 186-38l26 118z" fill="#1B1026"/>
+<path d="M800 600V496c-64-8-124-20-184-34l-40 138z" fill="#1B1026"/>
+<path d="M0 520c64-16 120-28 186-38M800 496c-64-8-124-20-184-34" stroke="#F2762E" stroke-width="3" fill="none" opacity=".55"/>
+<g stroke="#1B1026" stroke-width="3" fill="none" stroke-linecap="round">
+<path d="M40 600c4-44 0-70-12-92M62 600c2-38 8-62 22-80M86 600c0-30 6-52 18-66M716 600c-4-42 2-70 12-92M740 600c0-36-6-60-18-78"/>
+</g>
+<g stroke="#FFD9A0" stroke-width="2" fill="none" opacity=".8" stroke-linecap="round">
+<path d="M376 158q10-8 20 0M400 172q9-7 18 0M350 186q8-6 16 0"/>
+</g>
+<rect width="800" height="600" fill="url(#riverDusk-vignette)"/>
+</svg>

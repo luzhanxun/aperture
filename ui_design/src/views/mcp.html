@@ -1,0 +1,249 @@
+<section class="view" id="view-mcp" data-route="mcp" hidden>
+<div class="ai">
+  <div class="ai__body">
+    <div class="ai__head">
+      <div>
+        <h1 class="ai__title">智能体接口规范</h1>
+        <p class="ai__sub">MCP Server 把素材库变成 AI 可调用的工具集：检索、读元数据、统计上传、导出 Excel。</p>
+      </div>
+      <span class="status">服务运行中</span>
+    </div>
+
+    <div class="grid-2 u-mt-4">
+      <section class="panel panel--flush" aria-labelledby="toolsTitle">
+        <div class="panel__head">
+          <h2 class="panel__title" id="toolsTitle">可用工具</h2>
+          <span class="panel__meta">5 个 · 均继承账号权限</span>
+        </div>
+        <div class="panel__body">
+          <div class="table-wrap">
+            <table class="table table--mini">
+              <thead>
+                <tr>
+                  <th scope="col">工具</th>
+                  <th scope="col">作用</th>
+                  <th scope="col">状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="tool-code">search_assets</span></td>
+                  <td>按关键词、分类、时间与可见范围检索素材</td>
+                  <td><span class="status">可用</span></td>
+                </tr>
+                <tr>
+                  <td><span class="tool-code">get_asset_metadata</span></td>
+                  <td>读取单件素材的完整元数据与授权状态</td>
+                  <td><span class="status">可用</span></td>
+                </tr>
+                <tr>
+                  <td><span class="tool-code">aggregate_uploads</span></td>
+                  <td>按上传者、分类与时间统计上传量</td>
+                  <td><span class="status">可用</span></td>
+                </tr>
+                <tr>
+                  <td><span class="tool-code">export_to_excel</span></td>
+                  <td>将检索或统计结果导出为 Excel</td>
+                  <td><span class="status">可用</span></td>
+                </tr>
+                <tr>
+                  <td><span class="tool-code">list_collections</span></td>
+                  <td>列出合集与专题包，供选题复用</td>
+                  <td><span class="status">可用</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="foot-note">工具只读为主，唯一写操作是导出文件；任何调用都记入审计日志。</p>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="connectTitle">
+        <div class="panel__head">
+          <h2 class="panel__title" id="connectTitle">接入信息</h2>
+          <span class="panel__meta">MCP over HTTP</span>
+        </div>
+        <div class="panel__body">
+          <div class="endpoint">
+            <div class="endpoint__row">
+              <span>服务地址</span>
+              <code>https://aperture.doumen.cn/mcp</code>
+              <button class="btn btn--text" type="button" data-copy="https://aperture.doumen.cn/mcp">复制</button>
+            </div>
+            <div class="endpoint__row">
+              <span>鉴权方式</span>
+              <code>Bearer &lt;个人令牌&gt;</code>
+            </div>
+            <div class="endpoint__row">
+              <span>权限范围</span>
+              <code>与该账号在素材库中的可见范围一致</code>
+            </div>
+            <div class="endpoint__row">
+              <span>速率限制</span>
+              <code>60 次 / 分钟 / 账号</code>
+            </div>
+          </div>
+          <pre class="code-block">{
+  "mcpServers": {
+    "aperture": {
+      "url": "https://aperture.doumen.cn/mcp",
+      "headers": { "Authorization": "Bearer &lt;token&gt;" }
+    }
+  }
+}</pre>
+          <div class="u-row u-mt-3">
+            <button class="btn btn--quiet" type="button" data-toast="个人令牌已生成，仅显示一次">生成令牌</button>
+            <button class="btn btn--text" type="button" data-toast="已复制配置片段">复制配置</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="panel u-mt-4" aria-labelledby="sceneTitle">
+      <div class="panel__head">
+        <div>
+          <h2 class="panel__title" id="sceneTitle">场景演示</h2>
+          <p class="panel__meta u-mt-1">同一段对话里完成检索、核对授权与导出。</p>
+        </div>
+        <div class="segmented segmented--text" role="group" aria-label="演示场景">
+          <button class="is-active" type="button" data-scene="topic">选题找素材</button>
+          <button type="button" data-scene="monthly">月度上传统计</button>
+        </div>
+      </div>
+      <div class="panel__body">
+        <div class="chat" data-scene-panel="topic">
+          <div class="msg msg--user">
+            <p class="msg__meta">WorkBuddy · 14:02</p>
+            帮我找 10 条白蕉海鲈相关的竖版视频，最近三个月，要可商用的，附上价格。
+          </div>
+          <div class="msg msg--agent">
+            <p class="msg__meta">光圈AI 智能体 · 14:02</p>
+            <div class="toolcall">
+              <code>search_assets</code>
+              <span>query=白蕉海鲈 · type=video · ratio=9:16 · months=3</span>
+              <span class="status">12 条</span>
+            </div>
+            <div class="msg__result">
+              <table class="table table--mini">
+                <thead>
+                  <tr>
+                    <th scope="col">素材</th>
+                    <th scope="col">时长</th>
+                    <th scope="col">授权价</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>白蕉海鲈产业园航拍</td><td>00:12</td><td>¥680</td></tr>
+                  <tr><td>海鲈起捕现场</td><td>00:26</td><td>¥560</td></tr>
+                  <tr><td>养殖户访谈竖版</td><td>01:04</td><td>¥480</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="bubble-note">共 12 条符合条件，其中 9 条可直接商用，3 条仅限内部使用。需要我导出完整清单吗？</p>
+            <div class="msg__actions">
+              <button class="btn btn--text" type="button" data-toast="正在导出 12 条素材清单">导出 Excel</button>
+              <a class="btn btn--text" href="#/library">在素材库中查看</a>
+            </div>
+          </div>
+          <div class="msg msg--user">
+            <p class="msg__meta">WorkBuddy · 14:04</p>
+            导出吧，顺便把 3 条内部专用的标出来。
+          </div>
+          <div class="msg msg--agent">
+            <p class="msg__meta">光圈AI 智能体 · 14:04</p>
+            <div class="toolcall">
+              <code>export_to_excel</code>
+              <span>ids=12 · columns=标题,分类,时长,授权价,可见范围</span>
+              <span class="status">完成</span>
+            </div>
+            <div class="msg__result">
+              <div class="u-row">
+                <span class="u-caption">白蕉海鲈选题素材_20260418.xlsx</span>
+                <button class="btn btn--text" type="button" data-toast="开始下载 Excel（12 行）">下载</button>
+              </div>
+            </div>
+            <p class="bubble-note">已在「可见范围」列标注内部专用，导出动作已写入审计日志。</p>
+          </div>
+        </div>
+
+        <div class="chat" data-scene-panel="monthly" hidden>
+          <div class="msg msg--user">
+            <p class="msg__meta">WorkBuddy · 09:20</p>
+            统计 3 月各镇街的上传量，按视频和图片分开，导成 Excel。
+          </div>
+          <div class="msg msg--agent">
+            <p class="msg__meta">光圈AI 智能体 · 09:20</p>
+            <div class="toolcall">
+              <code>aggregate_uploads</code>
+              <span>range=2026-03-01..2026-03-31 · groupBy=镇街 · splitBy=类型</span>
+              <span class="status">完成</span>
+            </div>
+            <div class="msg__result">
+              <table class="table table--mini">
+                <thead>
+                  <tr>
+                    <th scope="col">镇街</th>
+                    <th scope="col">视频</th>
+                    <th scope="col">图片</th>
+                    <th scope="col">合计</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>井岸镇</td><td>186</td><td>412</td><td>598</td></tr>
+                  <tr><td>斗门镇</td><td>142</td><td>368</td><td>510</td></tr>
+                  <tr><td>莲洲镇</td><td>98</td><td>264</td><td>362</td></tr>
+                  <tr><td>白藤街道</td><td>76</td><td>205</td><td>281</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="bubble-note">3 月共上传 1,751 件，井岸镇占 34%。已按你的要求拆分视频与图片。</p>
+            <div class="msg__actions">
+              <button class="btn btn--text" type="button" data-toast="正在导出月度上传统计">导出 Excel</button>
+              <button class="btn btn--text" type="button" data-toast="已生成柱状图（演示）">生成图表</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid-2 u-mt-4">
+      <section class="panel" aria-labelledby="skillTitle">
+        <div class="panel__head">
+          <h2 class="panel__title" id="skillTitle">Agent Skill</h2>
+          <span class="panel__meta">WorkBuddy 首个接入</span>
+        </div>
+        <div class="panel__body">
+          <p class="u-caption u-muted">技能包封装三个动作，让智能体按中心规范选材与交付。</p>
+          <div class="prompt-list">
+            <span class="chip">选材</span>
+            <span class="chip">授权确认</span>
+            <span class="chip">导出交付</span>
+          </div>
+          <ul class="rule-list u-mt-3">
+            <li>选材时优先返回可商用素材，并标注授权范围。</li>
+            <li>导出前必须展示素材清单与用途，由使用者确认。</li>
+            <li>不得绕过素材库直接分发原片下载地址。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="limitTitle">
+        <div class="panel__head">
+          <h2 class="panel__title" id="limitTitle">边界与约定</h2>
+        </div>
+        <div class="panel__body">
+          <ul class="rule-list">
+            <li>智能体只读素材与元数据，不修改元数据、不删除素材。</li>
+            <li>导出的 Excel 不含原片地址，仅含素材编号与预览链接。</li>
+            <li>预览链接仍受有效期与访问上限约束。</li>
+            <li>每次工具调用记录账号、参数、结果与耗时。</li>
+          </ul>
+          <p class="foot-note">一期是否开放导出原片、是否允许外部账号接入 MCP，需要与中心确认。</p>
+        </div>
+      </section>
+    </div>
+
+    <p class="foot-note">演示内容为脚本化对话，用于确认智能体的回答口径与工具边界，不代表最终模型输出。</p>
+  </div>
+</div>
+</section>

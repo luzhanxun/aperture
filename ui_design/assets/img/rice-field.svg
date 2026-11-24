@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="斗门稻田">
+<defs>
+<linearGradient id="riceField-sky" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#FDF4D4"/>
+<stop offset=".55" stop-color="#F8DFA0"/>
+<stop offset="1" stop-color="#F2C14E"/>
+</linearGradient>
+<radialGradient id="riceField-sunGlow" cx=".5" cy=".5" r=".5">
+<stop offset="0" stop-color="#FFFDF2"/>
+<stop offset=".35" stop-color="#FFE9B0"/>
+<stop offset="1" stop-color="#F2C14E" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="riceField-hills" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#95C6B9"/>
+<stop offset="1" stop-color="#5E9D8E"/>
+</linearGradient>
+<linearGradient id="riceField-haze" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#FFF8E4" stop-opacity=".85"/>
+<stop offset="1" stop-color="#FFF8E4" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="riceField-vignette" cx=".5" cy=".45" r=".75">
+<stop offset=".55" stop-color="#14532D" stop-opacity="0"/>
+<stop offset="1" stop-color="#0B3A22" stop-opacity=".5"/>
+</radialGradient>
+</defs>
+<rect width="800" height="600" fill="url(#riceField-sky)"/>
+<circle cx="642" cy="192" r="160" fill="url(#riceField-sunGlow)"/>
+<circle cx="642" cy="192" r="31" fill="#FFF6D8"/>
+<g fill="#FFF8E4" opacity=".55">
+<ellipse cx="180" cy="86" rx="180" ry="9"/>
+<ellipse cx="500" cy="130" rx="230" ry="8"/>
+<ellipse cx="700" cy="64" rx="140" ry="7"/>
+</g>
+<path d="M0 244c60-28 108-38 168-44 58-6 118 2 178-12 68-16 130-8 198 12 78 22 172 30 256 24v44H0z" fill="url(#riceField-hills)" opacity=".9"/>
+<path d="M0 258c80-18 160-20 250-10 90 10 180 8 270-6 100-16 200-10 280 8v24H0z" fill="#4C8A7C" opacity=".65"/>
+<path d="M150 234l16-26 14 26 10-22 10 22z" fill="#2F6F62"/>
+<rect x="196" y="220" width="34" height="20" fill="#F4E6C8"/>
+<path d="M190 220l23-14 23 14z" fill="#3E5A52"/>
+<rect x="204" y="228" width="8" height="12" fill="#7A6350"/>
+<rect x="0" y="236" width="800" height="56" fill="url(#riceField-haze)" opacity=".7"/>
+<rect x="0" y="252" width="800" height="348" fill="#7BC46B"/>
+<path d="M0 252h800v36c-280-16-520-14-800 4z" fill="#A3D977"/>
+<path d="M0 300c280-18 520-18 800 4v48c-300-26-540-22-800 6z" fill="#5FB86B"/>
+<path d="M0 356c300-28 540-24 800 10v60c-320-34-560-28-800 6z" fill="#229E5C"/>
+<path d="M0 432c320-34 560-28 800 12v156H0z" fill="#167A46"/>
+<g stroke="#F2C14E" stroke-width="3" opacity=".4" fill="none">
+<path d="M0 272c260-12 520-10 800 6M0 340c280-16 540-12 800 12M0 414c300-20 560-14 800 14"/>
+</g>
+<g stroke="#145C36" stroke-width="4" opacity=".35" fill="none">
+<path d="M0 320c250-14 520-10 800 10M0 392c280-18 540-12 800 14"/>
+</g>
+<path d="M0 466c140-20 300-20 450 0s266 12 350-4v20c-90 18-230 14-370-4S150 460 0 482z" fill="#CFE9DC" opacity=".85"/>
+<g stroke="#FFFDF2" stroke-width="2" opacity=".5" fill="none">
+<path d="M40 476c90-10 180-10 270 0M340 484c100 6 200 4 300-8"/>
+</g>
+<g fill="#0C4B2C">
+<path d="M452 408h18l7 34h-30z"/>
+<circle cx="461" cy="398" r="7"/>
+<path d="M447 396h28l-14-9z"/>
+</g>
+<g fill="#0C4B2C" opacity=".9">
+<path d="M214 388c2-11 11-17 21-17 9 0 14 5 14 13l14 14h-18l-8-8-2 14h-21z"/>
+</g>
+<g stroke="#0B4A2B" stroke-width="8" fill="none" stroke-linecap="round">
+<path d="M40 600C54 540 48 486 26 442M92 600C102 540 116 494 144 464M146 600C150 550 160 512 184 492"/>
+<path d="M694 600C686 542 692 490 712 454M744 600C746 544 736 508 710 482M786 600C786 550 796 520 810 500"/>
+</g>
+<g stroke="#0B4A2B" stroke-width="5" fill="none" stroke-linecap="round">
+<path d="M66 600C78 556 78 512 66 480M124 600C132 562 144 534 164 512M716 600C712 560 706 528 696 506"/>
+</g>
+<g fill="#F2C14E">
+<ellipse cx="26" cy="436" rx="7" ry="19" transform="rotate(-16 26 436)"/>
+<ellipse cx="144" cy="458" rx="6" ry="17" transform="rotate(-10 144 458)"/>
+<ellipse cx="184" cy="486" rx="6" ry="16" transform="rotate(-6 184 486)"/>
+<ellipse cx="712" cy="448" rx="7" ry="18" transform="rotate(12 712 448)"/>
+<ellipse cx="710" cy="476" rx="6" ry="17" transform="rotate(18 710 476)"/>
+<ellipse cx="808" cy="494" rx="6" ry="16" transform="rotate(20 808 494)"/>
+<ellipse cx="66" cy="474" rx="5" ry="15" transform="rotate(-14 66 474)"/>
+<ellipse cx="696" cy="500" rx="5" ry="14" transform="rotate(14 696 500)"/>
+</g>
+<g stroke="#F8E7B4" stroke-width="2.5" fill="none" opacity=".9" stroke-linecap="round">
+<path d="M330 150q9-7 18 0M352 166q8-6 16 0M310 178q7-6 14 0"/>
+</g>
+<rect width="800" height="600" fill="url(#riceField-vignette)"/>
+</svg>

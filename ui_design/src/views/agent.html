@@ -1,0 +1,414 @@
+<section class="view" id="view-agent" data-route="agent" hidden>
+<div class="agent">
+  <div class="wrap wrap--wide">
+    <header class="agent__head">
+      <p class="eyebrow">AI智能体整合 · 实战演示</p>
+      <h1 class="agent__title">在对话里说一句话，<br>素材、授权链接、投放清单一起回来。</h1>
+      <p class="agent__lead">左侧是 WorkBuddy 的真实界面截图，对话内容完全由光圈AI 的 MCP 工具驱动。上方可切换两个场景：运营岗把一条素材变成授权链接，管理岗把一个月的数据变成能上会的简报。点「下一步」逐步播放，或让它自动播放——每一步都能看到模型调用了哪个工具、传了什么参数、拿回了什么。</p>
+      <div class="agent__actions">
+        <a class="btn btn--primary" href="#/mcp">查看智能体接口规范</a>
+        <a class="btn btn--text" href="#/library">先看素材库</a>
+        <a class="btn btn--quiet" href="#/agent" data-goto="agentMedia">直接看视频</a>
+      </div>
+    </header>
+
+    <div class="stage__switch" role="group" aria-label="选择演示场景">
+      <button class="stage__sw is-active" type="button" data-demo-scenario="ops" aria-pressed="true">
+        <span class="stage__sw-k">场景 A</span>
+        <span class="stage__sw-t">招商运营 · 一条素材到一条授权链接</span>
+        <span class="stage__sw-m">8 步 · 运营岗</span>
+      </button>
+      <button class="stage__sw" type="button" data-demo-scenario="biz" aria-pressed="false">
+        <span class="stage__sw-k">场景 B</span>
+        <span class="stage__sw-t">管理决策 · 一句话问出季度盘点</span>
+        <span class="stage__sw-m">7 步 · 管理岗</span>
+      </button>
+    </div>
+
+    <div class="stage" id="demoStage" data-step="0" data-scenario="ops">
+      <div class="stage__scroll">
+        <div class="stage__frame">
+          <img class="stage__shot" src="assets/img/workbuddy_clean.png" width="1916" height="966" loading="lazy" decoding="async" alt="WorkBuddy 应用界面空白截图">
+
+          <div class="stage__ui">
+            <div class="dm-chat" data-demo-scroll>
+              <div class="dm-chat__inner">
+                <p class="dm-chat__head">
+                  <span class="dm-chat__dot"></span>光圈AI 素材助手
+                  <span class="dm-chat__meta">已连接 5 个工具 · 斗门区融媒体中心</span>
+                </p>
+
+                <div class="dm-flow" data-scenario="ops">
+                <div class="dm dm--user" data-from="0">
+                  <p class="dm__who">运营 · 陈晓</p>
+                  <p class="dm__bubble">帮我把「黄杨河落日」这条素材做成抖音竖版短视频，再给我一条可商用的授权链接和一份投放清单。</p>
+                </div>
+
+                <div class="dm" data-from="1">
+                  <div class="dm-tool">
+                    <p class="dm-tool__head">
+                      <span class="dm-tool__dot"></span>
+                      <b>search_assets</b>
+                      <span class="dm-tool__state">已完成 · 128ms</span>
+                    </p>
+                    <dl class="dm-tool__args">
+                      <div><dt>keyword</dt><dd>"黄杨河 落日"</dd></div>
+                      <div><dt>media_type</dt><dd>"video"</dd></div>
+                      <div><dt>license</dt><dd>"commercial"</dd></div>
+                    </dl>
+                  </div>
+                </div>
+
+                <div class="dm" data-from="2">
+                  <p class="dm__note">命中 3 条，按相关度排序：</p>
+                  <div class="dm-hits">
+                    <figure class="dm-hit dm-hit--pick">
+                      <img src="assets/img/river-dusk.svg" alt="黄杨河落日航拍">
+                      <figcaption><b>黄杨河落日</b><span>04:12 · 4K · 可商用</span></figcaption>
+                    </figure>
+                    <figure class="dm-hit">
+                      <img src="assets/img/harbor.svg" alt="斗门港黄昏">
+                      <figcaption><b>斗门港黄昏</b><span>01:36 · 1080P · 可商用</span></figcaption>
+                    </figure>
+                    <figure class="dm-hit">
+                      <img src="assets/img/mountain-mist.svg" alt="黄杨山云海">
+                      <figcaption><b>黄杨山云海</b><span>02:05 · 4K · 需署名</span></figcaption>
+                    </figure>
+                  </div>
+                </div>
+
+                <div class="dm" data-from="3">
+                  <div class="dm-tool">
+                    <p class="dm-tool__head">
+                      <span class="dm-tool__dot"></span>
+                      <b>get_asset_metadata</b>
+                      <span class="dm-tool__state">已完成 · 96ms</span>
+                    </p>
+                    <dl class="dm-tool__args">
+                      <div><dt>asset_id</dt><dd>"DM-VID-2024-0871"</dd></div>
+                    </dl>
+                  </div>
+                </div>
+
+                <div class="dm" data-from="4">
+                  <div class="dm-card">
+                    <p class="dm-card__title">黄杨河落日 · 航拍空镜</p>
+                    <ul class="dm-kv">
+                      <li><span>授权范围</span><b>商用 · 可二次剪辑 · 全平台</b></li>
+                      <li><span>限制条件</span><b>含人物镜头需打码，禁止用于医疗广告</b></li>
+                      <li><span>有效期</span><b>2025-01-01 至 2027-12-31</b></li>
+                      <li><span>负责人</span><b>影像组 · 李岸</b></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="dm" data-from="5">
+                  <div class="dm-tool">
+                    <p class="dm-tool__head">
+                      <span class="dm-tool__dot"></span>
+                      <b>generate_sales_link</b>
+                      <span class="dm-tool__state">已完成 · 214ms</span>
+                    </p>
+                    <dl class="dm-tool__args">
+                      <div><dt>asset_id</dt><dd>"DM-VID-2024-0871"</dd></div>
+                      <div><dt>ttl_days</dt><dd>7</dd></div>
+                    </dl>
+                  </div>
+                  <div class="dm-link">
+                    <span class="dm-link__url">aperture.doumen.gov.cn/s/8Kq2fR</span>
+                    <button class="dm-link__btn" type="button" data-copy="https://aperture.doumen.gov.cn/s/8Kq2fR">复制</button>
+                  </div>
+                </div>
+
+                <div class="dm" data-from="6">
+                  <div class="dm-tool">
+                    <p class="dm-tool__head">
+                      <span class="dm-tool__dot"></span>
+                      <b>export_to_excel</b>
+                      <span class="dm-tool__state">已完成 · 331ms</span>
+                    </p>
+                  </div>
+                  <table class="dm-table">
+                    <caption class="sr-only">导出的投放清单预览</caption>
+                    <thead>
+                      <tr><th scope="col">素材</th><th scope="col">渠道</th><th scope="col">用途</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>黄杨河落日</td><td>抖音</td><td>竖版 15s</td></tr>
+                      <tr><td>黄杨河落日</td><td>视频号</td><td>横版 30s</td></tr>
+                      <tr><td>斗门港黄昏</td><td>小红书</td><td>封面图</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="dm" data-from="7">
+                  <div class="dm-done">
+                    <p class="dm-done__title">三件交付物已就绪</p>
+                    <ul class="dm-done__list">
+                      <li><span class="dm-chip dm-chip--teal">素材</span>黄杨河落日 · 4K 原片 + 竖版剪辑工程</li>
+                      <li><span class="dm-chip dm-chip--orange">链接</span>7 天有效的商用授权链接，可直接发客户</li>
+                      <li><span class="dm-chip dm-chip--violet">清单</span>CSV 投放清单，含渠道与用途</li>
+                    </ul>
+                    <p class="dm-done__foot">本次调用已写入审计日志，可在「后台管理 · 审计日志」追溯到工具、参数与返回。</p>
+                  </div>
+                </div>
+                </div>
+
+                <div class="dm-flow" data-scenario="biz" hidden>
+                  <div class="dm dm--user" data-from="0">
+                    <p class="dm__who">融媒管理人员 · 林海</p>
+                    <p class="dm__bubble">我是融媒中心的管理人员，请帮我统计 2026 年第三季度素材的上传情况，并按素材所有者分类。</p>
+                  </div>
+
+                  <div class="dm" data-from="1">
+                    <div class="dm-tool">
+                      <p class="dm-tool__head">
+                        <span class="dm-tool__dot"></span>
+                        <b>aggregate_uploads</b>
+                        <span class="dm-tool__state">已完成 · 142ms</span>
+                      </p>
+                      <dl class="dm-tool__args">
+                        <div><dt>range</dt><dd>"2026-Q3"</dd></div>
+                        <div><dt>group_by</dt><dd>"uploader"</dd></div>
+                        <div><dt>metrics</dt><dd>["count", "duration", "size"]</dd></div>
+                      </dl>
+                    </div>
+                  </div>
+
+                  <div class="dm" data-from="2">
+                    <div class="dm-kpis">
+                      <div class="dm-kpi dm-kpi--blue">
+                        <p class="dm-kpi__k">上传素材</p>
+                        <p class="dm-kpi__v">3,842</p>
+                        <p class="dm-kpi__d">环比 +12.6%</p>
+                      </div>
+                      <div class="dm-kpi dm-kpi--teal">
+                        <p class="dm-kpi__k">参与上传</p>
+                        <p class="dm-kpi__v">26 人</p>
+                        <p class="dm-kpi__d">覆盖 5 个部门</p>
+                      </div>
+                      <div class="dm-kpi dm-kpi--violet">
+                        <p class="dm-kpi__k">累计时长</p>
+                        <p class="dm-kpi__v">128 h</p>
+                        <p class="dm-kpi__d">视频占 74%</p>
+                      </div>
+                      <div class="dm-kpi dm-kpi--orange">
+                        <p class="dm-kpi__k">存储增量</p>
+                        <p class="dm-kpi__v">1.24 TB</p>
+                        <p class="dm-kpi__d">剩余容量 38%</p>
+                      </div>
+                    </div>
+                    <figure class="dm-spark">
+                      <figcaption class="dm-spark__cap">
+                        <span>2026-Q3 每周上传量</span>
+                        <span>季末两周明显堆积</span>
+                      </figcaption>
+                      <svg viewBox="0 0 320 72" preserveAspectRatio="none" role="img" aria-label="2026 年第三季度每周上传量：周均约 296 件，季末两周升至 400 件以上">
+                        <defs>
+                          <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#0071e3" stop-opacity="0.26"/>
+                            <stop offset="100%" stop-color="#0071e3" stop-opacity="0"/>
+                          </linearGradient>
+                        </defs>
+                        <path d="M0,64.4 L22.4,59.8 L44.9,61.8 L67.3,54.6 L89.7,46.1 L112.1,48.1 L134.6,40.2 L157,43.8 L179.4,31.8 L201.9,35.7 L224.3,23.9 L246.7,26.5 L269.1,15.5 L291.6,19.4 L314,7.6 L314,72 L0,72 Z" fill="url(#sparkFill)"/>
+                        <polyline points="0,64.4 22.4,59.8 44.9,61.8 67.3,54.6 89.7,46.1 112.1,48.1 134.6,40.2 157,43.8 179.4,31.8 201.9,35.7 224.3,23.9 246.7,26.5 269.1,15.5 291.6,19.4 314,7.6" fill="none" stroke="#0071e3" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="314" cy="7.6" r="3" fill="#0071e3" vector-effect="non-scaling-stroke"/>
+                      </svg>
+                    </figure>
+                  </div>
+
+                  <div class="dm" data-from="3">
+                    <p class="dm__note">按上传者拆开，前 3 位贡献了 75%：</p>
+                    <div class="dm-bars">
+                      <div class="dm-bar">
+                        <span class="dm-bar__k">影像组 · 李岸</span>
+                        <span class="dm-bar__track"><span class="dm-bar__fill dm-bar__fill--pink" style="width:100%"></span></span>
+                        <span class="dm-bar__v">1,120 件 · 29%</span>
+                      </div>
+                      <div class="dm-bar">
+                        <span class="dm-bar__k">新媒体组 · 周敏</span>
+                        <span class="dm-bar__track"><span class="dm-bar__fill dm-bar__fill--teal" style="width:84%"></span></span>
+                        <span class="dm-bar__v">940 件 · 24%</span>
+                      </div>
+                      <div class="dm-bar">
+                        <span class="dm-bar__k">新闻采访部 · 李锐</span>
+                        <span class="dm-bar__track"><span class="dm-bar__fill dm-bar__fill--blue" style="width:73%"></span></span>
+                        <span class="dm-bar__v">820 件 · 21%</span>
+                      </div>
+                      <div class="dm-bar">
+                        <span class="dm-bar__k">视觉工作室 · 苏晴</span>
+                        <span class="dm-bar__track"><span class="dm-bar__fill dm-bar__fill--orange" style="width:50%"></span></span>
+                        <span class="dm-bar__v">560 件 · 15%</span>
+                      </div>
+                      <div class="dm-bar">
+                        <span class="dm-bar__k">其余 22 人</span>
+                        <span class="dm-bar__track"><span class="dm-bar__fill dm-bar__fill--violet" style="width:36%"></span></span>
+                        <span class="dm-bar__v">402 件 · 11%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dm" data-from="4">
+                    <div class="dm-tool">
+                      <p class="dm-tool__head">
+                        <span class="dm-tool__dot"></span>
+                        <b>list_collections</b>
+                        <span class="dm-tool__state">已完成 · 187ms</span>
+                      </p>
+                      <dl class="dm-tool__args">
+                        <div><dt>depth</dt><dd>2</dd></div>
+                        <div><dt>with_counts</dt><dd>true</dd></div>
+                      </dl>
+                    </div>
+                    <div class="dm-insights">
+                      <div class="dm-insight dm-insight--green">
+                        <p class="dm-insight__k">结构</p>
+                        <p class="dm-insight__v">城市影像 41%，也是本月成交额最高的分类（¥12,400）</p>
+                      </div>
+                      <div class="dm-insight dm-insight--amber">
+                        <p class="dm-insight__k">节奏</p>
+                        <p class="dm-insight__v">季末两周占 44%，9 月 28 日单日 186 件，归档压力集中</p>
+                      </div>
+                      <div class="dm-insight dm-insight--orange">
+                        <p class="dm-insight__k">缺口</p>
+                        <p class="dm-insight__v">「白蕉海鲈」相关素材仅 38 件（1.8%），与重点项目不匹配</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dm" data-from="5">
+                    <div class="dm-tool">
+                      <p class="dm-tool__head">
+                        <span class="dm-tool__dot"></span>
+                        <b>export_to_excel</b>
+                        <span class="dm-tool__state">已完成 · 264ms</span>
+                      </p>
+                      <dl class="dm-tool__args">
+                        <div><dt>rows</dt><dd>26</dd></div>
+                        <div><dt>columns</dt><dd>["上传者","部门","件数","时长","容量"]</dd></div>
+                      </dl>
+                    </div>
+                    <div class="dm-file">
+                      <span class="dm-file__ic">XLSX</span>
+                      <div class="dm-file__meta">
+                        <b>2026-Q3 素材盘点 · 按上传者</b>
+                        <span>26 行 × 5 列 · 含月度趋势与分类结构</span>
+                      </div>
+                      <button class="dm-link__btn" type="button" data-toast="已导出：2026-Q3-素材盘点.xlsx">下载</button>
+                    </div>
+                  </div>
+
+                  <div class="dm" data-from="6">
+                    <div class="dm-done">
+                      <p class="dm-done__title">上会材料已就绪</p>
+                      <ul class="dm-done__list">
+                        <li><span class="dm-chip dm-chip--teal">表格</span>26 行明细 Excel，每位上传者的件数、时长与容量</li>
+                        <li><span class="dm-chip dm-chip--orange">图表</span>上传者分布 + 季度趋势，可直接放进季度报告</li>
+                        <li><span class="dm-chip dm-chip--violet">结论</span>影像组产能接近上限、季末堆积、海鲈题材缺口，三条建议待确认</li>
+                      </ul>
+                      <p class="dm-done__foot">统计类工具只读，不会改动素材与归属；本次查询写入审计日志，可追溯到人、时间与查询条件。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dm-composer" aria-hidden="true">
+                  <span class="dm-composer__plus">＋</span>
+                  <span class="dm-composer__ph">继续追问，或输入 / 查看可用工具…</span>
+                  <span class="dm-composer__send">↑</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage__ctl" role="group" aria-label="交互演示播放控制">
+        <button class="stage__btn" type="button" data-demo-prev aria-label="上一步">←</button>
+        <div class="stage__track"><span class="stage__fill" data-demo-progress></span></div>
+        <button class="stage__btn stage__btn--next" type="button" data-demo-next>下一步 →</button>
+        <span class="stage__count" data-demo-count aria-live="polite" aria-label="演示进度">1 / 8</span>
+        <button class="stage__btn stage__btn--ghost" type="button" data-demo-play aria-pressed="false">自动播放</button>
+        <button class="stage__btn stage__btn--ghost" type="button" data-demo-reset>重播</button>
+      </div>
+
+      <ol class="stage__caps" data-scenario="ops" aria-label="演示步骤">
+        <li><button type="button" data-cap data-demo-jump="0"><span class="cap__i">01</span><span class="cap__t">提出问题</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="1"><span class="cap__i">02</span><span class="cap__t">模型选工具</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="2"><span class="cap__i">03</span><span class="cap__t">检索素材</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="3"><span class="cap__i">04</span><span class="cap__t">读取详情</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="4"><span class="cap__i">05</span><span class="cap__t">权限校验</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="5"><span class="cap__i">06</span><span class="cap__t">生成链接</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="6"><span class="cap__i">07</span><span class="cap__t">导出清单</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="7"><span class="cap__i">08</span><span class="cap__t">交付完成</span></button></li>
+      </ol>
+
+      <ol class="stage__caps" data-scenario="biz" hidden aria-label="演示步骤">
+        <li><button type="button" data-cap data-demo-jump="0"><span class="cap__i">01</span><span class="cap__t">提出问题</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="1"><span class="cap__i">02</span><span class="cap__t">调用统计</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="2"><span class="cap__i">03</span><span class="cap__t">关键指标</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="3"><span class="cap__i">04</span><span class="cap__t">上传者分布</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="4"><span class="cap__i">05</span><span class="cap__t">结构分析</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="5"><span class="cap__i">06</span><span class="cap__t">导出报表</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="6"><span class="cap__i">07</span><span class="cap__t">汇报就绪</span></button></li>
+      </ol>
+    </div>
+
+    <section class="agent__why">
+      <h2 class="section__title">这套演示想确认的三件事</h2>
+      <div class="why-grid">
+        <div class="why">
+          <p class="why__i">01</p>
+          <h3>工具边界</h3>
+          <p>智能体只能调用光圈AI 开放的 MCP 工具：检索、元数据、上传统计、导出、销售链接。没有「随便改素材」，权限仍然由光圈AI 决定。</p>
+        </div>
+        <div class="why">
+          <p class="why__i">02</p>
+          <h3>参数可见</h3>
+          <p>每次调用都展示工具名、入参与耗时，客户和内部审核都能看懂智能体到底做了什么。</p>
+        </div>
+        <div class="why">
+          <p class="why__i">03</p>
+          <h3>可回溯</h3>
+          <p>所有调用写入审计日志，能追溯到人、素材、链接和导出的文件，满足对外授权留痕要求。</p>
+        </div>
+      </div>
+      <p class="agent__foot">演示数据均为示意；真实上线后工具返回结构不变，仅数据来源替换为生产库。</p>
+    </section>
+
+    <section class="agent__media" id="agentMedia" aria-labelledby="mediaTitle">
+      <div class="agent__media-head">
+        <div>
+          <p class="eyebrow">可带走</p>
+          <h2 class="section__title" id="mediaTitle">两段演示都已录成视频</h2>
+          <p class="section__lead">下面的视频无声循环，可直接放进方案汇报；GIF 版可以粘进微信和 PPT。</p>
+        </div>
+        <p class="agent__media-note" data-media-meta>场景 A 8 步 · 场景 B 7 步 · 1280 × 800</p>
+      </div>
+
+      <div class="media-grid">
+        <figure class="media">
+          <video class="media__v" src="assets/media/demo-ops.webm" data-poster="assets/media/demo-ops.jpg" width="1280" height="800" controls muted loop playsinline preload="none" aria-label="场景 A 招商运营演示视频"></video>
+          <figcaption class="media__cap">
+            <b>场景 A · 招商运营</b>
+            <span>从一句话到授权链接、投放清单。</span>
+            <span class="media__links">
+              <a href="assets/media/demo-ops.gif" download>下载 GIF<span class="u-micro">（微信 / PPT 可直接粘贴）</span></a>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="media">
+          <video class="media__v" src="assets/media/demo-biz.webm" data-poster="assets/media/demo-biz.jpg" width="1280" height="800" controls muted loop playsinline preload="none" aria-label="场景 B 管理决策演示视频"></video>
+          <figcaption class="media__cap">
+            <b>场景 B · 管理决策</b>
+            <span>管理人员一句话问出季度上传盘点。</span>
+            <span class="media__links">
+              <a href="assets/media/demo-biz.gif" download>下载 GIF<span class="u-micro">（微信 / PPT 可直接粘贴）</span></a>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+</div>
+</section>

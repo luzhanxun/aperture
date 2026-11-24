@@ -1,0 +1,283 @@
+﻿/* 光圈AI · 应用外壳与视图切换（v1.1）
+   单页外壳：顶部玻璃导航 + 视图挂载点。所有页面共用一套导航，
+   路由切换用一段克制的位移淡入表达「同一套系统在换屏」。 */
+
+html { scroll-padding-top: 64px; }
+
+.skip {
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  transform: translate(-50%, -160%);
+  z-index: 200;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  background: var(--color-paper);
+  color: var(--color-accent-strong);
+  font-size: var(--text-caption);
+  box-shadow: var(--shadow-float);
+  transition: transform var(--duration-fast) var(--ease-apple);
+}
+.skip:focus { transform: translate(-50%, 0); }
+
+/* 外壳导航 */
+.shell {
+  --shell-fg: var(--color-ink);
+  --shell-fg-dim: var(--color-ink-muted);
+  --shell-active: var(--color-accent-strong);
+  --shell-bg: rgba(251, 251, 253, 0.76);
+  --shell-line: var(--color-hairline-soft);
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  height: var(--shell-h);
+  padding: 0 var(--space-5);
+  background: var(--shell-bg);
+  -webkit-backdrop-filter: var(--nav-backdrop);
+  backdrop-filter: var(--nav-backdrop);
+  border-bottom: 1px solid var(--shell-line);
+  color: var(--shell-fg);
+  transition: background-color var(--duration-base) var(--ease-apple),
+              border-color var(--duration-base) var(--ease-apple),
+              color var(--duration-base) var(--ease-apple);
+}
+
+.shell__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: none;
+  color: inherit;
+  text-decoration: none;
+}
+.shell__brand:hover { text-decoration: none; }
+.shell__mark {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.shell__name {
+  font-family: var(--font-display);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  letter-spacing: var(--tracking-display);
+  white-space: nowrap;
+}
+
+.shell__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-left: auto;
+}
+.shell__nav::-webkit-scrollbar { display: none; }
+.shell__nav a {
+  flex: none;
+  padding: 6px var(--space-3);
+  border-radius: var(--radius-pill);
+  color: var(--shell-fg-dim);
+  font-size: var(--text-caption);
+  line-height: 1.3;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--duration-fast) var(--ease-apple),
+              background-color var(--duration-fast) var(--ease-apple);
+}
+.shell__nav a:hover {
+  color: var(--shell-fg);
+  background: rgba(120, 120, 128, 0.12);
+  text-decoration: none;
+}
+.shell__nav a.is-active {
+  color: var(--shell-active);
+  background: rgba(0, 113, 227, 0.1);
+  font-weight: 600;
+}
+
+.shell__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex: none;
+}
+.shell__hint {
+  font-size: var(--text-micro);
+  color: var(--shell-fg-dim);
+  white-space: nowrap;
+}
+.shell__user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: inherit;
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+  padding: 3px 10px 3px 3px;
+  transition: background-color var(--duration-fast) var(--ease-apple);
+}
+.shell__user:hover { background: rgba(120, 120, 128, 0.12); text-decoration: none; }
+.shell__user-name {
+  font-size: var(--text-caption);
+  white-space: nowrap;
+}
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--grad-brand);
+  color: var(--color-paper);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* 总览路由：导航转为暗色，与深色英雄区连成一体 */
+body[data-route="overview"] .shell {
+  --shell-fg: var(--color-ink-inverse);
+  --shell-fg-dim: rgba(245, 245, 247, 0.72);
+  --shell-active: var(--color-paper);
+  --shell-bg: rgba(18, 16, 26, 0.55);
+  --shell-line: rgba(255, 255, 255, 0.12);
+}
+body[data-route="overview"] .shell__nav a:hover { background: rgba(255, 255, 255, 0.14); }
+body[data-route="overview"] .shell__nav a.is-active { background: rgba(255, 255, 255, 0.18); }
+body[data-route="overview"] .shell__user:hover { background: rgba(255, 255, 255, 0.14); }
+
+/* 视图切换 */
+.view { animation: view-in var(--duration-base) var(--ease-out) both; }
+@keyframes view-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+#viewRoot { display: block; min-height: 60vh; }
+#viewRoot:focus { outline: none; }
+
+/* ---------- 总览：深色英雄区 ---------- */
+.view[data-route="overview"] .hero {
+  position: relative;
+  isolation: isolate;
+  padding-top: var(--space-10);
+  color: var(--color-ink-inverse);
+  background:
+    radial-gradient(1050px 480px at 8% -14%, rgba(107, 78, 230, 0.92), rgba(107, 78, 230, 0) 64%),
+    radial-gradient(820px 460px at 92% 4%, rgba(226, 89, 31, 0.62), rgba(226, 89, 31, 0) 62%),
+    radial-gradient(760px 420px at 66% 116%, rgba(13, 154, 168, 0.62), rgba(13, 154, 168, 0) 66%),
+    #141220;
+  overflow: hidden;
+}
+.view[data-route="overview"] .hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+.view[data-route="overview"] .hero__eyebrow { color: rgba(245, 245, 247, 0.7); }
+.view[data-route="overview"] .hero__lead { color: rgba(245, 245, 247, 0.76); }
+.view[data-route="overview"] .fact__label { color: rgba(245, 245, 247, 0.6); }
+.view[data-route="overview"] .hero .btn--text { color: var(--color-accent-text); }
+.view[data-route="overview"] .hero .btn--text:hover { color: #6cb8ff; }
+
+.view[data-route="overview"] .hero__map {
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+.view[data-route="overview"] .hero__map-label { color: rgba(245, 245, 247, 0.6); }
+.view[data-route="overview"] .map-list li { border-top-color: rgba(255, 255, 255, 0.14); }
+.view[data-route="overview"] .map-list a { color: var(--color-ink-inverse); }
+.view[data-route="overview"] .map-list .map__index,
+.view[data-route="overview"] .map-list .map__meta { color: rgba(245, 245, 247, 0.58); }
+.view[data-route="overview"] .map-list a:hover .map__name { color: var(--color-accent-text); }
+.view[data-route="overview"] .map-list .map--demo .map__name { color: var(--color-accent-text); }
+.view[data-route="overview"] .map-list .map--demo .map__index,
+.view[data-route="overview"] .map-list .map--demo .map__meta { color: rgba(41, 151, 255, 0.9); }
+.view[data-route="overview"] .map-list .map--demo a:hover .map__name { color: #7cc0ff; }
+
+/* 英雄区下方的影像带 */
+.filmstrip {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 2px;
+  background: #141220;
+}
+.filmstrip figure {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+.filmstrip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 620ms var(--ease-out);
+}
+.filmstrip figure:hover img { transform: scale(1.06); }
+.filmstrip figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: var(--space-3);
+  font-size: var(--text-micro);
+  color: var(--color-paper);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.62));
+}
+
+/* ---------- 总览：交付范围卡片着色 ---------- */
+.entry-grid > .entry:nth-child(1) { --e-hue: var(--hue-blue); --e-soft: var(--hue-blue-soft); --e-ink: var(--hue-blue-ink); }
+.entry-grid > .entry:nth-child(2) { --e-hue: var(--hue-teal); --e-soft: var(--hue-teal-soft); --e-ink: var(--hue-teal-ink); }
+.entry-grid > .entry:nth-child(3) { --e-hue: var(--hue-amber); --e-soft: var(--hue-amber-soft); --e-ink: var(--hue-amber-ink); }
+.entry-grid > .entry:nth-child(4) { --e-hue: var(--hue-orange); --e-soft: var(--hue-orange-soft); --e-ink: var(--hue-orange-ink); }
+.entry-grid > .entry:nth-child(5) { --e-hue: var(--hue-pink); --e-soft: var(--hue-pink-soft); --e-ink: var(--hue-pink-ink); }
+.entry-grid > .entry:nth-child(6) { --e-hue: var(--hue-green); --e-soft: var(--hue-green-soft); --e-ink: var(--hue-green-ink); }
+.entry-grid > .entry:nth-child(7) { --e-hue: var(--hue-violet); --e-soft: var(--hue-violet-soft); --e-ink: var(--hue-violet-ink); }
+.entry-grid > .entry:nth-child(8) { --e-hue: var(--hue-teal); --e-soft: var(--hue-teal-soft); --e-ink: var(--hue-teal-ink); }
+
+.entry { position: relative; overflow: hidden; }
+.entry:hover { background: var(--e-soft, var(--color-paper)); }
+.entry:hover .entry__link { text-decoration: underline; }
+.entry__index {
+  padding: 0;
+  background: none;
+  color: var(--e-ink, var(--hue-blue-ink));
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: 600;
+  letter-spacing: var(--tracking-display);
+  line-height: 1;
+}
+.entry__link { color: var(--e-ink, var(--color-accent-strong)); }
+
+
+
+
+@media (max-width: 1180px) {
+  .shell__hint { display: none; }
+  .shell { gap: var(--space-4); }
+  .shell__nav { gap: 0; }
+  .shell__nav a { padding-left: var(--space-2); padding-right: var(--space-2); }
+}
+@media (max-width: 860px) {
+  .filmstrip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .shell { gap: var(--space-3); padding: 0 var(--space-4); }
+  .shell__user-name { display: none; }
+  .shell__nav { margin-left: 0; }
+
+  .filmstrip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .filmstrip figcaption { font-size: 12px; padding: var(--space-2); }
+}

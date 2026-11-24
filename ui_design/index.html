@@ -1,0 +1,3571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>光圈AI · 数字化素材管理系统</title>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/screens.css">
+<link rel="stylesheet" href="assets/css/store.css">
+<link rel="stylesheet" href="assets/css/overview.css">
+<link rel="stylesheet" href="assets/css/agent.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/color.css">
+</head>
+<body data-route="overview">
+
+<a class="skip" href="#viewRoot">跳到主内容</a>
+
+<header class="shell" id="shell">
+  <a class="shell__brand" href="#/overview" aria-label="光圈AI 总览">
+    <svg class="shell__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m14.31 8 5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16 3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"/></svg>
+    <span class="shell__name">光圈AI</span>
+  </a>
+
+  <nav class="shell__nav" aria-label="系统导航">
+    <a href="#/overview" data-nav="overview">总览</a>
+    <a href="#/library" data-nav="library">素材库</a>
+    <a href="#/sales" data-nav="sales">销售链接</a>
+    <a href="#/buy" data-nav="buy">客户端</a>
+    <a href="#/stats" data-nav="stats">数据统计</a>
+    <a href="#/admin" data-nav="admin">管理后台</a>
+    <a href="#/agent" data-nav="agent">AI智能体整合</a>
+    <a href="#/design" data-nav="design">设计规范</a>
+    <a href="#/mcp" data-nav="mcp">智能体接口规范</a>
+  </nav>
+
+  <div class="shell__right">
+    <span class="shell__hint">原型 · 数据为示意</span>
+    <a class="shell__user" href="#/login" data-nav="login" aria-label="登录与账号">
+      <span class="avatar">陈</span>
+      <span class="shell__user-name">陈晓</span>
+    </a>
+  </div>
+</header>
+
+<main id="viewRoot">
+<section class="view" id="view-overview" data-route="overview" hidden>
+<div class="overview-body">
+  <section class="hero">
+    <div class="wrap wrap--wide hero__inner">
+      <div>
+        <p class="hero__eyebrow">斗门区融媒体中心 · 数字化素材管理系统</p>
+        <h1 class="hero__title">找得到，读得懂，<br>卖得出去，管得清楚。</h1>
+        <p class="hero__lead">光圈AI 把素材库、上传治理、销售授权与后台审计收进一套系统，并对外提供 AI 可调用的素材工具。本原型用于逐屏确认需求、交互与边界，所有数据均为示意。</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#/agent">看 AI 智能体整合</a>
+          <a class="btn btn--text" href="#/library">开始浏览界面</a>
+        </div>
+        <div class="hero__facts">
+          <div>
+            <p class="fact__value">8</p>
+            <p class="fact__label">子系统</p>
+          </div>
+          <div>
+            <p class="fact__value">12</p>
+            <p class="fact__label">可点击界面</p>
+          </div>
+          <div>
+            <p class="fact__value">4</p>
+            <p class="fact__label">角色</p>
+          </div>
+          <div>
+            <p class="fact__value">5</p>
+            <p class="fact__label">MCP 工具</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__map">
+        <p class="hero__map-label">系统地图 · 点击进入</p>
+        <ol class="map-list">
+          <li><a href="#/login"><span class="map__index">01</span><span class="map__name">登录与身份</span><span class="map__meta">4 种登录</span></a></li>
+          <li><a href="#/library"><span class="map__index">02</span><span class="map__name">素材库</span><span class="map__meta">检索与详情</span></a></li>
+          <li><a href="#/upload"><span class="map__index">03</span><span class="map__name">上传与元数据治理</span><span class="map__meta">AI 建议</span></a></li>
+          <li><a href="#/sales"><span class="map__index">04</span><span class="map__name">素材销售</span><span class="map__meta">链接与授权</span></a></li>
+          <li><a href="#/buy"><span class="map__index">05</span><span class="map__name">客户端</span><span class="map__meta">浏览与下单</span></a></li>
+          <li><a href="#/stats"><span class="map__index">06</span><span class="map__name">定价与销售统计</span><span class="map__meta">转化与趋势</span></a></li>
+          <li><a href="#/admin"><span class="map__index">07</span><span class="map__name">后台管理</span><span class="map__meta">权限与日志</span></a></li>
+          <li><a href="#/mcp"><span class="map__index">08</span><span class="map__name">智能体接口规范</span><span class="map__meta">MCP · 5 工具</span></a></li>
+          <li><a class="map--demo" href="#/agent"><span class="map__index">09</span><span class="map__name">AI智能体整合</span><span class="map__meta">可交互 · 2 个场景 15 步</span></a></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="filmstrip" aria-label="示意素材">
+    <figure>
+      <img src="assets/img/river-dusk.svg" alt="黄杨河落日航拍示意" width="480" height="360" loading="lazy">
+      <figcaption>黄杨河 · 落日　4K 航拍</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/rice-field.svg" alt="稻田晨雾示意图" width="480" height="360" loading="lazy">
+      <figcaption>斗门 · 稻田　晨雾</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/dragon-boat.svg" alt="龙舟赛现场示意图" width="480" height="360" loading="lazy">
+      <figcaption>黄杨河 · 龙舟　赛事</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/old-street.svg" alt="老街骑楼示意图" width="480" height="360" loading="lazy">
+      <figcaption>斗门老街 · 骑楼　人文</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/fish-farm.svg" alt="海上渔排示意图" width="480" height="360" loading="lazy">
+      <figcaption>白蕉 · 渔排　纪实</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/puppet-parade.svg" alt="飘色巡游示意图" width="480" height="360" loading="lazy">
+      <figcaption>斗门 · 飘色　非遗</figcaption>
+    </figure>
+  </div>
+
+  <section class="section" id="systems">
+    <div class="wrap wrap--wide">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">交付范围</h2>
+          <p class="section__lead">按业务链路拆成 8 个子系统，每个子系统一张可点击界面。先确认界面里有什么，再确认数据怎么流。</p>
+        </div>
+        <p class="section__note">可交互原型 · 无构建依赖 · 直接双击打开</p>
+      </div>
+
+      <div class="entry-grid">
+        <a class="entry" href="#/login">
+          <div>
+            <div class="entry__top"><span class="entry__index">01</span><span class="entry__count">1 个界面</span></div>
+            <h3>登录与身份</h3>
+            <p>账号密码、手机验证码、微信扫码三种入口，登录后按四类角色收敛可见范围。</p>
+          </div>
+          <span class="entry__link">查看界面</span>
+        </a>
+        <a class="entry" href="#/library">
+          <div>
+            <div class="entry__top"><span class="entry__index">02</span><span class="entry__count">1 个界面</span></div>
+            <h3>素材库</h3>
+            <p>关键词、类型、分类与可见范围组合检索；网格与列表切换，多选后可批量生成链接。</p>
+          </div>
+          <span class="entry__link">查看界面</span>
+        </a>
+        <a class="entry" href="#/upload">
+          <div>
+            <div class="entry__top"><span class="entry__index">03</span><span class="entry__count">1 个界面</span></div>
+            <h3>上传与元数据治理</h3>
+            <p>拖入即转码并生成带水印预览，AI 给出标题、分类与标签建议，人工确认后才入库。</p>
+          </div>
+          <span class="entry__link">查看界面</span>
+        </a>
+        <a class="entry" href="#/sales">
+          <div>
+            <div class="entry__top"><span class="entry__index">04</span><span class="entry__count">1 个界面</span></div>
+            <h3>素材销售</h3>
+            <p>把多件素材打包成一条带二维码的销售链接，配置有效期、访问上限与授权范围。</p>
+          </div>
+          <span class="entry__link">查看界面</span>
+        </a>
+        <a class="entry" href="#/buy">
+          <div>
+            <div class="entry__top"><span class="entry__index">05</span><span class="entry__count">1 个界面</span></div>
+            <h3>客户端</h3>
+            <p>客户在素材商店里浏览、筛选、看价格与授权范围，加入选购清单后进入下单；单条销售链接的客户页另开一屏，不带内部导航。</p>
+          </div>
+          <span class="entry__link">查看界面</span>
+        </a>
+        <a class="entry" href="#/stats">
+          <div>
+            <div class="entry__top"><span class="entry__index">06</span><span class="entry__count">1 个界面</span></div>
+            <h3>定价与销售统计</h3>
+            <p>成交额、订单、链接转化与分类分布；分类默认价、批量调价与单素材定价三档策略。</p>
+          </div>
+          <span class="entry__link">查看界面</span>
+        </a>
+        <a class="entry" href="#/admin">
+          <div>
+            <div class="entry__top"><span class="entry__index">07</span><span class="entry__count">1 个界面</span></div>
+            <h3>后台管理</h3>
+            <p>素材台账、用户与角色、权限矩阵，以及只追加不可编辑的审计日志。</p>
+          </div>
+          <span class="entry__link">查看界面</span>
+        </a>
+        <a class="entry" href="#/mcp">
+          <div>
+            <div class="entry__top"><span class="entry__index">08</span><span class="entry__count">1 个界面</span></div>
+            <h3>智能体接口规范</h3>
+            <p>5 个 MCP 工具、接入配置与两个脚本化场景，展示 WorkBuddy 如何按权限取用素材。</p>
+          </div>
+          <span class="entry__link">查看界面</span>
+        </a>
+        <a class="entry" href="#/design">
+          <div>
+            <div class="entry__top"><span class="entry__index">09</span><span class="entry__count">1 份规范</span></div>
+            <h3>设计规范</h3>
+            <p>颜色、字号、间距、圆角与组件状态，全部落到 token，方便后续开发照此实现。</p>
+          </div>
+          <span class="entry__link">查看规范</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="route">
+    <div class="wrap wrap--wide">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">建议演示路径</h2>
+          <p class="section__lead">与客户开会时按这条顺序走一遍，正好覆盖「上传 → 治理 → 销售 → 购买 → 对账」的完整闭环。</p>
+        </div>
+        <p class="section__note">约 25 分钟</p>
+      </div>
+
+      <div class="route-grid">
+        <div class="route-step">
+          <span class="route-step__num">01</span>
+          <div>
+            <h3>登录并切换角色</h3>
+            <p>在 <a href="#/login">登录页</a> 依次切换四类角色，确认每类角色能看到什么、不能看到什么。</p>
+          </div>
+        </div>
+        <div class="route-step">
+          <span class="route-step__num">02</span>
+          <div>
+            <h3>检索与批量选择</h3>
+            <p>在 <a href="#/library">素材库</a> 搜「海鲈」，切换网格与列表，打开详情抽屉，勾选三件素材。</p>
+          </div>
+        </div>
+        <div class="route-step">
+          <span class="route-step__num">03</span>
+          <div>
+            <h3>上传与确认建议</h3>
+            <p>在 <a href="#/upload">上传页</a> 看转码进度、AI 建议与元数据完整度，确认「人工确认后才入库」。</p>
+          </div>
+        </div>
+        <div class="route-step">
+          <span class="route-step__num">04</span>
+          <div>
+            <h3>生成销售链接</h3>
+            <p>在 <a href="#/sales">销售链接页</a> 配置有效期与访问上限，复制链接或扫码打开。</p>
+          </div>
+        </div>
+        <div class="route-step">
+          <span class="route-step__num">05</span>
+          <div>
+            <h3>客户视角下单</h3>
+            <p>在 <a href="#/buy">客户端</a> 浏览素材、加进选购清单；再从 <a href="#/sales">销售链接</a> 点「打开预览页」到 <a href="#/link">客户链接页</a>，看单条链接的授权与支付。</p>
+          </div>
+        </div>
+        <div class="route-step">
+          <span class="route-step__num">06</span>
+          <div>
+            <h3>对账与留痕</h3>
+            <p>回到 <a href="#/stats">统计页</a> 看转化与订单，再到 <a href="#/admin">后台</a> 展开一条审计日志。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="roles">
+    <div class="wrap wrap--wide">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">四类角色</h2>
+          <p class="section__lead">权限按「能看什么、能改什么、能导出什么」三条线划分，避免用岗位名称代替权限设计。</p>
+        </div>
+        <a class="btn btn--text" href="#/admin" data-goto="permissions">查看完整权限矩阵</a>
+      </div>
+
+      <div class="role-grid u-mt-6">
+        <div class="role-card">
+          <h3>一般用户</h3>
+          <p>浏览公开素材、查看带水印预览、按授权购买。不能上传、不能查看内部素材与销售数据。</p>
+        </div>
+        <div class="role-card">
+          <h3>融媒工作人员</h3>
+          <p>上传素材、补全元数据、生成销售链接、接待客户询价。不能删除素材、不能调整定价。</p>
+        </div>
+        <div class="role-card">
+          <h3>融媒管理人员</h3>
+          <p>审核与删除素材、管理分类、查看销售统计与定价、处理退款。不能管理账号与审计日志。</p>
+        </div>
+        <div class="role-card">
+          <h3>系统管理员</h3>
+          <p>管理账号与角色、查看与导出审计日志、配置 MCP 令牌与系统参数。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="questions">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">待确认问题</h2>
+          <p class="section__lead">这些问题会直接改变界面与数据模型。建议在会上逐条给结论，原型再据此调整。</p>
+        </div>
+        <p class="section__note">6 项</p>
+      </div>
+
+      <ol class="question-list">
+        <li>
+          <span class="question__index">01</span>
+          <span class="question__title">支付渠道与发票</span>
+          <span class="question__why">只接微信支付，还是同时支持对公转账？是否需要与中心财务系统对接、自动开票？</span>
+        </li>
+        <li>
+          <span class="question__index">02</span>
+          <span class="question__title">定价规则与商用加价</span>
+          <span class="question__why">按分类默认价，还是逐件定价？多平台、一年期等授权范围如何加价，由谁审批？</span>
+        </li>
+        <li>
+          <span class="question__index">03</span>
+          <span class="question__title">链接有效期与授权期限</span>
+          <span class="question__why">默认 7 天、30 天还是长期？链接过期后，已购授权是否仍然有效、能否重复下载？</span>
+        </li>
+        <li>
+          <span class="question__index">04</span>
+          <span class="question__title">水印与预览策略</span>
+          <span class="question__why">水印内容、位置与透明度？是否叠加访问者标识？是否允许客户下载带水印小样？</span>
+        </li>
+        <li>
+          <span class="question__index">05</span>
+          <span class="question__title">日志与合规要求</span>
+          <span class="question__why">日志保留多久、谁能导出？是否需要等保测评、操作审计对接或异地登录告警？</span>
+        </li>
+        <li>
+          <span class="question__index">06</span>
+          <span class="question__title">MCP 一期边界</span>
+          <span class="question__why">是否仅限内部账号接入？是否允许导出原片？除 WorkBuddy 外还有哪些智能体需要接入？</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+</div>
+</section>
+
+<section class="view" id="view-library" data-route="library" hidden>
+<div class="lib">
+  <div class="lib__head">
+    <div>
+      <h1 class="lib__title">素材库</h1>
+      <p class="lib__sub">斗门区融媒体中心 · 全库 82,416 件素材 · 今日新增 126 件</p>
+    </div>
+    <div class="u-row">
+      <button class="btn btn--quiet" type="button" data-select-toggle aria-pressed="false">多选</button>
+      <a class="btn btn--primary" href="#/upload">上传素材</a>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <label class="search toolbar__search">
+      <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="text" data-search placeholder="搜索标题、标签、拍摄地点或上传者" aria-label="搜索素材">
+    </label>
+    <div class="chip-row" role="group" aria-label="按素材类型筛选">
+      <button class="chip is-active" type="button" data-toast="已切换：全部素材">全部</button>
+      <button class="chip" type="button" data-toast="已切换：视频">视频</button>
+      <button class="chip" type="button" data-toast="已切换：图片">图片</button>
+      <button class="chip" type="button" data-toast="已切换：音频">音频</button>
+      <button class="chip" type="button" data-toast="已切换：文档">文档</button>
+      <button class="chip" type="button" data-toast="已切换：航拍素材">航拍</button>
+    </div>
+    <div class="toolbar__spacer"></div>
+    <div class="segmented" role="group" aria-label="切换视图">
+      <button type="button" class="is-active" data-view="grid" aria-label="网格视图" aria-pressed="true">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      </button>
+      <button type="button" data-view="list" aria-label="列表视图" aria-pressed="false">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <button class="btn btn--quiet" type="button" data-toast="排序：按上传时间，最新优先">最新上传</button>
+  </div>
+
+  <div class="resultbar">
+    <span>匹配 <strong data-result-count>8</strong> 件 / 共 82,416 件 · 全部可见范围</span>
+    <span>缩略图为水印预览，授权后可下载原片</span>
+  </div>
+
+  <div class="asset-grid lib__grid">
+    <article class="asset-card" data-asset data-keywords="白蕉海鲈 产业园 航拍 视频 4k 陈晓 白蕉镇 养殖">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：白蕉海鲈产业园航拍">
+        <div class="thumb">
+          <img src="assets/img/fish-farm.svg" alt="白蕉海鲈养殖鱼塘与网箱的航拍画面" width="800" height="600">
+          <span class="thumb__type">视频</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">白蕉海鲈产业园航拍</h2>
+          <p class="asset-sub">00:48 · 3840×2160 · 陈晓</p>
+          <div class="asset-tags"><span>白蕉镇 · 航拍 · 4K</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+
+    <article class="asset-card" data-asset data-keywords="黄杨河 落日 晚霞 图片 李锐 井岸镇 风光">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：黄杨河落日">
+        <div class="thumb">
+          <img src="assets/img/river-dusk.svg" alt="黄杨河日落与跨河桥" width="800" height="600">
+          <span class="thumb__type">图片</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">黄杨河落日</h2>
+          <p class="asset-sub">5472×3648 · 李锐 · 2026-04-12</p>
+          <div class="asset-tags"><span>井岸镇 · 风光 · 城市</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+
+    <article class="asset-card" data-asset data-keywords="黄杨山 云海 晨雾 图片 周敏 斗门镇 风光">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：黄杨山云海">
+        <div class="thumb">
+          <img src="assets/img/mountain-mist.svg" alt="黄杨山云海与山脊" width="800" height="600">
+          <span class="thumb__type">图片</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">黄杨山云海</h2>
+          <p class="asset-sub">6000×4000 · 周敏 · 2026-04-09</p>
+          <div class="asset-tags"><span>斗门镇 · 晨雾 · 山景</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+
+    <article class="asset-card" data-asset data-keywords="斗门旧街 骑楼 修缮 视频 非遗 林海 斗门镇 城市更新">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：斗门旧街骑楼修缮">
+        <div class="thumb">
+          <img src="assets/img/old-street.svg" alt="斗门旧街骑楼与行人" width="800" height="600">
+          <span class="thumb__type">视频</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">斗门旧街骑楼修缮</h2>
+          <p class="asset-sub">02:16 · 3840×2160 · 林海</p>
+          <div class="asset-tags"><span>斗门镇 · 城市更新</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+
+    <article class="asset-card" data-asset data-keywords="龙舟 竞渡 黄杨河 视频 体育 陈晓 井岸镇 端午">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：黄杨河龙舟竞渡">
+        <div class="thumb">
+          <img src="assets/img/dragon-boat.svg" alt="黄杨河上的龙舟竞渡" width="800" height="600">
+          <span class="thumb__type">视频</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">黄杨河龙舟竞渡</h2>
+          <p class="asset-sub">01:32 · 3840×2160 · 陈晓</p>
+          <div class="asset-tags"><span>井岸镇 · 体育 · 端午</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+
+    <article class="asset-card" data-asset data-keywords="春耕 稻田 农人 图片 周敏 莲洲镇 乡村 航拍">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：莲洲春耕">
+        <div class="thumb">
+          <img src="assets/img/rice-field.svg" alt="莲洲镇稻田与劳作的农人" width="800" height="600">
+          <span class="thumb__type">图片</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">莲洲春耕</h2>
+          <p class="asset-sub">5472×3648 · 周敏 · 2026-03-28</p>
+          <div class="asset-tags"><span>莲洲镇 · 乡村 · 春耕</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+
+    <article class="asset-card" data-asset data-keywords="飘色 巡游 非遗 民俗 图片 林海 斗门镇 节庆">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：斗门飘色巡游">
+        <div class="thumb">
+          <img src="assets/img/puppet-parade.svg" alt="斗门飘色巡游的色台与人群" width="800" height="600">
+          <span class="thumb__type">图片</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">斗门飘色巡游</h2>
+          <p class="asset-sub">4200×2800 · 林海 · 2026-03-15</p>
+          <div class="asset-tags"><span>斗门镇 · 非遗 · 民俗</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+
+    <article class="asset-card" data-asset data-keywords="斗门港 集装箱 码头 视频 工业 李锐 白藤街道 产业">
+      <a class="asset-card__link" href="#" data-drawer-open aria-label="查看素材：斗门港集装箱码头">
+        <div class="thumb">
+          <img src="assets/img/harbor.svg" alt="斗门港集装箱堆场与门式起重机" width="800" height="600">
+          <span class="thumb__type">视频</span>
+          <span class="thumb__wm">水印预览</span>
+        </div>
+        <div class="asset-meta">
+          <h2 class="asset-title">斗门港集装箱码头</h2>
+          <p class="asset-sub">01:04 · 3840×2160 · 李锐</p>
+          <div class="asset-tags"><span>白藤街道 · 产业 · 港口</span></div>
+        </div>
+      </a>
+      <span class="asset-check" aria-hidden="true">✓</span>
+    </article>
+  </div>
+
+  <div class="empty" id="emptyResult" hidden>
+    <h2>没有找到素材</h2>
+    <p>换个关键词，或清除筛选后重新查找。</p>
+    <div class="empty__actions">
+      <button class="btn btn--text" type="button" data-reset>清除筛选</button>
+    </div>
+  </div>
+
+  <p class="foot-note">光圈AI · 素材检索结果受可见范围与授权状态影响，销售素材仅展示水印预览。</p>
+</div>
+
+
+
+</section>
+
+<section class="view" id="view-upload" data-route="upload" hidden>
+<div class="lib">
+  <div class="lib__head">
+    <div>
+      <h1 class="lib__title">上传与元数据治理</h1>
+      <p class="lib__sub">AI 预填分类与标签，人工确认后入库；每件素材都带着可追溯的来源与授权。</p>
+    </div>
+    <div class="u-row">
+      <button class="btn btn--quiet" type="button" data-toast="已切换为批量上传模式">批量上传</button>
+      <button class="btn btn--primary" type="button" data-toast="上传任务已开始，完成后自动进入治理队列">开始上传</button>
+    </div>
+  </div>
+
+  <section class="upload u-mt-2" aria-label="上传队列">
+    <div class="dropzone">
+      <div>
+        <p class="eyebrow">拖拽上传</p>
+        <h2>把今天拍的素材放进来</h2>
+        <p>支持 MP4 / MOV / JPG / PNG / WAV，单文件最大 20GB。上传完成后自动转码 4K 代理并生成水印预览。</p>
+      </div>
+      <div class="u-row">
+        <button class="btn btn--primary" type="button" data-toast="已打开文件选择器（原型演示）">选择文件</button>
+        <button class="btn btn--text" type="button" data-toast="已选择文件夹：白蕉海鲈_0418">从文件夹导入</button>
+      </div>
+    </div>
+
+    <div class="file-list">
+      <div class="file-row">
+        <div class="file-row__head">
+          <span class="file-row__name">白蕉海鲈产业园航拍_4K.mp4</span>
+          <span class="status">已入库</span>
+        </div>
+        <p class="file-row__meta">3.8 GB · 00:48 · 陈晓 · 元数据完整度 92%</p>
+        <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+      </div>
+
+      <div class="file-row">
+        <div class="file-row__head">
+          <span class="file-row__name">黄杨河落日_未修图.jpg</span>
+          <span class="status status--ai">AI 预填完成</span>
+        </div>
+        <p class="file-row__meta">24.6 MB · 5472×3648 · 待人工确认 3 项</p>
+        <div class="bar-track"><div class="bar-fill" style="width:78%"></div></div>
+      </div>
+
+      <div class="file-row">
+        <div class="file-row__head">
+          <span class="file-row__name">飘色巡游_现场收音.wav</span>
+          <span class="status status--warn">转码中 64%</span>
+        </div>
+        <p class="file-row__meta">186 MB · 12:04 · 林海 · 预计还需 1 分 20 秒</p>
+        <div class="bar-track"><div class="bar-fill" style="width:64%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="grid-2 u-mt-4">
+    <section class="panel" aria-labelledby="aiSuggest">
+      <div class="panel__head">
+        <div>
+          <h2 class="panel__title" id="aiSuggest">AI 建议 · 待人工确认</h2>
+          <p class="panel__meta u-mt-1">素材 DM-2026-0419 · 黄杨河落日_未修图.jpg</p>
+        </div>
+        <span class="confidence">模型置信度 0.94</span>
+      </div>
+      <div class="panel__body">
+        <div class="field">
+          <span>标题</span>
+          <input type="text" value="黄杨河落日" aria-label="素材标题">
+        </div>
+
+        <div class="u-mt-3">
+          <p class="eyebrow">分类建议</p>
+          <div class="chip-row u-mt-2">
+            <button class="chip is-active" type="button" data-toast="已接受分类：图片">图片</button>
+            <button class="chip is-active" type="button" data-toast="已接受分类：风光">风光</button>
+            <button class="chip" type="button" data-toast="已添加分类：城市">城市</button>
+            <button class="chip" type="button" data-toast="已添加分类：黄杨河">黄杨河</button>
+          </div>
+        </div>
+
+        <div class="u-mt-3">
+          <p class="eyebrow">标签建议</p>
+          <div class="chip-row u-mt-2">
+            <button class="chip is-active" type="button" data-toast="已接受标签：黄杨河">黄杨河</button>
+            <button class="chip is-active" type="button" data-toast="已接受标签：日落">日落</button>
+            <button class="chip is-active" type="button" data-toast="已接受标签：井岸镇">井岸镇</button>
+            <button class="chip" type="button" data-toast="已接受标签：城市风光">城市风光</button>
+            <button class="chip" type="button" data-toast="已接受标签：晚霞">晚霞</button>
+          </div>
+        </div>
+
+        <div class="field u-mt-3">
+          <span>授权范围</span>
+          <select aria-label="授权范围">
+            <option>可商用 · 需登记使用方</option>
+            <option>仅内部使用</option>
+            <option>需购买授权后商用</option>
+          </select>
+        </div>
+
+        <div class="field u-mt-3">
+          <span>可见范围</span>
+          <select aria-label="可见范围">
+            <option>内部 + 销售池</option>
+            <option>仅内部可见</option>
+            <option>公开（带水印）</option>
+          </select>
+        </div>
+
+        <div class="u-row u-mt-4">
+          <button class="btn btn--primary" type="button" data-toast="已确认入库，元数据完整度提升至 96%">确认入库</button>
+          <button class="btn btn--text" type="button" data-toast="已保存草稿，稍后继续">稍后处理</button>
+          <button class="btn btn--quiet" type="button" data-toast="已重新运行 AI 建议">重新识别</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="stack-4">
+      <section class="panel" aria-labelledby="qualityTitle">
+        <div class="panel__head">
+          <h2 class="panel__title" id="qualityTitle">元数据完整度</h2>
+          <span class="panel__meta">本月平均</span>
+        </div>
+        <div class="panel__body">
+          <p class="kpi__value">86%</p>
+          <p class="kpi__meta">较上月提升 9 个百分点，销售池准入线为 70%。</p>
+          <div class="bar-list u-mt-4">
+            <div class="bar-row">
+              <div class="bar-row__head"><span>基础信息</span><span>100%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-row__head"><span>版权与授权</span><span>80%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-row__head"><span>人物与地点</span><span>65%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:65%"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-row__head"><span>标签与分类</span><span>92%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:92%"></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="queueTitle">
+        <div class="panel__head">
+          <h2 class="panel__title" id="queueTitle">待完善队列</h2>
+          <button class="btn btn--text" type="button" data-toast="已打开完整治理队列">查看全部</button>
+        </div>
+        <div class="panel__body">
+          <div class="queue">
+            <div class="queue__item">
+              <div class="queue__head"><span>斗门旧街骑楼修缮</span><span>缺人物授权 · 68%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:68%"></div></div>
+            </div>
+            <div class="queue__item">
+              <div class="queue__head"><span>龙舟竞渡 · 现场收音</span><span>缺拍摄地点 · 72%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:72%"></div></div>
+            </div>
+            <div class="queue__item">
+              <div class="queue__head"><span>莲洲春耕</span><span>缺版权登记 · 79%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:79%"></div></div>
+            </div>
+          </div>
+          <p class="mini-note">完整度低于 70% 的素材不会进入销售池，但仍可在内部检索与使用。</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <p class="foot-note">治理规则：AI 只做建议，入库与授权状态由人确认；每次修改都会写入不可篡改的操作日志。</p>
+</div>
+</section>
+
+<section class="view" id="view-sales" data-route="sales" hidden>
+<div class="lib">
+  <div class="lib__head">
+    <div>
+      <h1 class="lib__title">销售链接</h1>
+      <p class="lib__sub">把素材打包成一条链接发给客户：在线看预览、选授权、付款后自动开通原片下载。</p>
+    </div>
+    <div class="u-row">
+      <a class="btn btn--quiet" href="#/buy">查看客户端页面</a>
+      <button class="btn btn--primary" type="button" data-toast="已新建一条空白销售链接">新建销售链接</button>
+    </div>
+  </div>
+
+  <div class="grid-2 grid-2--even u-mt-2">
+    <section class="panel" aria-labelledby="configTitle">
+      <div class="panel__head">
+        <div>
+          <h2 class="panel__title" id="configTitle">链接配置</h2>
+          <p class="panel__meta u-mt-1">一条链接可包含多件素材，客户按授权范围分别下单。</p>
+        </div>
+        <span class="panel__meta">SL-260418-07</span>
+      </div>
+      <div class="panel__body">
+        <div class="field">
+          <span>关联素材</span>
+          <div class="asset-picked">
+            <img src="assets/img/fish-farm.svg" alt="白蕉海鲈产业园航拍缩略图">
+            <img src="assets/img/river-dusk.svg" alt="黄杨河落日缩略图">
+            <img src="assets/img/dragon-boat.svg" alt="黄杨河龙舟竞渡缩略图">
+            <span>共 3 件 · 视频 2 / 图片 1</span>
+            <button class="btn btn--text" type="button" data-toast="已打开素材选择器">更换</button>
+          </div>
+        </div>
+
+        <div class="field-row u-mt-3">
+          <label class="field">
+            <span>授权范围</span>
+            <select aria-label="授权范围">
+              <option>单次商用 · 单一平台</option>
+              <option>多平台商用 · 一年期</option>
+              <option>仅内部审片使用</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>链接有效期</span>
+            <select aria-label="链接有效期">
+              <option>7 天（默认）</option>
+              <option>30 天</option>
+              <option>长期有效</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="field u-mt-3">
+          <span>访问次数上限</span>
+          <input type="text" value="50" aria-label="访问次数上限">
+          <p class="field-hint">超过上限后链接自动失效，避免预览页被转发扩散。</p>
+        </div>
+
+        <label class="check-row u-mt-3">
+          <input type="checkbox" checked>
+          <span>允许客户下载带水印预览
+            <small>原片仅在支付成功并签署授权后开放，下载记录写入审计日志。</small>
+          </span>
+        </label>
+
+        <div class="u-row u-mt-4">
+          <button class="btn btn--primary" type="button" data-toast="链接已生成，有效期 7 天，已复制到剪贴板">生成链接</button>
+          <button class="btn btn--text" type="button" data-toast="已保存为链接模板">保存为模板</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="stack-4">
+      <section class="panel" aria-labelledby="latestTitle">
+        <div class="panel__head">
+          <h2 class="panel__title" id="latestTitle">最近生成的链接</h2>
+          <span class="status">有效</span>
+        </div>
+        <div class="panel__body">
+          <div class="link-card">
+            <div class="link-card__top">
+              <div>
+                <p class="link-card__url">aperture.doumen.gov.cn/s/8Kq2fR</p>
+                <p class="link-card__meta">3 件素材 · 有效期至 2026-04-25 · 访问 12 / 50 · 最近 2 小时前</p>
+              </div>
+              <div class="qr-mini">
+                <svg viewBox="0 0 80 80" role="img" aria-label="销售链接二维码">
+                  <defs>
+                    <pattern id="qrp" width="8" height="8" patternUnits="userSpaceOnUse">
+                      <rect width="8" height="8" fill="#ffffff"/>
+                      <rect width="4" height="4" fill="#1d1d1f"/>
+                      <rect x="4" y="4" width="4" height="4" fill="#1d1d1f"/>
+                    </pattern>
+                    <g id="finder">
+                      <rect width="22" height="22" fill="#1d1d1f"/>
+                      <rect x="5" y="5" width="12" height="12" fill="#ffffff"/>
+                      <rect x="9" y="9" width="4" height="4" fill="#1d1d1f"/>
+                    </g>
+                  </defs>
+                  <rect width="80" height="80" fill="url(#qrp)"/>
+                  <rect x="6" y="6" width="22" height="22" fill="#ffffff"/>
+                  <rect x="52" y="6" width="22" height="22" fill="#ffffff"/>
+                  <rect x="6" y="52" width="22" height="22" fill="#ffffff"/>
+                  <use href="#finder" x="6" y="6"/>
+                  <use href="#finder" x="52" y="6"/>
+                  <use href="#finder" x="6" y="52"/>
+                </svg>
+              </div>
+            </div>
+            <div class="link-card__actions">
+              <button class="btn btn--text" type="button" data-copy="https://aperture.doumen.gov.cn/s/8Kq2fR">复制链接</button>
+              <a class="btn btn--text" href="#/link">打开预览页</a>
+              <button class="btn btn--text" type="button" data-toast="链接已停用，客户再次打开将显示失效提示">停用</button>
+            </div>
+          </div>
+
+          <div class="link-steps">
+            <div class="link-step">
+              <span class="link-step__num">01</span>
+              <p class="link-step__text"><strong>客户打开链接</strong>无需注册即可查看带水印预览与授权说明。</p>
+            </div>
+            <div class="link-step">
+              <span class="link-step__num">02</span>
+              <p class="link-step__text"><strong>选择授权并下单</strong>按用途与分辨率选择价格，在线完成支付。</p>
+            </div>
+            <div class="link-step">
+              <span class="link-step__num">03</span>
+              <p class="link-step__text"><strong>自动开通下载</strong>支付成功即生成授权凭证，原片下载同步开放。</p>
+            </div>
+            <div class="link-step">
+              <span class="link-step__num">04</span>
+              <p class="link-step__text"><strong>回到后台对账</strong>访问、转化、成交与下载记录全部留痕。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <section class="panel panel--flush u-mt-4" aria-labelledby="linkTableTitle">
+    <div class="panel__head">
+      <h2 class="panel__title" id="linkTableTitle">链接记录</h2>
+      <span class="panel__meta">近 30 天 · 共 46 条</span>
+    </div>
+    <div class="panel__body">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">链接</th>
+              <th scope="col">关联素材</th>
+              <th scope="col">有效期至</th>
+              <th scope="col">访问</th>
+              <th scope="col">状态</th>
+              <th scope="col">成交</th>
+              <th scope="col"><span class="sr-only">操作</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SL-260418-07<div class="cell-sub">8Kq2fR</div></td>
+              <td>白蕉海鲈 · 黄杨河落日 等 3 件</td>
+              <td>2026-04-25</td>
+              <td>12 / 50</td>
+              <td><span class="status">有效</span></td>
+              <td>¥1,440</td>
+              <td class="cell-actions"><button class="btn btn--text" type="button" data-toast="链接已复制">复制</button></td>
+            </tr>
+            <tr>
+              <td>SL-260416-03<div class="cell-sub">2M7P1D</div></td>
+              <td>斗门旧街骑楼修缮 等 2 件</td>
+              <td>2026-04-23</td>
+              <td>28 / 30</td>
+              <td><span class="status">有效</span></td>
+              <td>¥860</td>
+              <td class="cell-actions"><button class="btn btn--text" type="button" data-toast="链接已复制">复制</button></td>
+            </tr>
+            <tr>
+              <td>SL-260411-11<div class="cell-sub">6Q9W4T</div></td>
+              <td>黄杨河龙舟竞渡</td>
+              <td>2026-04-18</td>
+              <td>50 / 50</td>
+              <td><span class="status">已用尽</span></td>
+              <td>¥2,400</td>
+              <td class="cell-actions"><button class="btn btn--text" type="button" data-toast="已延长链接有效期 7 天">延期</button></td>
+            </tr>
+            <tr>
+              <td>SL-260402-05<div class="cell-sub">9L2B8N</div></td>
+              <td>莲洲春耕 · 飘色巡游 等 4 件</td>
+              <td>2026-04-09</td>
+              <td>17 / 50</td>
+              <td><span class="status status--off">已过期</span></td>
+              <td>¥0</td>
+              <td class="cell-actions"><button class="btn btn--text" type="button" data-toast="已按原配置重建链接">重建</button></td>
+            </tr>
+            <tr>
+              <td>SL-260328-02<div class="cell-sub">3C5H7K</div></td>
+              <td>斗门港集装箱码头</td>
+              <td>长期</td>
+              <td>36 / 100</td>
+              <td><span class="status status--off">已停用</span></td>
+              <td>¥1,200</td>
+              <td class="cell-actions"><button class="btn btn--text" type="button" data-toast="已恢复链接">恢复</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="paged">
+        <span>显示 1–5 / 46 条</span>
+        <span class="paged__buttons"><button class="btn btn--text" type="button" data-toast="已是第一页">上一页</button><button class="btn btn--text" type="button" data-toast="已加载下一页">下一页</button></span>
+      </div>
+    </div>
+  </section>
+
+  <p class="foot-note">链接失效不等于授权失效：已成交订单的原片下载与授权凭证仍可在后台查阅。</p>
+</div>
+</section>
+
+<section class="view" id="view-buy" data-route="buy" hidden>
+<div class="shop">
+  <header class="shop__top">
+    <a class="shop__brand" href="#/buy">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m14.31 8 5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16 3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"/></svg>
+      <span><strong>光圈AI</strong> 素材商店</span>
+    </a>
+    <label class="shop__search">
+      <svg class="shop__search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" data-shop-search placeholder="搜索题材、地点或编号" aria-label="搜索商店素材">
+    </label>
+    <div class="shop__actions">
+      <a class="shop__cart-link" href="#shopCart" data-goto="shopCart">选购清单 <span data-cart-count>1</span></a>
+      <button class="shop__text" type="button" data-toast="授权记录可在「我的授权」中查看">我的授权</button>
+    </div>
+  </header>
+
+  <section class="shop__hero" aria-labelledby="shopTitle">
+    <div class="shop__hero-copy">
+      <p class="eyebrow">斗门区融媒体中心 · 素材商店</p>
+      <h1 class="shop__title" id="shopTitle">把斗门的画面，<br>授权给你的下一次发布。</h1>
+      <p class="shop__lead">城市影像、农业产业、非遗与活动记录，按用途和分辨率明码标价。选中的素材进入选购清单，支付后立即获得无水印原片与可查的授权凭证。</p>
+      <div class="shop__hero-actions">
+        <a class="btn btn--primary" href="#shelf" data-goto="shelf">开始选素材</a>
+        <a class="btn btn--text" href="#/link">看一条客户销售链接</a>
+      </div>
+      <dl class="shop__facts">
+        <div>
+          <dt>本月授权</dt>
+          <dd>42 笔</dd>
+        </div>
+        <div>
+          <dt>素材均价</dt>
+          <dd>¥462</dd>
+        </div>
+        <div>
+          <dt>授权方式</dt>
+          <dd>3 档</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="shop__hero-media" aria-label="近期上架的斗门影像">
+      <figure class="shop__shot shop__shot--main">
+        <img src="assets/img/river-dusk.svg" alt="黄杨河落日与跨河桥">
+        <figcaption>黄杨河落日 · 城市影像</figcaption>
+      </figure>
+      <figure class="shop__shot">
+        <img src="assets/img/fish-farm.svg" alt="白蕉海鲈养殖鱼塘与网箱航拍">
+        <figcaption>白蕉海鲈 · 农业产业</figcaption>
+      </figure>
+      <figure class="shop__shot">
+        <img src="assets/img/dragon-boat.svg" alt="黄杨河上的龙舟竞渡">
+        <figcaption>龙舟竞渡 · 活动记录</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="shop__notice">
+    <p class="shop__notice-text"><strong>你从销售链接 SL-260418-07 进入</strong><span>斗门区融媒体中心发出 · 有效期至 2026-04-25 · 访问 12 / 50</span></p>
+    <a class="btn btn--text" href="#/link">打开这条链接的客户页</a>
+  </div>
+
+  <section class="shop__catalog" id="shelf" aria-labelledby="shelfTitle">
+    <div class="shop__catalog-head">
+      <div>
+        <p class="eyebrow">Shelf</p>
+        <h2 id="shelfTitle">正在出售</h2>
+        <p class="shop__catalog-sub">价格含授权凭证；原片在支付后开放下载。缩略图均为水印预览。</p>
+      </div>
+      <p class="shop__count"><strong data-shop-count>8</strong> 件可见</p>
+    </div>
+
+    <div class="shop__filters" role="group" aria-label="按素材分类筛选">
+      <button class="chip is-active" type="button" data-shop-filter="all" aria-pressed="true">全部</button>
+      <button class="chip" type="button" data-shop-filter="city" aria-pressed="false">城市影像</button>
+      <button class="chip" type="button" data-shop-filter="agri" aria-pressed="false">农业产业</button>
+      <button class="chip" type="button" data-shop-filter="heritage" aria-pressed="false">非遗民俗</button>
+      <button class="chip" type="button" data-shop-filter="event" aria-pressed="false">活动记录</button>
+    </div>
+
+    <div class="shop__layout">
+      <div>
+        <div class="shelf__grid">
+          <article class="sku" data-sku-card data-cat="city" data-keywords="黄杨河 落日 井岸 城市 风光 李锐 DM-20260412-0031">
+            <div class="sku__media">
+              <img src="assets/img/river-dusk.svg" alt="黄杨河落日与跨河桥">
+              <span class="sku__tag">城市影像</span>
+              <span class="sku__flag">销售链接精选</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">黄杨河落日</h3>
+              <p class="sku__meta">DM-20260412-0031 · 图片 · 4K</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥480</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="DM-20260412-0031" data-title="黄杨河落日" data-price="480" data-license="单次商用 · 4K 原片" aria-label="加入选购清单：黄杨河落日">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sku" data-sku-card data-cat="agri" data-keywords="白蕉 海鲈 产业园 航拍 农业 养殖 陈晓">
+            <div class="sku__media">
+              <img src="assets/img/fish-farm.svg" alt="白蕉海鲈养殖鱼塘与网箱航拍">
+              <span class="sku__tag">农业产业</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">白蕉海鲈产业园航拍</h3>
+              <p class="sku__meta">视频 · 4K · 00:48 · 陈晓</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥560</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="fish-farm" data-title="白蕉海鲈产业园航拍" data-price="560" data-license="单次商用 · 4K 原片" aria-label="加入选购清单：白蕉海鲈产业园航拍">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sku" data-sku-card data-cat="city" data-keywords="黄杨山 云海 晨雾 斗门镇 风光 周敏">
+            <div class="sku__media">
+              <img src="assets/img/mountain-mist.svg" alt="黄杨山云海与山脊">
+              <span class="sku__tag">城市影像</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">黄杨山云海</h3>
+              <p class="sku__meta">图片 · 6000×4000 · 周敏</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥180</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="mountain-mist" data-title="黄杨山云海" data-price="180" data-license="单次商用 · 原图" aria-label="加入选购清单：黄杨山云海">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sku" data-sku-card data-cat="city" data-keywords="斗门旧街 骑楼 修缮 城市更新 林海 视频">
+            <div class="sku__media">
+              <img src="assets/img/old-street.svg" alt="斗门旧街骑楼与行人">
+              <span class="sku__tag">城市影像</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">斗门旧街骑楼修缮</h3>
+              <p class="sku__meta">视频 · 4K · 02:16 · 林海</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥680</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="old-street" data-title="斗门旧街骑楼修缮" data-price="680" data-license="单次商用 · 4K 原片" aria-label="加入选购清单：斗门旧街骑楼修缮">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sku" data-sku-card data-cat="event" data-keywords="龙舟 竞渡 黄杨河 端午 体育 陈晓 视频">
+            <div class="sku__media">
+              <img src="assets/img/dragon-boat.svg" alt="黄杨河上的龙舟竞渡">
+              <span class="sku__tag">活动记录</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">黄杨河龙舟竞渡</h3>
+              <p class="sku__meta">视频 · 4K · 01:32 · 陈晓</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥480</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="dragon-boat" data-title="黄杨河龙舟竞渡" data-price="480" data-license="单次商用 · 4K 原片" aria-label="加入选购清单：黄杨河龙舟竞渡">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sku" data-sku-card data-cat="agri" data-keywords="莲洲 春耕 稻田 农人 乡村 周敏 图片">
+            <div class="sku__media">
+              <img src="assets/img/rice-field.svg" alt="莲洲镇稻田与劳作的农人">
+              <span class="sku__tag">农业产业</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">莲洲春耕</h3>
+              <p class="sku__meta">图片 · 5472×3648 · 周敏</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥160</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="rice-field" data-title="莲洲春耕" data-price="160" data-license="单次商用 · 原图" aria-label="加入选购清单：莲洲春耕">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sku" data-sku-card data-cat="heritage" data-keywords="飘色 巡游 非遗 民俗 斗门镇 林海 图片">
+            <div class="sku__media">
+              <img src="assets/img/puppet-parade.svg" alt="斗门飘色巡游的色台与人群">
+              <span class="sku__tag">非遗民俗</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">斗门飘色巡游</h3>
+              <p class="sku__meta">图片 · 4200×2800 · 林海</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥200</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="puppet-parade" data-title="斗门飘色巡游" data-price="200" data-license="单次商用 · 原图" aria-label="加入选购清单：斗门飘色巡游">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sku" data-sku-card data-cat="city" data-keywords="斗门港 集装箱 码头 港口 产业 李锐 视频">
+            <div class="sku__media">
+              <img src="assets/img/harbor.svg" alt="斗门港集装箱堆场与门式起重机">
+              <span class="sku__tag">城市影像</span>
+            </div>
+            <div class="sku__body">
+              <h3 class="sku__title">斗门港集装箱码头</h3>
+              <p class="sku__meta">视频 · 4K · 01:04 · 李锐</p>
+              <p class="sku__license">单次商用 · 单一平台 · 含授权凭证</p>
+              <div class="sku__foot">
+                <p class="sku__price"><strong>¥680</strong><span>起</span></p>
+                <button class="sku__add" type="button" data-add-cart data-sku="harbor" data-title="斗门港集装箱码头" data-price="680" data-license="单次商用 · 4K 原片" aria-label="加入选购清单：斗门港集装箱码头">加入选购清单</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="shop__empty" id="shopEmpty" hidden>
+          <p class="shop__empty-title">这个筛选下暂时没有素材</p>
+          <p>换一个分类，或清空搜索词重新看看。</p>
+          <button class="btn btn--text" type="button" data-shop-reset>查看全部素材</button>
+        </div>
+      </div>
+
+      <aside class="cart" id="shopCart" aria-labelledby="cartTitle">
+        <div class="cart__head">
+          <h2 id="cartTitle">选购清单</h2>
+          <span class="status" data-cart-status>1 件</span>
+        </div>
+        <div class="cart__list" id="cartItems"></div>
+        <p class="cart__empty" id="cartEmpty" hidden>清单还是空的。挑一件素材，价格与授权范围会显示在这里。</p>
+        <div class="cart__total">
+          <span>应付合计</span>
+          <strong id="cartTotal">¥480</strong>
+        </div>
+        <a class="btn btn--primary btn--block" href="#shopCheckout" data-goto="shopCheckout">去结算</a>
+        <p class="cart__note">清单内为单次商用授权。需要多平台或一年期，请联系中心素材管理员调整订单。</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="checkout" id="shopCheckout" aria-labelledby="checkoutTitle">
+    <div class="checkout__main">
+      <p class="eyebrow">Checkout</p>
+      <h2 id="checkoutTitle">确认授权与支付</h2>
+      <ol class="checkout__steps">
+        <li class="is-done">01 清单</li>
+        <li class="is-current">02 主体</li>
+        <li>03 支付</li>
+        <li>04 授权</li>
+      </ol>
+
+      <div class="checkout__summary">
+        <h3>订单内容</h3>
+        <div id="checkoutItems"></div>
+        <dl class="checkout__facts">
+          <div>
+            <dt>授权范围</dt>
+            <dd>单次商用 · 单一平台 · 无水印原片</dd>
+          </div>
+          <div>
+            <dt>授权期限</dt>
+            <dd>与所购素材绑定，凭证长期可查</dd>
+          </div>
+          <div>
+            <dt>交付方式</dt>
+            <dd>支付后开放下载，同一订单最多 5 次</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="field">
+        <span>使用主体</span>
+        <input type="text" value="斗门区文化和旅游发展有限公司" aria-label="使用主体">
+        <p class="field-hint">授权凭证将以此主体开具，请与实际使用方一致。</p>
+      </div>
+
+      <div class="checkout__total">
+        <span>应付合计</span>
+        <strong id="checkoutTotal">¥480</strong>
+      </div>
+
+      <button class="btn btn--primary btn--block" type="button" data-shop-buy>支付并获取授权</button>
+      <p class="checkout__note">支付方式：微信支付 · 对公转账（企业客户）。点击支付即表示同意《素材授权使用协议》。</p>
+    </div>
+
+    <aside class="checkout__aside">
+      <h3>支付后你会得到</h3>
+      <ul class="rule-list">
+        <li>无水印原片下载入口，按订单授权范围开放。</li>
+        <li>一条可在「我的授权」查阅的电子授权凭证。</li>
+        <li>电子发票，预计 1 个工作日内开具。</li>
+        <li>下载与凭证查看记录写入审计日志。</li>
+      </ul>
+      <h3 class="checkout__aside-title">对公转账</h3>
+      <p class="checkout__aside-text">企业客户可先提交订单，由中心财务确认到账后开通下载。合同与发票由财务统一寄送。</p>
+    </aside>
+  </section>
+
+  <section class="checkout checkout--done" id="shopSuccess" tabindex="-1" aria-labelledby="shopDoneTitle" hidden>
+    <div class="checkout__done">
+      <div>
+        <p class="eyebrow">Payment complete</p>
+        <h2 id="shopDoneTitle">授权已开通</h2>
+        <p class="checkout__done-lead">订单 DM2604180037 已完成。无水印原片下载权限已开放，授权范围与期限以凭证为准。</p>
+        <div class="done__items" id="shopSuccessItems"></div>
+        <dl class="done__facts">
+          <div>
+            <dt>主素材授权编号</dt>
+            <dd>AU-2026-0418-037</dd>
+          </div>
+          <div>
+            <dt>使用主体</dt>
+            <dd>斗门区文化和旅游发展有限公司</dd>
+          </div>
+          <div>
+            <dt>订单合计</dt>
+            <dd id="shopSuccessTotal">¥480</dd>
+          </div>
+          <div>
+            <dt>票据状态</dt>
+            <dd>电子发票开具中，预计 1 个工作日</dd>
+          </div>
+        </dl>
+        <div class="u-row u-mt-4">
+          <button class="btn btn--primary" type="button" data-toast="开始下载无水印原片">下载无水印原片</button>
+          <button class="btn btn--text" type="button" data-toast="授权凭证已生成 PDF">查看授权凭证</button>
+          <a class="btn btn--text" href="#shelf" data-goto="shelf">继续选购</a>
+        </div>
+      </div>
+      <aside class="checkout__aside">
+        <h3>凭证说明</h3>
+        <ul class="rule-list">
+          <li>授权编号与订单号一一对应，可在「我的授权」下载 PDF。</li>
+          <li>同一订单最多下载 5 次，超过后需联系素材管理员。</li>
+          <li>链接失效不影响已成交订单的授权与下载。</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <p class="foot-note">客户端页面原型：浏览、筛选、加入选购清单到支付下载的完整链路。价格取自现有定价表与销售订单，条款为示意。</p>
+</div>
+</section>
+
+<section class="view" id="view-link" data-route="link" hidden>
+<div class="deal">
+  <header class="deal__top">
+    <a class="deal__brand" href="#/link" aria-label="斗门区融媒体中心素材授权">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m14.31 8 5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16 3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"/></svg>
+      <span><strong>斗门区融媒体中心</strong><small>素材授权 · aperture.doumen.gov.cn</small></span>
+    </a>
+    <div class="deal__top-right">
+      <span class="status">链接有效</span>
+      <a class="deal__back" href="#/sales">返回原型 · 销售链接</a>
+    </div>
+  </header>
+
+  <div class="deal__wrap">
+    <section class="deal__intro" aria-labelledby="dealTitle">
+      <div class="deal__intro-copy">
+        <p class="eyebrow">客户打开销售链接看到的第一屏</p>
+        <h1 class="deal__title" id="dealTitle">黄杨河落日，<br>可以现在授权使用。</h1>
+        <p class="deal__lead">斗门区融媒体中心通过销售链接 SL-260418-07 发来这件素材。你可以在线看带水印预览、选择授权范围并完成支付；支付成功后立即获得无水印原片与可查的授权凭证。无需注册，也不需要登录内部系统。</p>
+      </div>
+      <dl class="deal__facts">
+        <div>
+          <dt>链接编号</dt>
+          <dd>SL-260418-07</dd>
+        </div>
+        <div>
+          <dt>有效期至</dt>
+          <dd>2026-04-25</dd>
+        </div>
+        <div>
+          <dt>访问次数</dt>
+          <dd>12 / 50</dd>
+        </div>
+        <div>
+          <dt>发送方</dt>
+          <dd>斗门区融媒体中心</dd>
+        </div>
+      </dl>
+    </section>
+
+    <div class="deal__layout">
+      <div class="deal__main">
+        <div class="deal__media">
+          <div class="deal__preview">
+            <img src="assets/img/river-dusk.svg" alt="黄杨河落日，斗门井岸段河面与大桥剪影">
+            <span class="watermark"><span>斗门融媒 · 水印预览</span></span>
+            <span class="deal__wm">水印预览 · 不可直接使用</span>
+          </div>
+
+          <div class="deal__included">
+            <p class="deal__block-label">本链接包含 3 件素材</p>
+            <div class="deal__included-grid">
+              <figure class="deal__mini is-current">
+                <div class="deal__mini-media">
+                  <img src="assets/img/river-dusk.svg" alt="黄杨河落日缩略图">
+                  <span class="watermark"><span>预览</span></span>
+                </div>
+                <figcaption><strong>黄杨河落日</strong><span>DM-20260412-0031 · 单次商用 ¥480 起</span></figcaption>
+              </figure>
+              <figure class="deal__mini">
+                <div class="deal__mini-media">
+                  <img src="assets/img/fish-farm.svg" alt="白蕉海鲈产业园航拍缩略图">
+                  <span class="watermark"><span>预览</span></span>
+                </div>
+                <figcaption><strong>白蕉海鲈产业园航拍</strong><span>多平台商用 · 一年期 ¥1,280</span></figcaption>
+              </figure>
+              <figure class="deal__mini">
+                <div class="deal__mini-media">
+                  <img src="assets/img/dragon-boat.svg" alt="黄杨河龙舟竞渡缩略图">
+                  <span class="watermark"><span>预览</span></span>
+                </div>
+                <figcaption><strong>黄杨河龙舟竞渡</strong><span>多平台商用 · 一年期 ¥1,280</span></figcaption>
+              </figure>
+            </div>
+            <p class="deal__hint">本页先为「黄杨河落日」下单；另外两件可在支付前联系发送方调整下单范围。</p>
+          </div>
+        </div>
+
+        <section class="deal__block" aria-labelledby="whatTitle">
+          <h2 id="whatTitle">这是什么</h2>
+          <p class="deal__body-text">傍晚时分的黄杨河井岸段，河面反光与大桥剪影。适合城市形象片头、招商宣传与文旅推文配图，画面内无可识别个人信息。</p>
+          <dl class="deal__meta">
+            <div>
+              <dt>素材编号</dt>
+              <dd>DM-20260412-0031</dd>
+            </div>
+            <div>
+              <dt>拍摄地点</dt>
+              <dd>井岸镇 · 黄杨河</dd>
+            </div>
+            <div>
+              <dt>上传者</dt>
+              <dd>李锐 · 融媒工作人员</dd>
+            </div>
+            <div>
+              <dt>规格</dt>
+              <dd>4K 原片 · 5472×3648</dd>
+            </div>
+          </dl>
+          <div class="asset-tags">
+            <span class="chip">城市影像</span>
+            <span class="chip">黄杨河</span>
+            <span class="chip">黄昏</span>
+            <span class="chip">井岸镇</span>
+          </div>
+        </section>
+
+        <section class="deal__block" aria-labelledby="rightsTitle">
+          <h2 id="rightsTitle">授权范围</h2>
+          <div class="deal__two">
+            <div>
+              <h3>可以做什么</h3>
+              <ul class="rule-list">
+                <li>用于城市形象片、招商宣传、文旅推文与新闻报道。</li>
+                <li>用于线上与线下物料，单次商用限单一平台发布一次。</li>
+                <li>需要电视、网站、社交平台不限次数时，选择多平台商用一年期。</li>
+                <li>需要合同或对公转账，联系中心素材管理员办理。</li>
+              </ul>
+            </div>
+            <div>
+              <h3>不可以做什么</h3>
+              <ul class="rule-list">
+                <li>不得超出所购范围与期限使用，超出需另行购买。</li>
+                <li>不得删改画面中的台标与水印后二次分发。</li>
+                <li>不得用于违法违规、侮辱诽谤或误导性内容。</li>
+                <li>不得将授权转售、转让给第三方使用。</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="deal__block" aria-labelledby="proofTitle">
+          <h2 id="proofTitle">购买后的授权凭证</h2>
+          <ul class="rule-list">
+            <li>支付成功即生成订单号与授权编号，可在「我的授权」下载 PDF 凭证。</li>
+            <li>同一订单最多下载无水印原片 5 次，下载记录写入审计日志。</li>
+            <li>电子发票预计 1 个工作日内开具；对公转账需确认到账后开通下载。</li>
+            <li>链接失效不影响已成交订单的授权与下载。</li>
+          </ul>
+          <p class="deal__hint">凭证含使用主体、授权范围、有效期与订单号，可直接作为内部用稿依据。</p>
+        </section>
+      </div>
+
+      <aside class="deal__buy">
+        <section class="deal__panel" id="purchasePanel" aria-labelledby="buyTitle">
+          <div class="deal__panel-head">
+            <div>
+              <h2 id="buyTitle">选择授权</h2>
+              <p>价格由素材与授权范围共同决定。</p>
+            </div>
+            <span class="status">可下单</span>
+          </div>
+
+          <div class="deal__steps">
+            <span class="is-done" data-buy-step="preview">01 预览</span>
+            <span class="is-current" data-buy-step="rights">02 授权</span>
+            <span data-buy-step="pay">03 支付</span>
+            <span data-buy-step="done">04 下载</span>
+          </div>
+
+          <div class="deal__selected">
+            <img src="assets/img/river-dusk.svg" alt="">
+            <span><strong>黄杨河落日</strong><small>DM-20260412-0031 · 4K 原片</small></span>
+            <span class="deal__selected-price">¥480 起</span>
+          </div>
+
+          <div class="field">
+            <span>授权范围与分辨率</span>
+            <div class="option-list" id="licenseGroup">
+              <button class="option is-selected" type="button" data-option data-group="license" data-price="480" data-unit="元" aria-pressed="true">
+                <span class="option__body">
+                  <span class="option__title">单次商用 · 4K 原片</span>
+                  <span class="option__desc">单一平台使用一次，含授权凭证</span>
+                </span>
+                <span class="option__price">¥480</span>
+              </button>
+              <button class="option" type="button" data-option data-group="license" data-price="320" data-unit="元" aria-pressed="false">
+                <span class="option__body">
+                  <span class="option__title">单次商用 · 1080P</span>
+                  <span class="option__desc">适合新媒体端与网页使用</span>
+                </span>
+                <span class="option__price">¥320</span>
+              </button>
+              <button class="option" type="button" data-option data-group="license" data-price="1280" data-unit="元" aria-pressed="false">
+                <span class="option__body">
+                  <span class="option__title">多平台商用 · 一年期</span>
+                  <span class="option__desc">电视、网站、社交平台不限次数</span>
+                </span>
+                <span class="option__price">¥1,280</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="field u-mt-3">
+            <span>使用主体</span>
+            <input type="text" value="斗门区文化和旅游发展有限公司" aria-label="使用主体">
+            <p class="field-hint">授权凭证将以此主体开具，请与实际使用方一致。</p>
+          </div>
+
+          <div class="deal__total">
+            <span>应付合计</span>
+            <strong id="orderTotal">¥480</strong>
+          </div>
+
+          <button class="btn btn--primary btn--block" type="button" data-buy>支付并获取授权</button>
+          <p class="deal__note">支付方式：微信支付 · 对公转账（企业客户）。发票与合同由中心财务统一开具。</p>
+          <p class="deal__note">点击支付即表示同意《素材授权使用协议》。</p>
+        </section>
+
+        <section class="deal__panel" id="successPanel" aria-labelledby="linkDoneTitle" tabindex="-1" hidden>
+          <div class="deal__panel-head">
+            <h2 id="linkDoneTitle">授权已开通</h2>
+            <span class="status">支付成功</span>
+          </div>
+          <p class="deal__done-lead">订单 DM2604180037 已完成。无水印原片下载权限已开放，有效期与授权范围一致。</p>
+          <dl class="deal__meta deal__meta--tight">
+            <div>
+              <dt>授权编号</dt>
+              <dd>AU-2026-0418-037</dd>
+            </div>
+            <div>
+              <dt>授权范围</dt>
+              <dd>单次商用 · 4K 原片</dd>
+            </div>
+            <div>
+              <dt>使用主体</dt>
+              <dd>斗门区文化和旅游发展有限公司</dd>
+            </div>
+            <div>
+              <dt>票据状态</dt>
+              <dd>电子发票开具中，预计 1 个工作日</dd>
+            </div>
+          </dl>
+          <div class="u-row u-mt-4">
+            <button class="btn btn--primary" type="button" data-toast="开始下载 4K 原片（约 486MB）">下载无水印原片</button>
+            <button class="btn btn--text" type="button" data-toast="授权凭证已生成 PDF">查看授权凭证</button>
+          </div>
+          <p class="deal__note">下载与凭证查看均需校验订单，同一订单最多下载 5 次。</p>
+        </section>
+
+        <section class="deal__panel deal__panel--quiet" aria-labelledby="linkHelpTitle">
+          <h2 id="linkHelpTitle">需要协助</h2>
+          <p class="deal__body-text">素材授权、发票与合同问题请联系链接发送方或中心素材管理员。</p>
+          <p class="deal__note">工作日 09:00–18:00 · 0756-XXXXXXX</p>
+        </section>
+      </aside>
+    </div>
+
+    <p class="deal__foot">本页由光圈AI 生成 · 链接 SL-260418-07 有效期至 2026-04-25 · 逾期后请联系发送方重新生成</p>
+  </div>
+</div>
+</section>
+
+<section class="view" id="view-stats" data-route="stats" hidden>
+<div class="lib">
+  <div class="lib__head">
+    <div>
+      <h1 class="lib__title">定价与销售统计</h1>
+      <p class="lib__sub">看清楚哪些素材在卖、哪条链接在转化、哪一类授权最常被选择。</p>
+    </div>
+    <div class="u-row">
+      <div class="segmented segmented--text" role="group" aria-label="统计时间范围">
+        <button class="is-active" type="button" data-toast="已切换到近 30 天">近 30 天</button>
+        <button type="button" data-toast="已切换到近 90 天">近 90 天</button>
+        <button type="button" data-toast="已切换到本年度">本年度</button>
+      </div>
+      <button class="btn btn--quiet" type="button" data-toast="已导出 CSV，可在下载中心查看">导出报表</button>
+    </div>
+  </div>
+
+  <div class="kpi-grid u-mt-2">
+    <div class="kpi">
+      <p class="kpi__label">本月成交额</p>
+      <p class="kpi__value">¥28,640</p>
+      <p class="kpi__meta">较上月 +18.4% · 目标完成 71%</p>
+    </div>
+    <div class="kpi">
+      <p class="kpi__label">授权订单</p>
+      <p class="kpi__value">42</p>
+      <p class="kpi__meta">企业客户 26 · 个人 16</p>
+    </div>
+    <div class="kpi">
+      <p class="kpi__label">链接转化率</p>
+      <p class="kpi__value">34%</p>
+      <p class="kpi__meta">1,284 次访问 · 176 笔支付</p>
+    </div>
+    <div class="kpi">
+      <p class="kpi__label">素材均价</p>
+      <p class="kpi__value">¥462</p>
+      <p class="kpi__meta">视频 ¥680 · 图片 ¥180</p>
+    </div>
+  </div>
+
+  <div class="grid-2 u-mt-4">
+    <section class="panel" aria-labelledby="funnelTitle">
+      <div class="panel__head">
+        <div>
+          <h2 class="panel__title" id="funnelTitle">预览链接转化</h2>
+          <p class="panel__meta u-mt-1">客户从打开链接到完成支付的四步。</p>
+        </div>
+      </div>
+      <div class="panel__body">
+        <div class="funnel">
+          <div class="funnel__row">
+            <span>打开链接</span>
+            <span class="funnel__track"><span class="funnel__fill" style="width:100%"></span></span>
+            <span class="funnel__value">1,284</span>
+          </div>
+          <div class="funnel__row">
+            <span>查看预览</span>
+            <span class="funnel__track"><span class="funnel__fill" style="width:77%"></span></span>
+            <span class="funnel__value">986</span>
+          </div>
+          <div class="funnel__row">
+            <span>选择授权</span>
+            <span class="funnel__track"><span class="funnel__fill" style="width:40%"></span></span>
+            <span class="funnel__value">512</span>
+          </div>
+          <div class="funnel__row">
+            <span>完成支付</span>
+            <span class="funnel__track"><span class="funnel__fill funnel__fill--soft" style="width:14%"></span></span>
+            <span class="funnel__value">176</span>
+          </div>
+        </div>
+        <p class="foot-note">流失集中在意向授权到支付一步：客户常要求先看无水印小样或走对公转账。</p>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="categoryTitle">
+      <div class="panel__head">
+        <div>
+          <h2 class="panel__title" id="categoryTitle">分类销售额</h2>
+          <p class="panel__meta u-mt-1">近 30 天 · 按素材一级分类汇总。</p>
+        </div>
+      </div>
+      <div class="panel__body">
+        <div class="bar-list">
+          <div class="bar-row">
+            <div class="bar-row__head"><span>城市影像</span><span>¥12,400</span></div>
+            <div class="bar-track"><span class="bar-fill" style="width:100%"></span></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-row__head"><span>农业产业</span><span>¥8,600</span></div>
+            <div class="bar-track"><span class="bar-fill" style="width:69%"></span></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-row__head"><span>非遗民俗</span><span>¥4,200</span></div>
+            <div class="bar-track"><span class="bar-fill" style="width:34%"></span></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-row__head"><span>活动记录</span><span>¥3,440</span></div>
+            <div class="bar-track"><span class="bar-fill" style="width:28%"></span></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-row__head"><span>其他</span><span>¥1,000</span></div>
+            <div class="bar-track"><span class="bar-fill" style="width:8%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="panel u-mt-4" aria-labelledby="trendTitle">
+    <div class="panel__head">
+      <div>
+        <h2 class="panel__title" id="trendTitle">成交趋势</h2>
+        <p class="panel__meta u-mt-1">按日汇总的成交额，周末与节庆素材上线后有明显抬升。</p>
+      </div>
+      <div class="chart__legend">
+        <span class="chart__key">成交额</span>
+        <span class="chart__key chart__key--muted">30 日均线</span>
+      </div>
+    </div>
+    <div class="panel__body">
+      <div class="trend-chart">
+        <svg viewBox="0 0 720 200" role="img" aria-label="近 30 天成交额折线图，从 4 月 1 日的 4.2 万元上升至 4 月 30 日的 6.8 万元，中途在 4 月 12 日龙舟素材上线后达到峰值。">
+          <line class="grid-line" x1="0" y1="20" x2="720" y2="20"/>
+          <line class="grid-line" x1="0" y1="65" x2="720" y2="65"/>
+          <line class="grid-line" x1="0" y1="110" x2="720" y2="110"/>
+          <line class="grid-line" x1="0" y1="155" x2="720" y2="155"/>
+          <path class="area" d="M20 132 L82 120 L144 118 L206 96 L268 104 L330 88 L392 74 L454 82 L516 62 L578 58 L640 66 L700 44 L700 168 L20 168 Z"/>
+          <polyline class="line" points="20,132 82,120 144,118 206,96 268,104 330,88 392,74 454,82 516,62 578,58 640,66 700,44"/>
+          <line class="line--mean" x1="20" y1="92" x2="700" y2="92"/>
+          <circle class="dot" cx="206" cy="96" r="4"/>
+          <circle class="dot" cx="516" cy="62" r="4"/>
+          <circle class="dot" cx="700" cy="44" r="4"/>
+          <text x="20" y="188">04-01</text>
+          <text x="206" y="188">04-09</text>
+          <text x="392" y="188">04-18</text>
+          <text x="578" y="188">04-26</text>
+          <text x="700" y="188" text-anchor="end">04-30</text>
+          <text x="0" y="16">¥8k</text>
+          <text x="0" y="61">¥6k</text>
+          <text x="0" y="106">¥4k</text>
+          <text x="0" y="151">¥2k</text>
+        </svg>
+      </div>
+      <p class="foot-note">峰值出现在 04-12（龙舟竞渡素材上线）与 04-24（文旅局批量采购 6 条城市影像）。</p>
+    </div>
+  </section>
+
+  <section class="panel panel--flush u-mt-4" aria-labelledby="orderTitle">
+    <div class="panel__head">
+      <h2 class="panel__title" id="statsOrderTitle">成交订单</h2>
+      <span class="panel__meta">近 30 天 · 42 笔 · 其中 1 笔退款</span>
+    </div>
+    <div class="panel__body">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">订单号</th>
+              <th scope="col">素材</th>
+              <th scope="col">授权范围</th>
+              <th scope="col">客户</th>
+              <th scope="col">金额</th>
+              <th scope="col">时间</th>
+              <th scope="col">状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DM2604180037<div class="cell-sub">链接 8Kq2fR</div></td>
+              <td>黄杨河落日</td>
+              <td>单次商用 · 4K</td>
+              <td>斗门区文旅发展有限公司</td>
+              <td>¥480</td>
+              <td>04-18 15:22</td>
+              <td><span class="status">已支付</span></td>
+            </tr>
+            <tr>
+              <td>DM2604180036<div class="cell-sub">链接 8Kq2fR</div></td>
+              <td>白蕉海鲈产业园航拍</td>
+              <td>多平台商用 · 一年</td>
+              <td>白蕉镇农业服务中心</td>
+              <td>¥1,280</td>
+              <td>04-18 11:04</td>
+              <td><span class="status">已支付</span></td>
+            </tr>
+            <tr>
+              <td>DM2604170029<div class="cell-sub">链接 2M7P1D</div></td>
+              <td>斗门旧街骑楼修缮</td>
+              <td>单次商用 · 1080P</td>
+              <td>珠海某文化传播公司</td>
+              <td>¥320</td>
+              <td>04-17 17:41</td>
+              <td><span class="status">已支付</span></td>
+            </tr>
+            <tr>
+              <td>DM2604160018<div class="cell-sub">链接 2M7P1D</div></td>
+              <td>黄杨山云海</td>
+              <td>单次商用 · 4K</td>
+              <td>斗门区某中学</td>
+              <td>¥480</td>
+              <td>04-16 09:12</td>
+              <td><span class="status">已支付</span></td>
+            </tr>
+            <tr>
+              <td>DM2604140009<div class="cell-sub">链接 6Q9W4T</div></td>
+              <td>黄杨河龙舟竞渡</td>
+              <td>多平台商用 · 一年</td>
+              <td>珠海某体育运营公司</td>
+              <td>¥1,280</td>
+              <td>04-14 20:07</td>
+              <td><span class="status status--risk">已退款</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="paged">
+        <span>显示 1–5 / 42 笔</span>
+        <span class="paged__buttons"><button class="btn btn--text" type="button" data-toast="已加载下一页">下一页</button></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel u-mt-4" aria-labelledby="pricingTitle" data-tabset>
+    <div class="panel__head">
+      <div>
+        <h2 class="panel__title" id="pricingTitle">定价策略</h2>
+        <p class="panel__meta u-mt-1">调整后仅影响新订单，已成交订单金额不变。</p>
+      </div>
+    </div>
+    <div class="panel__body">
+      <div class="tabs" role="tablist" aria-label="定价方式">
+        <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="category">分类默认价</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-tab="batch">批量调价</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-tab="single">单素材定价</button>
+      </div>
+
+      <div class="u-mt-4" data-tab-panel="category">
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">分类</th>
+                <th scope="col">默认图片价</th>
+                <th scope="col">默认视频价</th>
+                <th scope="col">商用加价</th>
+                <th scope="col">近 30 天成交</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>城市影像</td>
+                <td><input class="price-input" type="text" value="180" aria-label="城市影像默认图片价"></td>
+                <td><input class="price-input" type="text" value="680" aria-label="城市影像默认视频价"></td>
+                <td>×1.5</td>
+                <td>¥12,400</td>
+              </tr>
+              <tr>
+                <td>农业产业</td>
+                <td><input class="price-input" type="text" value="160" aria-label="农业产业默认图片价"></td>
+                <td><input class="price-input" type="text" value="560" aria-label="农业产业默认视频价"></td>
+                <td>×1.5</td>
+                <td>¥8,600</td>
+              </tr>
+              <tr>
+                <td>非遗民俗</td>
+                <td><input class="price-input" type="text" value="200" aria-label="非遗民俗默认图片价"></td>
+                <td><input class="price-input" type="text" value="720" aria-label="非遗民俗默认视频价"></td>
+                <td>×2.0</td>
+                <td>¥4,200</td>
+              </tr>
+              <tr>
+                <td>活动记录</td>
+                <td><input class="price-input" type="text" value="120" aria-label="活动记录默认图片价"></td>
+                <td><input class="price-input" type="text" value="480" aria-label="活动记录默认视频价"></td>
+                <td>×1.2</td>
+                <td>¥3,440</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="u-row u-mt-3">
+          <button class="btn btn--primary" type="button" data-toast="定价已保存，仅对新订单生效">保存定价</button>
+          <button class="btn btn--text" type="button" data-toast="已恢复到上一次保存的定价">还原</button>
+        </div>
+      </div>
+
+      <div class="u-mt-4" data-tab-panel="batch" hidden>
+        <div class="field-row">
+          <label class="field">
+            <span>作用范围</span>
+            <select aria-label="批量调价作用范围">
+              <option>全部分类</option>
+              <option>城市影像</option>
+              <option>农业产业</option>
+              <option>非遗民俗</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>调整方式</span>
+            <select aria-label="批量调价方式">
+              <option>按百分比上调</option>
+              <option>按百分比下调</option>
+              <option>统一设为固定价</option>
+            </select>
+          </label>
+        </div>
+        <label class="field u-mt-3">
+          <span>调整幅度</span>
+          <input type="text" value="10%" aria-label="批量调价幅度">
+          <p class="field-hint">批量调价会生成变更记录，可在审计日志中回溯。</p>
+        </label>
+        <button class="btn btn--primary u-mt-3" type="button" data-toast="已预览影响范围：326 件素材，确认后生效">预览影响范围</button>
+      </div>
+
+      <div class="u-mt-4" data-tab-panel="single" hidden>
+        <div class="asset-picked">
+          <img src="assets/img/dragon-boat.svg" alt="黄杨河龙舟竞渡缩略图">
+          <span>黄杨河龙舟竞渡 · DM-20260411-0008</span>
+          <button class="btn btn--text" type="button" data-toast="已打开素材选择器">更换素材</button>
+        </div>
+        <div class="field-row u-mt-3">
+          <label class="field">
+            <span>图片授权价</span>
+            <input type="text" value="240" aria-label="单素材图片授权价">
+          </label>
+          <label class="field">
+            <span>视频授权价</span>
+            <input type="text" value="880" aria-label="单素材视频授权价">
+          </label>
+        </div>
+        <p class="foot-note">单素材定价优先于分类默认价；设为空则回落到分类价格。</p>
+      </div>
+    </div>
+  </section>
+
+  <p class="foot-note">统计口径与财务对账口径的差异，需要在验收前与中心财务确认。</p>
+</div>
+</section>
+
+<section class="view" id="view-admin" data-route="admin" hidden>
+<div class="admin">
+  <aside class="admin__side" aria-label="后台导航">
+    <a class="admin__brand" href="#/overview">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m14.31 8 5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16 3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"/></svg>
+      光圈AI 后台
+    </a>
+    <nav class="admin__nav">
+      <p class="admin__label">内容</p>
+      <div class="admin__links">
+        <a class="is-current" href="#/admin">素材管理</a>
+        <a href="#/library">素材库前台</a>
+        <a href="#/upload">上传与元数据治理</a>
+      </div>
+      <p class="admin__label">销售</p>
+      <div class="admin__links">
+        <a href="#/sales">销售链接</a>
+        <a href="#/stats">订单与统计</a>
+      </div>
+      <p class="admin__label">用户</p>
+      <div class="admin__links">
+        <a href="#/admin" data-goto="users">用户与角色</a>
+        <a href="#/admin" data-goto="permissions">权限矩阵</a>
+      </div>
+      <p class="admin__label">系统</p>
+      <div class="admin__links">
+        <a href="#/admin" data-goto="logs">审计日志</a>
+        <a href="#/mcp">智能体接口规范</a>
+      </div>
+    </nav>
+    <div class="admin__foot">
+      <span class="avatar">陈</span>
+      <span>陈晓<br><span class="u-micro u-subtle">系统管理员</span></span>
+    </div>
+  </aside>
+
+  <div class="admin__main">
+    <div class="admin__head">
+      <div>
+        <h1 class="admin__title">素材管理与审计</h1>
+        <p class="admin__sub">统一管理素材、用户、权限与全部操作留痕。</p>
+      </div>
+      <div class="admin__tools">
+        <button class="btn btn--quiet" type="button" data-toast="已导出当前筛选结果">导出列表</button>
+        <a class="btn btn--primary" href="#/upload">上传素材</a>
+      </div>
+    </div>
+
+    <div class="admin__body">
+      <div class="kpi-grid">
+        <div class="kpi">
+          <p class="kpi__label">素材总量</p>
+          <p class="kpi__value">82,416</p>
+          <p class="kpi__meta">已发布 78,204 · 已下架 312</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi__label">待完善元数据</p>
+          <p class="kpi__value">1,284</p>
+          <p class="kpi__meta">完整度低于 80% · 影响检索</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi__label">本月下载</p>
+          <p class="kpi__value">3,642</p>
+          <p class="kpi__meta">含内部调阅与授权下载</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi__label">异常访问</p>
+          <p class="kpi__value">7</p>
+          <p class="kpi__meta">链接超限 5 · 异地登录 2</p>
+        </div>
+      </div>
+
+      <section class="admin__section" aria-labelledby="assetsTitle">
+        <div class="u-row u-row--between">
+          <h2 class="panel__title" id="assetsTitle">素材管理</h2>
+          <div class="list-tools">
+            <label class="search">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input type="search" placeholder="搜索标题、编号或上传者" aria-label="搜索素材">
+            </label>
+            <div class="segmented segmented--text" role="group" aria-label="素材状态筛选">
+              <button class="is-active" type="button" data-toast="已筛选全部素材">全部</button>
+              <button type="button" data-toast="已筛选待完善素材">待完善</button>
+              <button type="button" data-toast="已筛选已下架素材">已下架</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-wrap u-mt-3">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">素材</th>
+                <th scope="col">分类</th>
+                <th scope="col">可见范围</th>
+                <th scope="col">元数据</th>
+                <th scope="col">上传者</th>
+                <th scope="col">状态</th>
+                <th scope="col"><span class="sr-only">操作</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="cell-asset">
+                    <span class="thumb-mini"><img src="assets/img/fish-farm.svg" alt=""></span>
+                    <span><strong>白蕉海鲈产业园航拍</strong><span class="cell-sub">DM-20260412-0014 · 4K</span></span>
+                  </div>
+                </td>
+                <td>农业产业</td>
+                <td>公开可见</td>
+                <td>96%</td>
+                <td>陈晓</td>
+                <td><span class="status">已发布</span></td>
+                <td class="cell-actions"><a class="btn btn--text" href="#/library">查看</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-asset">
+                    <span class="thumb-mini"><img src="assets/img/river-dusk.svg" alt=""></span>
+                    <span><strong>黄杨河落日</strong><span class="cell-sub">DM-20260412-0031 · 4K</span></span>
+                  </div>
+                </td>
+                <td>城市影像</td>
+                <td>内部可见</td>
+                <td>92%</td>
+                <td>李锐</td>
+                <td><span class="status">已发布</span></td>
+                <td class="cell-actions"><a class="btn btn--text" href="#/library">查看</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-asset">
+                    <span class="thumb-mini"><img src="assets/img/old-street.svg" alt=""></span>
+                    <span><strong>斗门旧街骑楼修缮</strong><span class="cell-sub">DM-20260411-0022 · 图片组</span></span>
+                  </div>
+                </td>
+                <td>城市影像</td>
+                <td>付费可见</td>
+                <td>68%</td>
+                <td>林海</td>
+                <td><span class="status status--off">待完善</span></td>
+                <td class="cell-actions"><button class="btn btn--text" type="button" data-toast="已打开元数据补全面板">补全</button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-asset">
+                    <span class="thumb-mini"><img src="assets/img/dragon-boat.svg" alt=""></span>
+                    <span><strong>黄杨河龙舟竞渡</strong><span class="cell-sub">DM-20260411-0008 · 4K</span></span>
+                  </div>
+                </td>
+                <td>活动记录</td>
+                <td>公开可见</td>
+                <td>100%</td>
+                <td>陈晓</td>
+                <td><span class="status">已发布</span></td>
+                <td class="cell-actions"><a class="btn btn--text" href="#/library">查看</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-asset">
+                    <span class="thumb-mini"><img src="assets/img/rice-field.svg" alt=""></span>
+                    <span><strong>莲洲春耕</strong><span class="cell-sub">DM-20260409-0017 · 图片组</span></span>
+                  </div>
+                </td>
+                <td>农业产业</td>
+                <td>内部可见</td>
+                <td>79%</td>
+                <td>周敏</td>
+                <td><span class="status status--off">待完善</span></td>
+                <td class="cell-actions"><button class="btn btn--text" type="button" data-toast="已打开元数据补全面板">补全</button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-asset">
+                    <span class="thumb-mini"><img src="assets/img/puppet-parade.svg" alt=""></span>
+                    <span><strong>斗门飘色巡游</strong><span class="cell-sub">DM-20260408-0041 · 图片组</span></span>
+                  </div>
+                </td>
+                <td>非遗民俗</td>
+                <td>公开可见</td>
+                <td>74%</td>
+                <td>林海</td>
+                <td><span class="status">已发布</span></td>
+                <td class="cell-actions"><a class="btn btn--text" href="#/library">查看</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="paged">
+          <span>显示 1–6 / 82,416 件</span>
+          <span class="paged__buttons"><button class="btn btn--text" type="button" data-toast="已加载下一页">下一页</button></span>
+        </div>
+      </section>
+
+      <section class="panel panel--flush u-mt-4" id="users" aria-labelledby="usersTitle">
+          <div class="panel__head">
+            <h2 class="panel__title" id="usersTitle">用户与角色</h2>
+            <span class="panel__meta">共 38 个账号</span>
+          </div>
+          <div class="panel__body">
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">用户</th>
+                    <th scope="col">角色</th>
+                    <th scope="col">最近登录</th>
+                    <th scope="col">状态</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>陈晓<div class="cell-sub">chenxiao</div></td>
+                    <td>系统管理员</td>
+                    <td>今天 08:41</td>
+                    <td><span class="status">正常</span></td>
+                  </tr>
+                  <tr>
+                    <td>李锐<div class="cell-sub">lirui</div></td>
+                    <td>融媒工作人员</td>
+                    <td>今天 09:12</td>
+                    <td><span class="status">正常</span></td>
+                  </tr>
+                  <tr>
+                    <td>周敏<div class="cell-sub">zhoumin</div></td>
+                    <td>融媒工作人员</td>
+                    <td>昨天 17:36</td>
+                    <td><span class="status">正常</span></td>
+                  </tr>
+                  <tr>
+                    <td>林海<div class="cell-sub">linhai</div></td>
+                    <td>融媒管理人员</td>
+                    <td>昨天 15:02</td>
+                    <td><span class="status">正常</span></td>
+                  </tr>
+                  <tr>
+                    <td>黄工<div class="cell-sub">huanggong</div></td>
+                    <td>一般用户</td>
+                    <td>04-12 10:20</td>
+                    <td><span class="status status--off">已停用</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="u-row u-mt-3">
+              <button class="btn btn--quiet" type="button" data-toast="已打开邀请成员面板">邀请成员</button>
+              <button class="btn btn--text" type="button" data-toast="角色变更需二次确认">调整角色</button>
+            </div>
+          </div>
+      </section>
+
+      <section class="panel u-mt-4" id="permissions" aria-labelledby="permTitle">
+          <div class="panel__head">
+            <div>
+              <h2 class="panel__title" id="permTitle">权限矩阵</h2>
+              <p class="panel__meta u-mt-1">圆点为允许，灰色点为不可见。</p>
+            </div>
+          </div>
+          <div class="panel__body">
+            <div class="table-wrap">
+              <table class="table matrix">
+                <thead>
+                  <tr>
+                    <th scope="col">操作</th>
+                    <th scope="col">一般用户</th>
+                    <th scope="col">工作人员</th>
+                    <th scope="col">管理人员</th>
+                    <th scope="col">系统管理员</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>浏览与检索素材</td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                  <tr>
+                    <td>上传素材</td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                  <tr>
+                    <td>编辑元数据与可见范围</td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                  <tr>
+                    <td>删除素材</td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                  <tr>
+                    <td>生成销售链接</td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                  <tr>
+                    <td>查看销售统计</td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                  <tr>
+                    <td>管理用户与角色</td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                  <tr>
+                    <td>查看审计日志</td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="deny"></span><span class="sr-only">不允许</span></td>
+                    <td><span class="allow"></span><span class="sr-only">允许</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      <section class="panel panel--flush u-mt-4" id="logs" aria-labelledby="logsTitle">
+        <div class="panel__head">
+          <div>
+            <h2 class="panel__title" id="logsTitle">审计日志</h2>
+            <p class="panel__meta u-mt-1">只追加、不可编辑。点击任意一行展开请求详情。</p>
+          </div>
+          <a class="btn btn--text" href="#/admin" data-goto="logs" data-toast="已导出近 30 天日志（CSV）">导出日志</a>
+        </div>
+        <div class="panel__body">
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">时间</th>
+                  <th scope="col">操作人</th>
+                  <th scope="col">动作</th>
+                  <th scope="col">对象</th>
+                  <th scope="col">来源 IP</th>
+                  <th scope="col">结果</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><button class="row-button" type="button" data-log-toggle="log1" aria-expanded="false">今天 09:12</button></td>
+                  <td>李锐</td>
+                  <td>上传素材</td>
+                  <td>黄杨河落日</td>
+                  <td>10.12.4.31</td>
+                  <td><span class="status">成功</span></td>
+                </tr>
+                <tr id="log1" class="log-detail" hidden>
+                  <td colspan="6">
+                    <dl class="log-detail__grid">
+                      <div><dt>请求 ID</dt><dd>req_7F3K2Q9A</dd></div>
+                      <div><dt>耗时</dt><dd>8.4 秒（含转码）</dd></div>
+                      <div><dt>文件</dt><dd>river_dusk_4k.mp4 · 486MB</dd></div>
+                      <div><dt>元数据完整度</dt><dd>92%（缺拍摄许可）</dd></div>
+                      <div><dt>结果</dt><dd>入库成功，等待可见范围复核</dd></div>
+                      <div><dt>客户端</dt><dd>Chrome 124 / Windows 11</dd></div>
+                    </dl>
+                  </td>
+                </tr>
+                <tr>
+                  <td>今天 08:41</td>
+                  <td>陈晓</td>
+                  <td>调整可见范围</td>
+                  <td>白蕉海鲈产业园航拍</td>
+                  <td>10.12.4.8</td>
+                  <td><span class="status">成功</span></td>
+                </tr>
+                <tr>
+                  <td>昨天 20:03</td>
+                  <td>访客链接 8Kq2fR</td>
+                  <td>访问预览页</td>
+                  <td>黄杨河落日</td>
+                  <td>113.76.22.9</td>
+                  <td><span class="status">成功</span></td>
+                </tr>
+                <tr>
+                  <td>昨天 18:47</td>
+                  <td>未知账号</td>
+                  <td>登录</td>
+                  <td>honggong</td>
+                  <td>113.76.22.41</td>
+                  <td><span class="status status--risk">失败</span></td>
+                </tr>
+                <tr>
+                  <td>昨天 15:02</td>
+                  <td>林海</td>
+                  <td>下载原片</td>
+                  <td>斗门旧街骑楼修缮</td>
+                  <td>10.12.4.19</td>
+                  <td><span class="status">成功</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="foot-note">日志保留期限、导出权限与异地登录告警规则，需要在验收前与中心安全负责人确认。</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="view" id="view-login" data-route="login" hidden>
+<div class="login">
+  <section class="login__aside" aria-label="产品说明">
+    <div>
+      <a class="login__brand" href="#/overview">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m14.31 8 5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16 3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"/></svg>
+        <span class="login__brand-name">光圈AI</span>
+      </a>
+      <p class="login__statement">让每一帧斗门影像，<br><em>都能被找到、被使用、被记住。</em></p>
+      <ul class="login__facts">
+        <li>82,416 件素材，覆盖 8 大分类与 4 类角色</li>
+        <li>上传即生成元数据建议，人工确认后入库</li>
+        <li>预览链接、在线授权与销售统计串成一条链路</li>
+        <li>所有查询、下载与授权操作均可审计</li>
+      </ul>
+    </div>
+    <p class="login__foot">斗门区融媒体中心 · 光圈AI 素材管理系统 · 演示原型 v0.9</p>
+  </section>
+
+  <section class="login__main">
+    <div class="login__card">
+      <h1>登录工作台</h1>
+      <p class="login__lead">使用中心统一账号登录，或扫码进入。演示环境不会发送真实短信。</p>
+
+      <div class="login__channels">
+        <div class="tabs" role="tablist" aria-label="登录方式">
+          <button class="tab is-active" type="button" role="tab" aria-selected="true" data-channel="password">账号密码</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-channel="phone">手机验证码</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-channel="wechat">微信扫码</button>
+        </div>
+      </div>
+
+      <div class="login__panel" data-channel-panel="password">
+        <label class="field">
+          <span>账号</span>
+          <input type="text" value="chenxiao" autocomplete="username" aria-label="账号">
+        </label>
+        <label class="field u-mt-3">
+          <span>密码</span>
+          <input type="password" value="doumen2026" autocomplete="current-password" aria-label="密码">
+        </label>
+        <a class="btn btn--primary u-mt-4" href="#/library">登录</a>
+        <div class="login__helper">
+          <span>记住此设备</span>
+          <button class="btn btn--text" type="button" data-toast="请联系中心素材管理员重置密码">忘记密码</button>
+        </div>
+      </div>
+
+      <div class="login__panel" data-channel-panel="phone" hidden>
+        <label class="field">
+          <span>手机号</span>
+          <input type="tel" value="138 0000 0000" aria-label="手机号">
+        </label>
+        <label class="field u-mt-3">
+          <span>验证码</span>
+          <input type="text" value="" placeholder="6 位数字" aria-label="验证码">
+          <p class="field-hint">演示环境验证码固定为 8888，不会真实发送。</p>
+        </label>
+        <div class="u-row u-row--between u-mt-3">
+          <button class="btn btn--text" type="button" data-toast="验证码已发送（演示）">获取验证码</button>
+          <span class="u-micro u-subtle">59 秒后可重发</span>
+        </div>
+        <a class="btn btn--primary u-mt-4" href="#/library">登录</a>
+      </div>
+
+      <div class="login__panel" data-channel-panel="wechat" hidden>
+        <div class="qr-wrap">
+          <svg viewBox="0 0 80 80" role="img" aria-label="微信扫码登录二维码">
+            <defs>
+              <pattern id="qrLogin" width="8" height="8" patternUnits="userSpaceOnUse">
+                <rect width="8" height="8" fill="#ffffff"/>
+                <rect width="4" height="4" fill="#1d1d1f"/>
+                <rect x="4" y="4" width="4" height="4" fill="#1d1d1f"/>
+              </pattern>
+              <g id="finderL">
+                <rect width="22" height="22" fill="#1d1d1f"/>
+                <rect x="5" y="5" width="12" height="12" fill="#ffffff"/>
+                <rect x="9" y="9" width="4" height="4" fill="#1d1d1f"/>
+              </g>
+            </defs>
+            <rect width="80" height="80" fill="url(#qrLogin)"/>
+            <rect x="6" y="6" width="22" height="22" fill="#ffffff"/>
+            <rect x="52" y="6" width="22" height="22" fill="#ffffff"/>
+            <rect x="6" y="52" width="22" height="22" fill="#ffffff"/>
+            <use href="#finderL" x="6" y="6"/>
+            <use href="#finderL" x="52" y="6"/>
+            <use href="#finderL" x="6" y="52"/>
+          </svg>
+          <p>打开微信扫一扫 · 仅限中心内部账号</p>
+        </div>
+        <p class="u-micro u-subtle u-mt-3">扫码后需在手机上确认登录，30 秒内有效。</p>
+      </div>
+
+      <div class="login__roles">
+        <p class="u-micro u-subtle">角色演示 · 切换查看不同角色的可用范围</p>
+        <div class="login__role-row" role="group" aria-label="角色演示">
+          <button type="button" data-role="一般用户">一般用户</button>
+          <button class="is-active" type="button" data-role="融媒工作人员">融媒工作人员</button>
+          <button type="button" data-role="融媒管理人员">融媒管理人员</button>
+          <button type="button" data-role="系统管理员">系统管理员</button>
+        </div>
+        <p class="u-micro u-muted u-mt-2" id="roleHint">融媒工作人员演示视图：登录后仅显示该角色的可用范围。</p>
+      </div>
+
+      <p class="login__note">首次登录需修改初始密码并绑定手机号。账号由系统管理员统一开通，不开放自助注册。</p>
+      <p class="login__note"><a href="#/overview">返回设计总览</a></p>
+    </div>
+  </section>
+</div>
+</section>
+
+<section class="view" id="view-mcp" data-route="mcp" hidden>
+<div class="ai">
+  <div class="ai__body">
+    <div class="ai__head">
+      <div>
+        <h1 class="ai__title">智能体接口规范</h1>
+        <p class="ai__sub">MCP Server 把素材库变成 AI 可调用的工具集：检索、读元数据、统计上传、导出 Excel。</p>
+      </div>
+      <span class="status">服务运行中</span>
+    </div>
+
+    <div class="grid-2 u-mt-4">
+      <section class="panel panel--flush" aria-labelledby="toolsTitle">
+        <div class="panel__head">
+          <h2 class="panel__title" id="toolsTitle">可用工具</h2>
+          <span class="panel__meta">5 个 · 均继承账号权限</span>
+        </div>
+        <div class="panel__body">
+          <div class="table-wrap">
+            <table class="table table--mini">
+              <thead>
+                <tr>
+                  <th scope="col">工具</th>
+                  <th scope="col">作用</th>
+                  <th scope="col">状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="tool-code">search_assets</span></td>
+                  <td>按关键词、分类、时间与可见范围检索素材</td>
+                  <td><span class="status">可用</span></td>
+                </tr>
+                <tr>
+                  <td><span class="tool-code">get_asset_metadata</span></td>
+                  <td>读取单件素材的完整元数据与授权状态</td>
+                  <td><span class="status">可用</span></td>
+                </tr>
+                <tr>
+                  <td><span class="tool-code">aggregate_uploads</span></td>
+                  <td>按上传者、分类与时间统计上传量</td>
+                  <td><span class="status">可用</span></td>
+                </tr>
+                <tr>
+                  <td><span class="tool-code">export_to_excel</span></td>
+                  <td>将检索或统计结果导出为 Excel</td>
+                  <td><span class="status">可用</span></td>
+                </tr>
+                <tr>
+                  <td><span class="tool-code">list_collections</span></td>
+                  <td>列出合集与专题包，供选题复用</td>
+                  <td><span class="status">可用</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="foot-note">工具只读为主，唯一写操作是导出文件；任何调用都记入审计日志。</p>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="connectTitle">
+        <div class="panel__head">
+          <h2 class="panel__title" id="connectTitle">接入信息</h2>
+          <span class="panel__meta">MCP over HTTP</span>
+        </div>
+        <div class="panel__body">
+          <div class="endpoint">
+            <div class="endpoint__row">
+              <span>服务地址</span>
+              <code>https://aperture.doumen.cn/mcp</code>
+              <button class="btn btn--text" type="button" data-copy="https://aperture.doumen.cn/mcp">复制</button>
+            </div>
+            <div class="endpoint__row">
+              <span>鉴权方式</span>
+              <code>Bearer &lt;个人令牌&gt;</code>
+            </div>
+            <div class="endpoint__row">
+              <span>权限范围</span>
+              <code>与该账号在素材库中的可见范围一致</code>
+            </div>
+            <div class="endpoint__row">
+              <span>速率限制</span>
+              <code>60 次 / 分钟 / 账号</code>
+            </div>
+          </div>
+          <pre class="code-block">{
+  "mcpServers": {
+    "aperture": {
+      "url": "https://aperture.doumen.cn/mcp",
+      "headers": { "Authorization": "Bearer &lt;token&gt;" }
+    }
+  }
+}</pre>
+          <div class="u-row u-mt-3">
+            <button class="btn btn--quiet" type="button" data-toast="个人令牌已生成，仅显示一次">生成令牌</button>
+            <button class="btn btn--text" type="button" data-toast="已复制配置片段">复制配置</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="panel u-mt-4" aria-labelledby="sceneTitle">
+      <div class="panel__head">
+        <div>
+          <h2 class="panel__title" id="sceneTitle">场景演示</h2>
+          <p class="panel__meta u-mt-1">同一段对话里完成检索、核对授权与导出。</p>
+        </div>
+        <div class="segmented segmented--text" role="group" aria-label="演示场景">
+          <button class="is-active" type="button" data-scene="topic">选题找素材</button>
+          <button type="button" data-scene="monthly">月度上传统计</button>
+        </div>
+      </div>
+      <div class="panel__body">
+        <div class="chat" data-scene-panel="topic">
+          <div class="msg msg--user">
+            <p class="msg__meta">WorkBuddy · 14:02</p>
+            帮我找 10 条白蕉海鲈相关的竖版视频，最近三个月，要可商用的，附上价格。
+          </div>
+          <div class="msg msg--agent">
+            <p class="msg__meta">光圈AI 智能体 · 14:02</p>
+            <div class="toolcall">
+              <code>search_assets</code>
+              <span>query=白蕉海鲈 · type=video · ratio=9:16 · months=3</span>
+              <span class="status">12 条</span>
+            </div>
+            <div class="msg__result">
+              <table class="table table--mini">
+                <thead>
+                  <tr>
+                    <th scope="col">素材</th>
+                    <th scope="col">时长</th>
+                    <th scope="col">授权价</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>白蕉海鲈产业园航拍</td><td>00:12</td><td>¥680</td></tr>
+                  <tr><td>海鲈起捕现场</td><td>00:26</td><td>¥560</td></tr>
+                  <tr><td>养殖户访谈竖版</td><td>01:04</td><td>¥480</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="bubble-note">共 12 条符合条件，其中 9 条可直接商用，3 条仅限内部使用。需要我导出完整清单吗？</p>
+            <div class="msg__actions">
+              <button class="btn btn--text" type="button" data-toast="正在导出 12 条素材清单">导出 Excel</button>
+              <a class="btn btn--text" href="#/library">在素材库中查看</a>
+            </div>
+          </div>
+          <div class="msg msg--user">
+            <p class="msg__meta">WorkBuddy · 14:04</p>
+            导出吧，顺便把 3 条内部专用的标出来。
+          </div>
+          <div class="msg msg--agent">
+            <p class="msg__meta">光圈AI 智能体 · 14:04</p>
+            <div class="toolcall">
+              <code>export_to_excel</code>
+              <span>ids=12 · columns=标题,分类,时长,授权价,可见范围</span>
+              <span class="status">完成</span>
+            </div>
+            <div class="msg__result">
+              <div class="u-row">
+                <span class="u-caption">白蕉海鲈选题素材_20260418.xlsx</span>
+                <button class="btn btn--text" type="button" data-toast="开始下载 Excel（12 行）">下载</button>
+              </div>
+            </div>
+            <p class="bubble-note">已在「可见范围」列标注内部专用，导出动作已写入审计日志。</p>
+          </div>
+        </div>
+
+        <div class="chat" data-scene-panel="monthly" hidden>
+          <div class="msg msg--user">
+            <p class="msg__meta">WorkBuddy · 09:20</p>
+            统计 3 月各镇街的上传量，按视频和图片分开，导成 Excel。
+          </div>
+          <div class="msg msg--agent">
+            <p class="msg__meta">光圈AI 智能体 · 09:20</p>
+            <div class="toolcall">
+              <code>aggregate_uploads</code>
+              <span>range=2026-03-01..2026-03-31 · groupBy=镇街 · splitBy=类型</span>
+              <span class="status">完成</span>
+            </div>
+            <div class="msg__result">
+              <table class="table table--mini">
+                <thead>
+                  <tr>
+                    <th scope="col">镇街</th>
+                    <th scope="col">视频</th>
+                    <th scope="col">图片</th>
+                    <th scope="col">合计</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>井岸镇</td><td>186</td><td>412</td><td>598</td></tr>
+                  <tr><td>斗门镇</td><td>142</td><td>368</td><td>510</td></tr>
+                  <tr><td>莲洲镇</td><td>98</td><td>264</td><td>362</td></tr>
+                  <tr><td>白藤街道</td><td>76</td><td>205</td><td>281</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="bubble-note">3 月共上传 1,751 件，井岸镇占 34%。已按你的要求拆分视频与图片。</p>
+            <div class="msg__actions">
+              <button class="btn btn--text" type="button" data-toast="正在导出月度上传统计">导出 Excel</button>
+              <button class="btn btn--text" type="button" data-toast="已生成柱状图（演示）">生成图表</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid-2 u-mt-4">
+      <section class="panel" aria-labelledby="skillTitle">
+        <div class="panel__head">
+          <h2 class="panel__title" id="skillTitle">Agent Skill</h2>
+          <span class="panel__meta">WorkBuddy 首个接入</span>
+        </div>
+        <div class="panel__body">
+          <p class="u-caption u-muted">技能包封装三个动作，让智能体按中心规范选材与交付。</p>
+          <div class="prompt-list">
+            <span class="chip">选材</span>
+            <span class="chip">授权确认</span>
+            <span class="chip">导出交付</span>
+          </div>
+          <ul class="rule-list u-mt-3">
+            <li>选材时优先返回可商用素材，并标注授权范围。</li>
+            <li>导出前必须展示素材清单与用途，由使用者确认。</li>
+            <li>不得绕过素材库直接分发原片下载地址。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="limitTitle">
+        <div class="panel__head">
+          <h2 class="panel__title" id="limitTitle">边界与约定</h2>
+        </div>
+        <div class="panel__body">
+          <ul class="rule-list">
+            <li>智能体只读素材与元数据，不修改元数据、不删除素材。</li>
+            <li>导出的 Excel 不含原片地址，仅含素材编号与预览链接。</li>
+            <li>预览链接仍受有效期与访问上限约束。</li>
+            <li>每次工具调用记录账号、参数、结果与耗时。</li>
+          </ul>
+          <p class="foot-note">一期是否开放导出原片、是否允许外部账号接入 MCP，需要与中心确认。</p>
+        </div>
+      </section>
+    </div>
+
+    <p class="foot-note">演示内容为脚本化对话，用于确认智能体的回答口径与工具边界，不代表最终模型输出。</p>
+  </div>
+</div>
+</section>
+
+<section class="view" id="view-agent" data-route="agent" hidden>
+<div class="agent">
+  <div class="wrap wrap--wide">
+    <header class="agent__head">
+      <p class="eyebrow">AI智能体整合 · 实战演示</p>
+      <h1 class="agent__title">在对话里说一句话，<br>素材、授权链接、投放清单一起回来。</h1>
+      <p class="agent__lead">左侧是 WorkBuddy 的真实界面截图，对话内容完全由光圈AI 的 MCP 工具驱动。上方可切换两个场景：运营岗把一条素材变成授权链接，管理岗把一个月的数据变成能上会的简报。点「下一步」逐步播放，或让它自动播放——每一步都能看到模型调用了哪个工具、传了什么参数、拿回了什么。</p>
+      <div class="agent__actions">
+        <a class="btn btn--primary" href="#/mcp">查看智能体接口规范</a>
+        <a class="btn btn--text" href="#/library">先看素材库</a>
+        <a class="btn btn--quiet" href="#/agent" data-goto="agentMedia">直接看视频</a>
+      </div>
+    </header>
+
+    <div class="stage__switch" role="group" aria-label="选择演示场景">
+      <button class="stage__sw is-active" type="button" data-demo-scenario="ops" aria-pressed="true">
+        <span class="stage__sw-k">场景 A</span>
+        <span class="stage__sw-t">招商运营 · 一条素材到一条授权链接</span>
+        <span class="stage__sw-m">8 步 · 运营岗</span>
+      </button>
+      <button class="stage__sw" type="button" data-demo-scenario="biz" aria-pressed="false">
+        <span class="stage__sw-k">场景 B</span>
+        <span class="stage__sw-t">管理决策 · 一句话问出季度盘点</span>
+        <span class="stage__sw-m">7 步 · 管理岗</span>
+      </button>
+    </div>
+
+    <div class="stage" id="demoStage" data-step="0" data-scenario="ops">
+      <div class="stage__scroll">
+        <div class="stage__frame">
+          <img class="stage__shot" src="assets/img/workbuddy_clean.png" width="1916" height="966" loading="lazy" decoding="async" alt="WorkBuddy 应用界面空白截图">
+
+          <div class="stage__ui">
+            <div class="dm-chat" data-demo-scroll>
+              <div class="dm-chat__inner">
+                <p class="dm-chat__head">
+                  <span class="dm-chat__dot"></span>光圈AI 素材助手
+                  <span class="dm-chat__meta">已连接 5 个工具 · 斗门区融媒体中心</span>
+                </p>
+
+                <div class="dm-flow" data-scenario="ops">
+                <div class="dm dm--user" data-from="0">
+                  <p class="dm__who">运营 · 陈晓</p>
+                  <p class="dm__bubble">帮我把「黄杨河落日」这条素材做成抖音竖版短视频，再给我一条可商用的授权链接和一份投放清单。</p>
+                </div>
+
+                <div class="dm" data-from="1">
+                  <div class="dm-tool">
+                    <p class="dm-tool__head">
+                      <span class="dm-tool__dot"></span>
+                      <b>search_assets</b>
+                      <span class="dm-tool__state">已完成 · 128ms</span>
+                    </p>
+                    <dl class="dm-tool__args">
+                      <div><dt>keyword</dt><dd>"黄杨河 落日"</dd></div>
+                      <div><dt>media_type</dt><dd>"video"</dd></div>
+                      <div><dt>license</dt><dd>"commercial"</dd></div>
+                    </dl>
+                  </div>
+                </div>
+
+                <div class="dm" data-from="2">
+                  <p class="dm__note">命中 3 条，按相关度排序：</p>
+                  <div class="dm-hits">
+                    <figure class="dm-hit dm-hit--pick">
+                      <img src="assets/img/river-dusk.svg" alt="黄杨河落日航拍">
+                      <figcaption><b>黄杨河落日</b><span>04:12 · 4K · 可商用</span></figcaption>
+                    </figure>
+                    <figure class="dm-hit">
+                      <img src="assets/img/harbor.svg" alt="斗门港黄昏">
+                      <figcaption><b>斗门港黄昏</b><span>01:36 · 1080P · 可商用</span></figcaption>
+                    </figure>
+                    <figure class="dm-hit">
+                      <img src="assets/img/mountain-mist.svg" alt="黄杨山云海">
+                      <figcaption><b>黄杨山云海</b><span>02:05 · 4K · 需署名</span></figcaption>
+                    </figure>
+                  </div>
+                </div>
+
+                <div class="dm" data-from="3">
+                  <div class="dm-tool">
+                    <p class="dm-tool__head">
+                      <span class="dm-tool__dot"></span>
+                      <b>get_asset_metadata</b>
+                      <span class="dm-tool__state">已完成 · 96ms</span>
+                    </p>
+                    <dl class="dm-tool__args">
+                      <div><dt>asset_id</dt><dd>"DM-VID-2024-0871"</dd></div>
+                    </dl>
+                  </div>
+                </div>
+
+                <div class="dm" data-from="4">
+                  <div class="dm-card">
+                    <p class="dm-card__title">黄杨河落日 · 航拍空镜</p>
+                    <ul class="dm-kv">
+                      <li><span>授权范围</span><b>商用 · 可二次剪辑 · 全平台</b></li>
+                      <li><span>限制条件</span><b>含人物镜头需打码，禁止用于医疗广告</b></li>
+                      <li><span>有效期</span><b>2025-01-01 至 2027-12-31</b></li>
+                      <li><span>负责人</span><b>影像组 · 李岸</b></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="dm" data-from="5">
+                  <div class="dm-tool">
+                    <p class="dm-tool__head">
+                      <span class="dm-tool__dot"></span>
+                      <b>generate_sales_link</b>
+                      <span class="dm-tool__state">已完成 · 214ms</span>
+                    </p>
+                    <dl class="dm-tool__args">
+                      <div><dt>asset_id</dt><dd>"DM-VID-2024-0871"</dd></div>
+                      <div><dt>ttl_days</dt><dd>7</dd></div>
+                    </dl>
+                  </div>
+                  <div class="dm-link">
+                    <span class="dm-link__url">aperture.doumen.gov.cn/s/8Kq2fR</span>
+                    <button class="dm-link__btn" type="button" data-copy="https://aperture.doumen.gov.cn/s/8Kq2fR">复制</button>
+                  </div>
+                </div>
+
+                <div class="dm" data-from="6">
+                  <div class="dm-tool">
+                    <p class="dm-tool__head">
+                      <span class="dm-tool__dot"></span>
+                      <b>export_to_excel</b>
+                      <span class="dm-tool__state">已完成 · 331ms</span>
+                    </p>
+                  </div>
+                  <table class="dm-table">
+                    <caption class="sr-only">导出的投放清单预览</caption>
+                    <thead>
+                      <tr><th scope="col">素材</th><th scope="col">渠道</th><th scope="col">用途</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>黄杨河落日</td><td>抖音</td><td>竖版 15s</td></tr>
+                      <tr><td>黄杨河落日</td><td>视频号</td><td>横版 30s</td></tr>
+                      <tr><td>斗门港黄昏</td><td>小红书</td><td>封面图</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="dm" data-from="7">
+                  <div class="dm-done">
+                    <p class="dm-done__title">三件交付物已就绪</p>
+                    <ul class="dm-done__list">
+                      <li><span class="dm-chip dm-chip--teal">素材</span>黄杨河落日 · 4K 原片 + 竖版剪辑工程</li>
+                      <li><span class="dm-chip dm-chip--orange">链接</span>7 天有效的商用授权链接，可直接发客户</li>
+                      <li><span class="dm-chip dm-chip--violet">清单</span>CSV 投放清单，含渠道与用途</li>
+                    </ul>
+                    <p class="dm-done__foot">本次调用已写入审计日志，可在「后台管理 · 审计日志」追溯到工具、参数与返回。</p>
+                  </div>
+                </div>
+                </div>
+
+                <div class="dm-flow" data-scenario="biz" hidden>
+                  <div class="dm dm--user" data-from="0">
+                    <p class="dm__who">融媒管理人员 · 林海</p>
+                    <p class="dm__bubble">我是融媒中心的管理人员，请帮我统计 2026 年第三季度素材的上传情况，并按素材所有者分类。</p>
+                  </div>
+
+                  <div class="dm" data-from="1">
+                    <div class="dm-tool">
+                      <p class="dm-tool__head">
+                        <span class="dm-tool__dot"></span>
+                        <b>aggregate_uploads</b>
+                        <span class="dm-tool__state">已完成 · 142ms</span>
+                      </p>
+                      <dl class="dm-tool__args">
+                        <div><dt>range</dt><dd>"2026-Q3"</dd></div>
+                        <div><dt>group_by</dt><dd>"uploader"</dd></div>
+                        <div><dt>metrics</dt><dd>["count", "duration", "size"]</dd></div>
+                      </dl>
+                    </div>
+                  </div>
+
+                  <div class="dm" data-from="2">
+                    <div class="dm-kpis">
+                      <div class="dm-kpi dm-kpi--blue">
+                        <p class="dm-kpi__k">上传素材</p>
+                        <p class="dm-kpi__v">3,842</p>
+                        <p class="dm-kpi__d">环比 +12.6%</p>
+                      </div>
+                      <div class="dm-kpi dm-kpi--teal">
+                        <p class="dm-kpi__k">参与上传</p>
+                        <p class="dm-kpi__v">26 人</p>
+                        <p class="dm-kpi__d">覆盖 5 个部门</p>
+                      </div>
+                      <div class="dm-kpi dm-kpi--violet">
+                        <p class="dm-kpi__k">累计时长</p>
+                        <p class="dm-kpi__v">128 h</p>
+                        <p class="dm-kpi__d">视频占 74%</p>
+                      </div>
+                      <div class="dm-kpi dm-kpi--orange">
+                        <p class="dm-kpi__k">存储增量</p>
+                        <p class="dm-kpi__v">1.24 TB</p>
+                        <p class="dm-kpi__d">剩余容量 38%</p>
+                      </div>
+                    </div>
+                    <figure class="dm-spark">
+                      <figcaption class="dm-spark__cap">
+                        <span>2026-Q3 每周上传量</span>
+                        <span>季末两周明显堆积</span>
+                      </figcaption>
+                      <svg viewBox="0 0 320 72" preserveAspectRatio="none" role="img" aria-label="2026 年第三季度每周上传量：周均约 296 件，季末两周升至 400 件以上">
+                        <defs>
+                          <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#0071e3" stop-opacity="0.26"/>
+                            <stop offset="100%" stop-color="#0071e3" stop-opacity="0"/>
+                          </linearGradient>
+                        </defs>
+                        <path d="M0,64.4 L22.4,59.8 L44.9,61.8 L67.3,54.6 L89.7,46.1 L112.1,48.1 L134.6,40.2 L157,43.8 L179.4,31.8 L201.9,35.7 L224.3,23.9 L246.7,26.5 L269.1,15.5 L291.6,19.4 L314,7.6 L314,72 L0,72 Z" fill="url(#sparkFill)"/>
+                        <polyline points="0,64.4 22.4,59.8 44.9,61.8 67.3,54.6 89.7,46.1 112.1,48.1 134.6,40.2 157,43.8 179.4,31.8 201.9,35.7 224.3,23.9 246.7,26.5 269.1,15.5 291.6,19.4 314,7.6" fill="none" stroke="#0071e3" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="314" cy="7.6" r="3" fill="#0071e3" vector-effect="non-scaling-stroke"/>
+                      </svg>
+                    </figure>
+                  </div>
+
+                  <div class="dm" data-from="3">
+                    <p class="dm__note">按上传者拆开，前 3 位贡献了 75%：</p>
+                    <div class="dm-bars">
+                      <div class="dm-bar">
+                        <span class="dm-bar__k">影像组 · 李岸</span>
+                        <span class="dm-bar__track"><span class="dm-bar__fill dm-bar__fill--pink" style="width:100%"></span></span>
+                        <span class="dm-bar__v">1,120 件 · 29%</span>
+                      </div>
+                      <div class="dm-bar">
+                        <span class="dm-bar__k">新媒体组 · 周敏</span>
+                        <span class="dm-bar__track"><span class="dm-bar__fill dm-bar__fill--teal" style="width:84%"></span></span>
+                        <span class="dm-bar__v">940 件 · 24%</span>
+                      </div>
+                      <div class="dm-bar">
+                        <span class="dm-bar__k">新闻采访部 · 李锐</span>
+                        <span class="dm-bar__track"><span class="dm-bar__fill dm-bar__fill--blue" style="width:73%"></span></span>
+                        <span class="dm-bar__v">820 件 · 21%</span>
+                      </div>
+                      <div class="dm-bar">
+                        <span class="dm-bar__k">视觉工作室 · 苏晴</span>
+                        <span class="dm-bar__track"><span class="dm-bar__fill dm-bar__fill--orange" style="width:50%"></span></span>
+                        <span class="dm-bar__v">560 件 · 15%</span>
+                      </div>
+                      <div class="dm-bar">
+                        <span class="dm-bar__k">其余 22 人</span>
+                        <span class="dm-bar__track"><span class="dm-bar__fill dm-bar__fill--violet" style="width:36%"></span></span>
+                        <span class="dm-bar__v">402 件 · 11%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dm" data-from="4">
+                    <div class="dm-tool">
+                      <p class="dm-tool__head">
+                        <span class="dm-tool__dot"></span>
+                        <b>list_collections</b>
+                        <span class="dm-tool__state">已完成 · 187ms</span>
+                      </p>
+                      <dl class="dm-tool__args">
+                        <div><dt>depth</dt><dd>2</dd></div>
+                        <div><dt>with_counts</dt><dd>true</dd></div>
+                      </dl>
+                    </div>
+                    <div class="dm-insights">
+                      <div class="dm-insight dm-insight--green">
+                        <p class="dm-insight__k">结构</p>
+                        <p class="dm-insight__v">城市影像 41%，也是本月成交额最高的分类（¥12,400）</p>
+                      </div>
+                      <div class="dm-insight dm-insight--amber">
+                        <p class="dm-insight__k">节奏</p>
+                        <p class="dm-insight__v">季末两周占 44%，9 月 28 日单日 186 件，归档压力集中</p>
+                      </div>
+                      <div class="dm-insight dm-insight--orange">
+                        <p class="dm-insight__k">缺口</p>
+                        <p class="dm-insight__v">「白蕉海鲈」相关素材仅 38 件（1.8%），与重点项目不匹配</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dm" data-from="5">
+                    <div class="dm-tool">
+                      <p class="dm-tool__head">
+                        <span class="dm-tool__dot"></span>
+                        <b>export_to_excel</b>
+                        <span class="dm-tool__state">已完成 · 264ms</span>
+                      </p>
+                      <dl class="dm-tool__args">
+                        <div><dt>rows</dt><dd>26</dd></div>
+                        <div><dt>columns</dt><dd>["上传者","部门","件数","时长","容量"]</dd></div>
+                      </dl>
+                    </div>
+                    <div class="dm-file">
+                      <span class="dm-file__ic">XLSX</span>
+                      <div class="dm-file__meta">
+                        <b>2026-Q3 素材盘点 · 按上传者</b>
+                        <span>26 行 × 5 列 · 含月度趋势与分类结构</span>
+                      </div>
+                      <button class="dm-link__btn" type="button" data-toast="已导出：2026-Q3-素材盘点.xlsx">下载</button>
+                    </div>
+                  </div>
+
+                  <div class="dm" data-from="6">
+                    <div class="dm-done">
+                      <p class="dm-done__title">上会材料已就绪</p>
+                      <ul class="dm-done__list">
+                        <li><span class="dm-chip dm-chip--teal">表格</span>26 行明细 Excel，每位上传者的件数、时长与容量</li>
+                        <li><span class="dm-chip dm-chip--orange">图表</span>上传者分布 + 季度趋势，可直接放进季度报告</li>
+                        <li><span class="dm-chip dm-chip--violet">结论</span>影像组产能接近上限、季末堆积、海鲈题材缺口，三条建议待确认</li>
+                      </ul>
+                      <p class="dm-done__foot">统计类工具只读，不会改动素材与归属；本次查询写入审计日志，可追溯到人、时间与查询条件。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dm-composer" aria-hidden="true">
+                  <span class="dm-composer__plus">＋</span>
+                  <span class="dm-composer__ph">继续追问，或输入 / 查看可用工具…</span>
+                  <span class="dm-composer__send">↑</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage__ctl" role="group" aria-label="交互演示播放控制">
+        <button class="stage__btn" type="button" data-demo-prev aria-label="上一步">←</button>
+        <div class="stage__track"><span class="stage__fill" data-demo-progress></span></div>
+        <button class="stage__btn stage__btn--next" type="button" data-demo-next>下一步 →</button>
+        <span class="stage__count" data-demo-count aria-live="polite" aria-label="演示进度">1 / 8</span>
+        <button class="stage__btn stage__btn--ghost" type="button" data-demo-play aria-pressed="false">自动播放</button>
+        <button class="stage__btn stage__btn--ghost" type="button" data-demo-reset>重播</button>
+      </div>
+
+      <ol class="stage__caps" data-scenario="ops" aria-label="演示步骤">
+        <li><button type="button" data-cap data-demo-jump="0"><span class="cap__i">01</span><span class="cap__t">提出问题</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="1"><span class="cap__i">02</span><span class="cap__t">模型选工具</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="2"><span class="cap__i">03</span><span class="cap__t">检索素材</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="3"><span class="cap__i">04</span><span class="cap__t">读取详情</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="4"><span class="cap__i">05</span><span class="cap__t">权限校验</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="5"><span class="cap__i">06</span><span class="cap__t">生成链接</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="6"><span class="cap__i">07</span><span class="cap__t">导出清单</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="7"><span class="cap__i">08</span><span class="cap__t">交付完成</span></button></li>
+      </ol>
+
+      <ol class="stage__caps" data-scenario="biz" hidden aria-label="演示步骤">
+        <li><button type="button" data-cap data-demo-jump="0"><span class="cap__i">01</span><span class="cap__t">提出问题</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="1"><span class="cap__i">02</span><span class="cap__t">调用统计</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="2"><span class="cap__i">03</span><span class="cap__t">关键指标</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="3"><span class="cap__i">04</span><span class="cap__t">上传者分布</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="4"><span class="cap__i">05</span><span class="cap__t">结构分析</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="5"><span class="cap__i">06</span><span class="cap__t">导出报表</span></button></li>
+        <li><button type="button" data-cap data-demo-jump="6"><span class="cap__i">07</span><span class="cap__t">汇报就绪</span></button></li>
+      </ol>
+    </div>
+
+    <section class="agent__why">
+      <h2 class="section__title">这套演示想确认的三件事</h2>
+      <div class="why-grid">
+        <div class="why">
+          <p class="why__i">01</p>
+          <h3>工具边界</h3>
+          <p>智能体只能调用光圈AI 开放的 MCP 工具：检索、元数据、上传统计、导出、销售链接。没有「随便改素材」，权限仍然由光圈AI 决定。</p>
+        </div>
+        <div class="why">
+          <p class="why__i">02</p>
+          <h3>参数可见</h3>
+          <p>每次调用都展示工具名、入参与耗时，客户和内部审核都能看懂智能体到底做了什么。</p>
+        </div>
+        <div class="why">
+          <p class="why__i">03</p>
+          <h3>可回溯</h3>
+          <p>所有调用写入审计日志，能追溯到人、素材、链接和导出的文件，满足对外授权留痕要求。</p>
+        </div>
+      </div>
+      <p class="agent__foot">演示数据均为示意；真实上线后工具返回结构不变，仅数据来源替换为生产库。</p>
+    </section>
+
+    <section class="agent__media" id="agentMedia" aria-labelledby="mediaTitle">
+      <div class="agent__media-head">
+        <div>
+          <p class="eyebrow">可带走</p>
+          <h2 class="section__title" id="mediaTitle">两段演示都已录成视频</h2>
+          <p class="section__lead">下面的视频无声循环，可直接放进方案汇报；GIF 版可以粘进微信和 PPT。</p>
+        </div>
+        <p class="agent__media-note" data-media-meta>场景 A 8 步 · 场景 B 7 步 · 1280 × 800</p>
+      </div>
+
+      <div class="media-grid">
+        <figure class="media">
+          <video class="media__v" src="assets/media/demo-ops.webm" data-poster="assets/media/demo-ops.jpg" width="1280" height="800" controls muted loop playsinline preload="none" aria-label="场景 A 招商运营演示视频"></video>
+          <figcaption class="media__cap">
+            <b>场景 A · 招商运营</b>
+            <span>从一句话到授权链接、投放清单。</span>
+            <span class="media__links">
+              <a href="assets/media/demo-ops.gif" download>下载 GIF<span class="u-micro">（微信 / PPT 可直接粘贴）</span></a>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="media">
+          <video class="media__v" src="assets/media/demo-biz.webm" data-poster="assets/media/demo-biz.jpg" width="1280" height="800" controls muted loop playsinline preload="none" aria-label="场景 B 管理决策演示视频"></video>
+          <figcaption class="media__cap">
+            <b>场景 B · 管理决策</b>
+            <span>管理人员一句话问出季度上传盘点。</span>
+            <span class="media__links">
+              <a href="assets/media/demo-biz.gif" download>下载 GIF<span class="u-micro">（微信 / PPT 可直接粘贴）</span></a>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+</div>
+</section>
+
+<section class="view" id="view-design" data-route="design" hidden>
+<div class="doc">
+  <div class="doc__head">
+    <div class="wrap">
+      <p class="doc__label">UI Guide · v1.1</p>
+      <h1 class="doc__title">一套克制的界面语言</h1>
+      <p class="doc__lead">所有界面共用一套 token：一个强调色、七组语义色相、四级文字、一套间距。v1.1 在不改变「蓝色只表可交互」的前提下补入了色彩与影像，让界面在客户面前有温度；v1.1 同时把十二屏收进同一个原型：十一屏共用外壳，客户链接页独立成页。</p>
+    </div>
+  </div>
+
+  <section class="doc__band doc__band--paper" aria-labelledby="d-colorTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">01 · Color</p>
+        <h2 id="d-colorTitle">颜色</h2>
+        <p>强调色是画面里唯一的彩色，只用于主操作、当前项与可点击文本。其余层级靠中性色与留白建立。</p>
+        <div class="token-grid">
+          <div class="token">
+            <div class="token__swatch sw--canvas"></div>
+            <p class="token__name">画布</p>
+            <p class="token__value">--color-canvas · #f5f5f7</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--paper"></div>
+            <p class="token__name">卡片 / 内容面</p>
+            <p class="token__value">--color-paper · #ffffff</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--ink"></div>
+            <p class="token__name">主文字</p>
+            <p class="token__value">--color-ink · #1d1d1f</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--ink-muted"></div>
+            <p class="token__name">次级文字</p>
+            <p class="token__value">--color-ink-muted · #58585e</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--ink-subtle"></div>
+            <p class="token__name">辅助文字</p>
+            <p class="token__value">--color-ink-subtle · #6f6f76</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--hairline"></div>
+            <p class="token__name">细线</p>
+            <p class="token__value">--color-hairline · #d2d2d7</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--accent"></div>
+            <p class="token__name">强调色</p>
+            <p class="token__value">--color-accent · #0071e3</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--accent-strong"></div>
+            <p class="token__name">浅底上的链接</p>
+            <p class="token__value">--color-accent-strong · #0066cc</p>
+          </div>
+          <div class="token">
+            <div class="token__swatch sw--accent-text"></div>
+            <p class="token__name">深底上的链接</p>
+            <p class="token__value">--color-accent-text · #2997ff</p>
+          </div>
+        </div>
+        <ul class="rule-list">
+          <li>主文字与画布的对比度 ≥ 7:1，次级文字 ≥ 4.5:1。</li>
+          <li>不在强调色上再叠加浅色文字，强调色按钮统一用白字。</li>
+          <li>文字形式的链接按底色分两档：浅底用 <code>--color-accent-strong</code>，深色英雄区用 <code>--color-accent-text</code>，两者在各自底色上都 ≥ 4.5:1。</li>
+          <li>状态用文字 + 6px 圆点表达：正常为绿，进行中为琥珀，临期为橙，失败为玫红，AI 处理为紫，关闭为灰。</li>
+        </ul>
+      </div>
+
+      <div class="doc__section u-mt-8">
+        <p class="doc__label">01b · Color extension</p>
+        <h2 id="d-hueTitle">色相：只表意，不表交互</h2>
+        <p>v1.0 的克制是对的，但全灰的画面无法让人在十秒内分辨「这是哪类素材、这条数据在说什么」。v1.1 补入七组色相，只允许出现在三处：影像与插画、数据可视化、内容分类与状态。蓝色仍是唯一的交互信号，任何一个色相都不得用来画按钮描边或可点击文字，否则客户会误判哪里能点。</p>
+        <div class="table-wrap">
+          <table class="table table--compact hue-table">
+            <thead>
+              <tr>
+                <th scope="col">色相</th>
+                <th scope="col">Token</th>
+                <th scope="col">唯一含义</th>
+                <th scope="col">出现位置</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="hue-dot" style="background: var(--hue-blue)"></span>蓝</td>
+                <td><code>--hue-blue</code> · #0071e3</td>
+                <td>可交互 / 主品牌</td>
+                <td>主按钮、链接、当前导航、进度</td>
+              </tr>
+              <tr>
+                <td><span class="hue-dot" style="background: var(--hue-teal)"></span>青</td>
+                <td><code>--hue-teal</code> · #0d9aa8</td>
+                <td>影像与水域场景</td>
+                <td>上传转码、水产与乡村题材、影像带</td>
+              </tr>
+              <tr>
+                <td><span class="hue-dot" style="background: var(--hue-green)"></span>绿</td>
+                <td><code>--hue-green</code> · #2fa84f</td>
+                <td>通过 / 可售</td>
+                <td>审核通过、已授权、可商用</td>
+              </tr>
+              <tr>
+                <td><span class="hue-dot" style="background: var(--hue-amber)"></span>琥珀</td>
+                <td><code>--hue-amber</code> · #d98600</td>
+                <td>待处理</td>
+                <td>转码中、待审核、待付款</td>
+              </tr>
+              <tr>
+                <td><span class="hue-dot" style="background: var(--hue-orange)"></span>橙</td>
+                <td><code>--hue-orange</code> · #e2591f</td>
+                <td>临期 / 需跟进</td>
+                <td>授权临期、待续费、退款</td>
+              </tr>
+              <tr>
+                <td><span class="hue-dot" style="background: var(--hue-pink)"></span>玫红</td>
+                <td><code>--hue-pink</code> · #d6336c</td>
+                <td>新闻与节庆</td>
+                <td>新闻类目、龙舟与民俗素材</td>
+              </tr>
+              <tr>
+                <td><span class="hue-dot" style="background: var(--hue-violet)"></span>紫</td>
+                <td><code>--hue-violet</code> · #6b4ee6</td>
+                <td>AI 能力</td>
+                <td>AI 预填、智能标签、智能体入口</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="doc__note">每组色相配四档：<code>-soft</code> 用于标签底、<code>-wash</code> 用于整块留白、<code>-ink</code> 用于小字、原色用于圆点与图形。渐变只在影像占位与 AI 标识上使用，不用于按钮。</p>
+        <div class="grad-grid">
+          <div class="grad grad--brand"><span>--grad-brand</span></div>
+          <div class="grad grad--dusk"><span>--grad-dusk</span></div>
+          <div class="grad grad--sea"><span>--grad-sea</span></div>
+          <div class="grad grad--ember"><span>--grad-ember</span></div>
+          <div class="grad grad--ai"><span>--grad-ai</span></div>
+        </div>
+        <ul class="rule-list">
+          <li>一个色相只背一个含义，跨页面复用，不按页面重新分配。</li>
+          <li>色相不进入文字层级：正文永远是四级中性色，颜色只出现在圆点、标签底、图形与图表。</li>
+          <li>同一屏内不出现三种以上色相，避免变成彩色货架。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--canvas" aria-labelledby="d-typeTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">02 · Typography</p>
+        <h2 id="d-typeTitle">字号与字重</h2>
+        <p>标题用苹方 / 系统黑体，正文用同一字体族以保证中文断行稳定。字重最多三级：400、600、700。</p>
+        <div class="u-mt-4">
+          <div class="type-row">
+            <p class="type-row__meta">Hero · 56px · 700<br>仅总览页使用一次</p>
+            <p class="type-row__sample u-display" style="font-size:var(--text-hero);line-height:var(--leading-hero);letter-spacing:var(--tracking-hero);font-weight:700">找得到，读得懂。</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta">H1 · 40px · 700<br>页面唯一主标题</p>
+            <p class="type-row__sample u-display" style="font-size:var(--text-h1);line-height:var(--leading-display);font-weight:700">素材库</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta">H2 · 28px · 600<br>区块标题</p>
+            <p class="type-row__sample u-display" style="font-size:var(--text-h2);line-height:var(--leading-display);font-weight:600">区块标题</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta">H3 · 21px · 600<br>卡片与面板标题</p>
+            <p class="type-row__sample u-display" style="font-size:var(--text-h3);line-height:var(--leading-display);font-weight:600">卡片标题</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta">正文 · 17px · 400<br>说明与段落</p>
+            <p class="type-row__sample" style="font-size:var(--text-body);line-height:var(--leading-body)">素材库支持关键词、类型、分类与可见范围组合检索。</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta">说明 · 14px · 400 / 600<br>表格、按钮、元数据</p>
+            <p class="type-row__sample" style="font-size:var(--text-caption);line-height:var(--leading-body)">陈晓 · 系统管理员 · 2026-04-18 上传</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta">辅助 · 12px · 400<br>最小字号，用于标注</p>
+            <p class="type-row__sample u-subtle" style="font-size:var(--text-micro);line-height:var(--leading-body)">4K 原片 · 5472×3648 · 486MB</p>
+          </div>
+        </div>
+        <ul class="rule-list">
+          <li>正文不小于 12px；一屏内不超过三级字号跳跃。</li>
+          <li>中文不使用斜体与字间距过大的大写样式。</li>
+          <li>数字用等宽数字（<span class="u-mono">font-variant-numeric: tabular-nums</span>），保证表格对齐。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--paper" aria-labelledby="d-spaceTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">03 · Space &amp; Shape</p>
+        <h2 id="d-spaceTitle">间距与形状</h2>
+        <p>间距只有八级，全部来自 4px 基准。区块之间 64px，面板内 24px，控件之间 12–16px。</p>
+        <div class="space-row">
+          <div class="space-item"><i style="width:var(--space-1)"></i><span>4</span></div>
+          <div class="space-item"><i style="width:var(--space-2)"></i><span>8</span></div>
+          <div class="space-item"><i style="width:var(--space-3)"></i><span>12</span></div>
+          <div class="space-item"><i style="width:var(--space-4)"></i><span>16</span></div>
+          <div class="space-item"><i style="width:var(--space-5)"></i><span>24</span></div>
+          <div class="space-item"><i style="width:var(--space-6)"></i><span>32</span></div>
+          <div class="space-item"><i style="width:var(--space-7)"></i><span>48</span></div>
+          <div class="space-item"><i style="width:var(--space-8)"></i><span>64</span></div>
+          <div class="space-item"><i style="width:var(--space-9)"></i><span>80</span></div>
+        </div>
+        <div class="demo-row">
+          <span class="chip">圆角 8 · 卡片与输入</span>
+          <span class="chip">圆角 11 · 面板与抽屉</span>
+          <span class="chip">胶囊 980 · 筛选与标签</span>
+        </div>
+        <ul class="rule-list">
+          <li>内容列最大 980px；多列网格最大 1200px；页面左右留白 24px。</li>
+          <li>顶部导航 44px，后台侧栏 200px，详情抽屉 320px。</li>
+          <li>卡片、面板、表格一律不加边框，靠背景与留白区分。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--canvas" aria-labelledby="d-compTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">04 · Components</p>
+        <h2 id="d-compTitle">组件与状态</h2>
+        <p>每个组件至少定义默认、悬停、聚焦、禁用与选中五种状态。以下为关键状态示意。</p>
+
+        <div class="demo-block">
+          <p class="u-micro u-subtle">按钮 · 主操作只有一个</p>
+          <div class="demo-row">
+            <button class="btn btn--primary" type="button">生成链接</button>
+            <button class="btn btn--text" type="button">次要操作</button>
+            <button class="btn btn--quiet" type="button">安静操作</button>
+            <button class="btn btn--danger" type="button">删除素材</button>
+            <button class="btn btn--primary" type="button" disabled>禁用</button>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <p class="u-micro u-subtle">筛选与状态</p>
+          <div class="demo-row">
+            <span class="chip is-active">全部</span>
+            <span class="chip">视频</span>
+            <span class="chip">图片</span>
+            <span class="status">已发布</span>
+            <span class="status status--off">已下架</span>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <p class="u-micro u-subtle">表单与选项</p>
+          <div class="demo-row" style="align-items:flex-start">
+            <label class="field" style="min-width:240px">
+              <span>授权范围</span>
+              <select><option>单次商用 · 4K 原片</option><option>多平台商用 · 一年期</option></select>
+            </label>
+            <label class="field" style="min-width:240px">
+              <span>访问上限</span>
+              <input type="text" value="50">
+              <span class="field-hint">超过上限后链接自动失效。</span>
+            </label>
+          </div>
+          <div class="option-list u-mt-3">
+            <button class="option is-selected" type="button" aria-pressed="true">
+              <span class="option__body"><span class="option__title">单次商用 · 4K 原片</span><span class="option__desc">单一平台使用一次</span></span>
+              <span class="option__price">¥480</span>
+            </button>
+            <button class="option" type="button" aria-pressed="false">
+              <span class="option__body"><span class="option__title">多平台商用 · 一年期</span><span class="option__desc">不限平台与次数</span></span>
+              <span class="option__price">¥1,280</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <p class="u-micro u-subtle">空状态 · 不使用图标或插画</p>
+          <div class="empty">
+            <p class="empty__title">没有符合条件的素材</p>
+            <p class="empty__text">试着减少筛选条件，或换一个关键词。</p>
+            <button class="btn btn--text" type="button">清除筛选</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--paper" aria-labelledby="d-motionTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">05 · Motion</p>
+        <h2 id="d-motionTitle">动效与反馈</h2>
+        <p>动效只用于解释状态变化，不用于装饰。所有过渡 120–200ms，统一缓动曲线。</p>
+        <ul class="rule-list">
+          <li>抽屉从右侧滑入 200ms，遮罩同步淡入；关闭后焦点回到触发按钮。</li>
+          <li>批量操作条从底部升起 200ms，选中数量变化即时刷新。</li>
+          <li>悬停只改变文字颜色或背景，不做缩放与旋转。</li>
+          <li>系统开启「减少动态效果」时，所有过渡降为 0.01ms。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--canvas" aria-labelledby="a11yTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">06 · Accessibility</p>
+        <h2 id="a11yTitle">可访问性与响应式</h2>
+        <ul class="rule-list">
+          <li>所有可交互元素可用键盘到达，焦点环 2px 强调色，不做 outline: none。</li>
+          <li>对比度：主文字 15.4:1、次级文字 6.7:1、辅助文字 4.6:1（画布上均 ≥ 4.5:1，AA 达标）。</li>
+          <li>强调蓝在画布上为 4.3:1，按规范只用于可交互文本与选中态，不用于正文段落。</li>
+          <li>点击区域不小于 44×44px；图标按钮必须有中文 aria-label。</li>
+          <li>图片有 alt：装饰性为空，内容性描述画面与地点。</li>
+          <li>表格使用 th scope，展开行同步 aria-expanded。</li>
+          <li>900px 以下后台侧栏折为顶部横条，640px 以下全部单列。</li>
+          <li>320px 宽度下不出现横向滚动；表格可横向滚动但页面不滚动。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--paper" aria-labelledby="d-banTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">07 · Avoid</p>
+        <h2 id="d-banTitle">禁用清单</h2>
+        <div class="grid-2 u-mt-4">
+          <ul class="rule-list">
+            <li>不用阴影制造层级，只有抽屉、浮层与提示条例外。</li>
+            <li>不用彩色渐变、玻璃拟态卡片或装饰性插画。</li>
+            <li>不用 emoji、图标或插画填充空状态。</li>
+            <li>不给卡片、按钮、输入框、筛选标签加边框。</li>
+          </ul>
+          <ul class="rule-list">
+            <li>不用彩色胶囊表示状态，改用文字加圆点。</li>
+            <li>不把强调色用于装饰、标题或大面积背景。</li>
+            <li>不使用纯黑 #000 作为文字颜色。</li>
+            <li>不在同一屏堆叠超过三级字号与两种强调色。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--canvas" aria-labelledby="d-shellTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">08 · Shell &amp; Routing</p>
+        <h2 id="d-shellTitle">一个外壳，十二个视图</h2>
+        <p>前版把每屏做成独立 HTML，客户需要在十一个标签页之间来回点，看到的是十一个碎片。v1.1 收成一个单页应用：顶部外壳固定不动，只有下面的内容区在换。任何一个视图都能直接分享，浏览器前进后退照常可用，刷新不会丢失位置。客户打开销售链接的 <code>#/link</code> 是唯一例外：它模拟客户在微信里点开的那一页，不使用内部导航。</p>
+        <div class="table-wrap">
+          <table class="table table--compact">
+            <thead>
+              <tr>
+                <th scope="col">地址</th>
+                <th scope="col">视图</th>
+                <th scope="col">客户用它确认什么</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>#/overview</code></td><td>总览</td><td>系统边界与八个子系统的关系</td></tr>
+              <tr><td><code>#/library</code></td><td>素材库</td><td>检索、筛选、详情抽屉、批量操作</td></tr>
+              <tr><td><code>#/upload</code></td><td>上传与元数据治理</td><td>批量入库、AI 预填、审核队列</td></tr>
+              <tr><td><code>#/sales</code></td><td>销售链接</td><td>链接配置、有效期、访问上限与成交</td></tr>
+              <tr><td><code>#/buy</code></td><td>客户端</td><td>客户看到的素材商店、价格与授权范围</td></tr>
+              <tr><td><code>#/link</code></td><td>客户销售链接页</td><td>客户点开链接后的预览、授权与支付（无内部导航）</td></tr>
+              <tr><td><code>#/stats</code></td><td>数据看板</td><td>指标口径与漏斗</td></tr>
+              <tr><td><code>#/admin</code></td><td>后台</td><td>账号、角色、权限矩阵、审计日志</td></tr>
+              <tr><td><code>#/login</code></td><td>登录</td><td>身份与安全策略</td></tr>
+              <tr><td><code>#/agent</code></td><td>AI智能体整合</td><td>工具在真实对话里怎么被调用</td></tr>
+              <tr><td><code>#/mcp</code></td><td>智能体接口规范</td><td>对外暴露的五个工具与字段</td></tr>
+              <tr><td><code>#/design</code></td><td>设计规范</td><td>本页：数值与规则</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="rule-list">
+          <li>切屏时内容区做 10px 上移淡入，250ms；开启「减少动态效果」时不播放。</li>
+          <li>当前所在的导航项使用深色底 + <code>aria-current="page"</code>，颜色不参与标识。</li>
+          <li>锚点链接写成 <code>#/admin</code> 加 <code>data-goto</code>，例如把「权限矩阵」这一条直接发给客户，打开就停在矩阵那一屏。</li>
+          <li>总览使用深色英雄区，进入总览以外的任意视图时外壳自动回到浅色，不出现两套导航。</li>
+          <li><code>#/link</code> 不显示外壳导航与登录态，只保留右上角「返回原型 · 销售链接」作为唯一出口；客户不会用内部导航找到它。</li>
+          <li>上传与元数据治理不占顶部导航，入口放在后台管理的侧栏；<code>#/upload</code> 仍可直接访问与分享。</li>
+          <li>客户页与销售链接必须共用同一组事实：链接编号 SL-260418-07、有效期 2026-04-25、访问 12 / 50、素材 DM-20260412-0031，漏斗仍是 1,284 / 986 / 512 / 176。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc__band doc__band--paper" aria-labelledby="d-demoTitle">
+    <div class="wrap">
+      <div class="doc__section">
+        <p class="doc__label">09 · Agent demo</p>
+        <h2 id="d-demoTitle">AI智能体整合：在真实界面上演两遍</h2>
+        <p>接口规范只能回答「有哪些工具」，回答不了「它能帮我干什么」。所以 <code>#/agent</code> 用一张真实的对话产品截图作底，把光圈AI 的工具调用叠在对话里，用播放器把完整任务从提问走到交付。客户看到的不是示意图，而是工具在一次真实对话中的位置。两个场景对应需求书 5.2 的两条验收基准：运营岗的素材任务、管理岗的上传统计。</p>
+        <div class="table-wrap">
+          <table class="table table--compact">
+            <thead>
+              <tr>
+                <th scope="col">场景</th>
+                <th scope="col">角色与提问</th>
+                <th scope="col">调用的工具链</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>A · 招商运营</td><td>运营岗：把一条素材做成短视频，并给授权链接与投放清单</td><td><code>search_assets</code> → <code>get_asset_metadata</code> → <code>generate_sales_link</code> → <code>export_to_excel</code></td></tr>
+              <tr><td>B · 管理决策</td><td>管理岗：统计 2026 Q3 上传情况，并按素材所有者分类</td><td><code>aggregate_uploads</code> → <code>list_collections</code> → <code>export_to_excel</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap u-mt-4">
+          <table class="table table--compact">
+            <thead>
+              <tr>
+                <th scope="col">层</th>
+                <th scope="col">内容</th>
+                <th scope="col">规则</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>底图层</td><td>WorkBuddy 空界面截图 1916 × 966</td><td>等比缩放，不裁切，不重绘；只保留左侧导航与会话区</td></tr>
+              <tr><td>对话层</td><td>场景 A 八步、场景 B 七步，切换即重置</td><td>浮在截图内容区之上，宽度不超出底图气泡区</td></tr>
+              <tr><td>工具层</td><td>每次调用显示工具名、入参摘要、耗时</td><td>工具名用紫，参数用等宽字，耗时用辅助色</td></tr>
+              <tr><td>数据层</td><td>指标卡、走势、条形、洞察卡只在场景 B 出现</td><td>色相只做分类标识；数字用等宽数位，右对齐</td></tr>
+              <tr><td>播放层</td><td>上一步 / 下一步 / 自动播放 / 重播 + 步骤说明</td><td>未在当前步的元素隐藏，不靠滚动交代进度</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="rule-list">
+          <li>两个场景共用同一底板与播放器：切换场景即切工具链，不新开页面，不换视觉语言。</li>
+          <li>每一步停留时，说明必须回答「这一步客户得到了什么」，而不是复述工具名。</li>
+          <li>底图属于客户提供的真实产品，只作演示背景，不修改、不冒充光圈AI 的界面。</li>
+          <li>两段演示同时录成 <code>.webm</code>（1280 × 800，无声循环）与 <code>.gif</code>（640 × 400），放在 <code>assets/media/</code>，可直接进汇报与微信。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="doc__foot">
+    <div class="wrap">
+      <p>光圈AI 设计规范 v1.1 · 与项目需求计划书同步维护 · <a href="#/overview">返回设计总览</a></p>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<aside class="drawer" id="assetDrawer" aria-hidden="true" aria-label="素材详情">
+  <div class="drawer__head">
+    <p class="drawer__title">素材详情</p>
+    <button class="btn btn--quiet" type="button" data-drawer-close>关闭</button>
+  </div>
+  <div class="drawer__body">
+    <div class="drawer__preview">
+      <img src="assets/img/fish-farm.svg" alt="白蕉海鲈产业园航拍预览" width="800" height="600">
+      <span class="watermark"><span>斗门融媒 · 预览</span></span>
+    </div>
+    <div class="drawer__section">
+      <p class="drawer__label">基本信息</p>
+      <h3 class="u-display u-h3 u-mt-2">白蕉海鲈产业园航拍</h3>
+      <p class="u-micro u-muted u-mt-1">DM-2026-0418 · 视频 / 航拍</p>
+      <dl class="meta-list">
+        <div><dt>时长</dt><dd>00:48</dd></div>
+        <div><dt>分辨率</dt><dd>3840×2160 · 4K</dd></div>
+        <div><dt>上传者</dt><dd>陈晓</dd></div>
+        <div><dt>上传时间</dt><dd>2026-04-18 09:42</dd></div>
+        <div><dt>拍摄地点</dt><dd>白蕉镇 · 海鲈产业园</dd></div>
+      </dl>
+    </div>
+    <div class="drawer__section">
+      <p class="drawer__label">授权与可见性</p>
+      <div class="u-stack-2 u-mt-3">
+        <span class="status">可商用 · 已登记版权</span>
+        <span class="status status--off">外部下载需购买授权</span>
+      </div>
+      <dl class="meta-list">
+        <div><dt>可见范围</dt><dd>内部 + 销售</dd></div>
+        <div><dt>水印</dt><dd>预览强制</dd></div>
+        <div><dt>标签</dt><dd>海鲈 · 养殖 · 产业</dd></div>
+      </dl>
+      <div class="drawer__price">
+        <span class="u-micro u-muted">单次商用授权</span>
+        <strong>¥480</strong>
+      </div>
+    </div>
+    <div class="drawer__actions">
+      <button class="btn btn--primary btn--block" type="button" data-toast="销售链接已生成：有效期 7 天，可回传客户">生成销售链接</button>
+      <a class="btn btn--text btn--block" href="#/buy">查看客户端商店</a>
+      <button class="btn btn--text btn--block" type="button" data-toast="已下载带水印预览文件">下载水印预览</button>
+    </div>
+  </div>
+</aside>
+
+<div class="dock" id="dock">
+  <span class="dock__count">已选 <b id="dockCount">0</b> 件</span>
+  <button type="button" data-dock-action="已导出素材清单">导出清单</button>
+  <button type="button" data-dock-action="已加入合集">加入合集</button>
+  <button type="button" class="dock__primary" data-dock-action="已生成销售链接">生成销售链接</button>
+  <button type="button" data-dock-clear>取消</button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
